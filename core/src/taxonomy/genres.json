@@ -1,0 +1,10917 @@
+[
+ {
+  "slug": "2-step",
+  "label": "2-Step",
+  "parent_slug": "uk-garage"
+ },
+ {
+  "slug": "2-tone",
+  "label": "2 Tone",
+  "parent_slug": "ska"
+ },
+ {
+  "slug": "3-step",
+  "label": "3-Step",
+  "parent_slug": null
+ },
+ {
+  "slug": "aak",
+  "label": "Aak",
+  "parent_slug": null
+ },
+ {
+  "slug": "abhang",
+  "label": "Abhang",
+  "parent_slug": null
+ },
+ {
+  "slug": "aboio",
+  "label": "Aboio",
+  "parent_slug": null
+ },
+ {
+  "slug": "abstract-hip-hop",
+  "label": "Abstract Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "acholitronix",
+  "label": "Acholitronix",
+  "parent_slug": null
+ },
+ {
+  "slug": "acid-breaks",
+  "label": "Acid Breaks",
+  "parent_slug": "breakbeat"
+ },
+ {
+  "slug": "acid-house",
+  "label": "Acid House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "acid-jazz",
+  "label": "Acid Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "acid-rock",
+  "label": "Acid Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "acid-techno",
+  "label": "Acid Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "acid-trance",
+  "label": "Acid Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "acidcore",
+  "label": "Acidcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "acousmatic",
+  "label": "Acousmatic",
+  "parent_slug": null
+ },
+ {
+  "slug": "acoustic-blues",
+  "label": "Acoustic Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "acoustic-chicago-blues",
+  "label": "Acoustic Chicago Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "acoustic-rock",
+  "label": "Acoustic Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "acoustic-texas-blues",
+  "label": "Acoustic Texas Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "adhunik-geet",
+  "label": "Adhunik Geet",
+  "parent_slug": null
+ },
+ {
+  "slug": "afoxe",
+  "label": "Afoxê",
+  "parent_slug": null
+ },
+ {
+  "slug": "african-blues",
+  "label": "African Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "afro-cuban-jazz",
+  "label": "Afro-Cuban Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "afro-funk",
+  "label": "Afro-Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "afro-house",
+  "label": "Afro House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "afro-jazz",
+  "label": "Afro-Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "afro-rock",
+  "label": "Afro Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "afro-trap",
+  "label": "Afro Trap",
+  "parent_slug": null
+ },
+ {
+  "slug": "afro-zouk",
+  "label": "Afro-Zouk",
+  "parent_slug": null
+ },
+ {
+  "slug": "afrobeat",
+  "label": "Afrobeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "afrobeats",
+  "label": "Afrobeats",
+  "parent_slug": null
+ },
+ {
+  "slug": "afropiano",
+  "label": "Afropiano",
+  "parent_slug": null
+ },
+ {
+  "slug": "afroswing",
+  "label": "Afroswing",
+  "parent_slug": null
+ },
+ {
+  "slug": "agbadza",
+  "label": "Agbadza",
+  "parent_slug": null
+ },
+ {
+  "slug": "agbekor",
+  "label": "Agbekor",
+  "parent_slug": null
+ },
+ {
+  "slug": "aggrotech",
+  "label": "Aggrotech",
+  "parent_slug": null
+ },
+ {
+  "slug": "agronejo",
+  "label": "Agronejo",
+  "parent_slug": null
+ },
+ {
+  "slug": "ahwash",
+  "label": "Ahwash",
+  "parent_slug": null
+ },
+ {
+  "slug": "aita",
+  "label": "Aita",
+  "parent_slug": null
+ },
+ {
+  "slug": "akishibu-kei",
+  "label": "Akishibu-Kei",
+  "parent_slug": null
+ },
+ {
+  "slug": "al-jeel",
+  "label": "Al Jeel",
+  "parent_slug": null
+ },
+ {
+  "slug": "aleke",
+  "label": "Aleke",
+  "parent_slug": null
+ },
+ {
+  "slug": "algerian-chaabi",
+  "label": "Algerian Chaabi",
+  "parent_slug": null
+ },
+ {
+  "slug": "algorave",
+  "label": "Algorave",
+  "parent_slug": null
+ },
+ {
+  "slug": "alloukou",
+  "label": "Alloukou",
+  "parent_slug": null
+ },
+ {
+  "slug": "alpenrock",
+  "label": "Alpenrock",
+  "parent_slug": null
+ },
+ {
+  "slug": "alte",
+  "label": "Alté",
+  "parent_slug": null
+ },
+ {
+  "slug": "alternative-country",
+  "label": "Alternative Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "alternative-dance",
+  "label": "Alternative Dance",
+  "parent_slug": null
+ },
+ {
+  "slug": "alternative-folk",
+  "label": "Alternative Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "alternative-hip-hop",
+  "label": "Alternative Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "alternative-metal",
+  "label": "Alternative Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "alternative-pop",
+  "label": "Alternative Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "alternative-punk",
+  "label": "Alternative Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "alternative-rnb",
+  "label": "Alternative R&b",
+  "parent_slug": "rnb"
+ },
+ {
+  "slug": "alternative-rock",
+  "label": "Alternative Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "amapiano",
+  "label": "Amapiano",
+  "parent_slug": null
+ },
+ {
+  "slug": "ambasse-bey",
+  "label": "Ambasse Bey",
+  "parent_slug": null
+ },
+ {
+  "slug": "ambient",
+  "label": "Ambient",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "ambient-americana",
+  "label": "Ambient Americana",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "ambient-dub",
+  "label": "Ambient Dub",
+  "parent_slug": "dub"
+ },
+ {
+  "slug": "ambient-house",
+  "label": "Ambient House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "ambient-noise-wall",
+  "label": "Ambient Noise Wall",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "ambient-plugg",
+  "label": "Ambient Plugg",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "ambient-pop",
+  "label": "Ambient Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "ambient-techno",
+  "label": "Ambient Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "ambient-trance",
+  "label": "Ambient Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "ambrosian-chant",
+  "label": "Ambrosian Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "american-gamelan",
+  "label": "American Gamelan",
+  "parent_slug": null
+ },
+ {
+  "slug": "american-primitive-guitar",
+  "label": "American Primitive Guitar",
+  "parent_slug": null
+ },
+ {
+  "slug": "americana",
+  "label": "Americana",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "amigacore",
+  "label": "Amigacore",
+  "parent_slug": null
+ },
+ {
+  "slug": "anarcho-punk",
+  "label": "Anarcho-Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "anatolian-rock",
+  "label": "Anatolian Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "andalusian-classical",
+  "label": "Andalusian Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "andean-new-age",
+  "label": "Andean New Age",
+  "parent_slug": null
+ },
+ {
+  "slug": "anglican-chant",
+  "label": "Anglican Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "animal-sounds",
+  "label": "Animal Sounds",
+  "parent_slug": null
+ },
+ {
+  "slug": "anti-folk",
+  "label": "Anti-Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "aor",
+  "label": "Aor",
+  "parent_slug": null
+ },
+ {
+  "slug": "apala",
+  "label": "Apala",
+  "parent_slug": null
+ },
+ {
+  "slug": "appalachian-folk",
+  "label": "Appalachian Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "aquacrunk",
+  "label": "Aquacrunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "arabesk",
+  "label": "Arabesk",
+  "parent_slug": null
+ },
+ {
+  "slug": "arabesk-rap",
+  "label": "Arabesk Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "arena-rock",
+  "label": "Arena Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "arrocha",
+  "label": "Arrocha",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "arrocha-funk",
+  "label": "Arrocha Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "arrocha-sertanejo",
+  "label": "Arrocha Sertanejo",
+  "parent_slug": "sertanejo"
+ },
+ {
+  "slug": "arrochadeira",
+  "label": "Arrochadeira",
+  "parent_slug": null
+ },
+ {
+  "slug": "ars-antiqua",
+  "label": "Ars Antiqua",
+  "parent_slug": null
+ },
+ {
+  "slug": "ars-nova",
+  "label": "Ars Nova",
+  "parent_slug": null
+ },
+ {
+  "slug": "ars-subtilior",
+  "label": "Ars Subtilior",
+  "parent_slug": null
+ },
+ {
+  "slug": "art-pop",
+  "label": "Art Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "art-punk",
+  "label": "Art Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "art-rock",
+  "label": "Art Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "art-song",
+  "label": "Art Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "artcore",
+  "label": "Artcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "ashkenazi-cantorial-music",
+  "label": "Ashkenazi Cantorial Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "asian-rock",
+  "label": "Asian Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "asmr",
+  "label": "Asmr",
+  "parent_slug": null
+ },
+ {
+  "slug": "assiko",
+  "label": "Assiko",
+  "parent_slug": null
+ },
+ {
+  "slug": "atmospheric-black-metal",
+  "label": "Atmospheric Black Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "atmospheric-drum-and-bass",
+  "label": "Atmospheric Drum and Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "atmospheric-sludge-metal",
+  "label": "Atmospheric Sludge Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "audio-documentary",
+  "label": "Audio Documentary",
+  "parent_slug": null
+ },
+ {
+  "slug": "audio-drama",
+  "label": "Audio Drama",
+  "parent_slug": null
+ },
+ {
+  "slug": "autonomic",
+  "label": "Autonomic",
+  "parent_slug": null
+ },
+ {
+  "slug": "avant-folk",
+  "label": "Avant-Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "avant-garde",
+  "label": "Avant-Garde",
+  "parent_slug": null
+ },
+ {
+  "slug": "avant-garde-jazz",
+  "label": "Avant-Garde Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "avant-garde-metal",
+  "label": "Avant-Garde Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "avant-garde-pop",
+  "label": "Avant-Garde Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "avant-prog",
+  "label": "Avant-Prog",
+  "parent_slug": null
+ },
+ {
+  "slug": "avanzada",
+  "label": "Avanzada",
+  "parent_slug": null
+ },
+ {
+  "slug": "avtorskaya-pesnya",
+  "label": "Avtorskaya Pesnya",
+  "parent_slug": null
+ },
+ {
+  "slug": "axe",
+  "label": "Axé",
+  "parent_slug": null
+ },
+ {
+  "slug": "bacardi",
+  "label": "Bacardi",
+  "parent_slug": null
+ },
+ {
+  "slug": "bachata",
+  "label": "Bachata",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "bachaton",
+  "label": "Bachatón",
+  "parent_slug": null
+ },
+ {
+  "slug": "bagad",
+  "label": "Bagad",
+  "parent_slug": null
+ },
+ {
+  "slug": "bagatelle",
+  "label": "Bagatelle",
+  "parent_slug": null
+ },
+ {
+  "slug": "baguala",
+  "label": "Baguala",
+  "parent_slug": null
+ },
+ {
+  "slug": "baiao",
+  "label": "Baião",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "baila",
+  "label": "Baila",
+  "parent_slug": null
+ },
+ {
+  "slug": "baisha-xiyue",
+  "label": "Baisha Xiyue",
+  "parent_slug": null
+ },
+ {
+  "slug": "baithak-gana",
+  "label": "Baithak Gana",
+  "parent_slug": null
+ },
+ {
+  "slug": "bakersfield-sound",
+  "label": "Bakersfield Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "balani-show",
+  "label": "Balani Show",
+  "parent_slug": null
+ },
+ {
+  "slug": "balearic-beat",
+  "label": "Balearic Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "balearic-trance",
+  "label": "Balearic Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "balinese-gamelan",
+  "label": "Balinese Gamelan",
+  "parent_slug": null
+ },
+ {
+  "slug": "balitaw",
+  "label": "Balitaw",
+  "parent_slug": null
+ },
+ {
+  "slug": "ballad",
+  "label": "Ballad",
+  "parent_slug": null
+ },
+ {
+  "slug": "ballad-opera",
+  "label": "Ballad Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "ballet",
+  "label": "Ballet",
+  "parent_slug": null
+ },
+ {
+  "slug": "ballet-de-cour",
+  "label": "Ballet de Cour",
+  "parent_slug": null
+ },
+ {
+  "slug": "ballroom-house",
+  "label": "Ballroom House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "baltimore-club",
+  "label": "Baltimore Club",
+  "parent_slug": null
+ },
+ {
+  "slug": "bambuco",
+  "label": "Bambuco",
+  "parent_slug": null
+ },
+ {
+  "slug": "banda-sinaloense",
+  "label": "Banda Sinaloense",
+  "parent_slug": null
+ },
+ {
+  "slug": "bandari",
+  "label": "Bandari",
+  "parent_slug": null
+ },
+ {
+  "slug": "bandinha",
+  "label": "Bandinha",
+  "parent_slug": null
+ },
+ {
+  "slug": "banga",
+  "label": "Banga",
+  "parent_slug": null
+ },
+ {
+  "slug": "bantengan",
+  "label": "Bantengan",
+  "parent_slug": null
+ },
+ {
+  "slug": "baqashot",
+  "label": "Baqashot",
+  "parent_slug": null
+ },
+ {
+  "slug": "barber-beats",
+  "label": "Barber Beats",
+  "parent_slug": null
+ },
+ {
+  "slug": "barbershop",
+  "label": "Barbershop",
+  "parent_slug": null
+ },
+ {
+  "slug": "bard-rock",
+  "label": "Bard Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "bardcore",
+  "label": "Bardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "baroque",
+  "label": "Baroque",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "baroque-pop",
+  "label": "Baroque Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "baroque-suite",
+  "label": "Baroque Suite",
+  "parent_slug": null
+ },
+ {
+  "slug": "bashment-soca",
+  "label": "Bashment Soca",
+  "parent_slug": "soca"
+ },
+ {
+  "slug": "bass-house",
+  "label": "Bass House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "bassline",
+  "label": "Bassline",
+  "parent_slug": "uk-garage"
+ },
+ {
+  "slug": "batida",
+  "label": "Batida",
+  "parent_slug": null
+ },
+ {
+  "slug": "batidao-romantico",
+  "label": "Batidão Romântico",
+  "parent_slug": null
+ },
+ {
+  "slug": "batonebi-songs",
+  "label": "Batonebi Songs",
+  "parent_slug": null
+ },
+ {
+  "slug": "battle-rap",
+  "label": "Battle Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "battle-record",
+  "label": "Battle Record",
+  "parent_slug": null
+ },
+ {
+  "slug": "batucada",
+  "label": "Batucada",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "batuque",
+  "label": "Batuque",
+  "parent_slug": null
+ },
+ {
+  "slug": "baul-gaan",
+  "label": "Baul Gaan",
+  "parent_slug": null
+ },
+ {
+  "slug": "beach-music",
+  "label": "Beach Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "beat-bolha",
+  "label": "Beat Bolha",
+  "parent_slug": null
+ },
+ {
+  "slug": "beat-bruxaria",
+  "label": "Beat Bruxaria",
+  "parent_slug": null
+ },
+ {
+  "slug": "beat-fino",
+  "label": "Beat Fino",
+  "parent_slug": null
+ },
+ {
+  "slug": "beat-music",
+  "label": "Beat Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "beat-poetry",
+  "label": "Beat Poetry",
+  "parent_slug": null
+ },
+ {
+  "slug": "beat-rock",
+  "label": "Beat Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "beatboxing",
+  "label": "Beatboxing",
+  "parent_slug": null
+ },
+ {
+  "slug": "beatdown-hardcore",
+  "label": "Beatdown Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "bebop",
+  "label": "Bebop",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "bedoui-wahrani",
+  "label": "Bedoui Wahrani",
+  "parent_slug": null
+ },
+ {
+  "slug": "bedroom-pop",
+  "label": "Bedroom Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "beijing-opera",
+  "label": "Beijing Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "bele",
+  "label": "Bélé",
+  "parent_slug": null
+ },
+ {
+  "slug": "belgian-techno",
+  "label": "Belgian Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "bend-skin",
+  "label": "Bend-Skin",
+  "parent_slug": null
+ },
+ {
+  "slug": "beneventan-chant",
+  "label": "Beneventan Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "benga",
+  "label": "Benga",
+  "parent_slug": null
+ },
+ {
+  "slug": "beni",
+  "label": "Beni",
+  "parent_slug": null
+ },
+ {
+  "slug": "benna",
+  "label": "Benna",
+  "parent_slug": null
+ },
+ {
+  "slug": "beompae",
+  "label": "Beompae",
+  "parent_slug": null
+ },
+ {
+  "slug": "berite-club",
+  "label": "Bérite Club",
+  "parent_slug": null
+ },
+ {
+  "slug": "berlin-school",
+  "label": "Berlin School",
+  "parent_slug": null
+ },
+ {
+  "slug": "bhajan",
+  "label": "Bhajan",
+  "parent_slug": null
+ },
+ {
+  "slug": "bhangra",
+  "label": "Bhangra",
+  "parent_slug": null
+ },
+ {
+  "slug": "bhavageethe",
+  "label": "Bhavageethe",
+  "parent_slug": null
+ },
+ {
+  "slug": "bhojpuri-pop",
+  "label": "Bhojpuri Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "big-band",
+  "label": "Big Band",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "big-beat",
+  "label": "Big Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "big-room-house",
+  "label": "Big Room House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "big-room-trance",
+  "label": "Big Room Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "biguine",
+  "label": "Biguine",
+  "parent_slug": null
+ },
+ {
+  "slug": "bikutsi",
+  "label": "Bikutsi",
+  "parent_slug": null
+ },
+ {
+  "slug": "binaural-beats",
+  "label": "Binaural Beats",
+  "parent_slug": null
+ },
+ {
+  "slug": "biraha",
+  "label": "Biraha",
+  "parent_slug": null
+ },
+ {
+  "slug": "birdsong",
+  "label": "Birdsong",
+  "parent_slug": null
+ },
+ {
+  "slug": "birmingham-sound",
+  "label": "Birmingham Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "bit-music",
+  "label": "Bit Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "bitpop",
+  "label": "Bitpop",
+  "parent_slug": null
+ },
+ {
+  "slug": "black-ambient",
+  "label": "Black Ambient",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "black-metal",
+  "label": "Black Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "black-midi",
+  "label": "Black Midi",
+  "parent_slug": null
+ },
+ {
+  "slug": "black-n-roll",
+  "label": "Black 'n' Roll",
+  "parent_slug": null
+ },
+ {
+  "slug": "black-noise",
+  "label": "Black Noise",
+  "parent_slug": "noise"
+ },
+ {
+  "slug": "blackened-crust",
+  "label": "Blackened Crust",
+  "parent_slug": null
+ },
+ {
+  "slug": "blackened-death-metal",
+  "label": "Blackened Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "blackgaze",
+  "label": "Blackgaze",
+  "parent_slug": null
+ },
+ {
+  "slug": "bleep-techno",
+  "label": "Bleep Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "blue-eyed-soul",
+  "label": "Blue-Eyed Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "bluegrass",
+  "label": "Bluegrass",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "bluegrass-gospel",
+  "label": "Bluegrass Gospel",
+  "parent_slug": "gospel"
+ },
+ {
+  "slug": "blues",
+  "label": "Blues",
+  "parent_slug": null
+ },
+ {
+  "slug": "blues-rock",
+  "label": "Blues Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "bocet",
+  "label": "Bocet",
+  "parent_slug": null
+ },
+ {
+  "slug": "boduberu",
+  "label": "Boduberu",
+  "parent_slug": null
+ },
+ {
+  "slug": "boedra",
+  "label": "Boedra",
+  "parent_slug": null
+ },
+ {
+  "slug": "bogino-duu",
+  "label": "Bogino Duu",
+  "parent_slug": null
+ },
+ {
+  "slug": "bolero",
+  "label": "Bolero",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "bolero-beat",
+  "label": "Bolero-Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "bolero-espanol",
+  "label": "Bolero Español",
+  "parent_slug": null
+ },
+ {
+  "slug": "bolero-son",
+  "label": "Bolero Son",
+  "parent_slug": null
+ },
+ {
+  "slug": "bomba",
+  "label": "Bomba",
+  "parent_slug": null
+ },
+ {
+  "slug": "bomba-del-chota",
+  "label": "Bomba Del Chota",
+  "parent_slug": null
+ },
+ {
+  "slug": "bongo-flava",
+  "label": "Bongo Flava",
+  "parent_slug": null
+ },
+ {
+  "slug": "boogaloo",
+  "label": "Boogaloo",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "boogie",
+  "label": "Boogie",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "boogie-rock",
+  "label": "Boogie Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "boogie-woogie",
+  "label": "Boogie-Woogie",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "boom-bap",
+  "label": "Boom Bap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "bossa-nova",
+  "label": "Bossa Nova",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "bounce",
+  "label": "Bounce",
+  "parent_slug": null
+ },
+ {
+  "slug": "bounce-beat",
+  "label": "Bounce Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "bouncy-techno",
+  "label": "Bouncy Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "bouyon",
+  "label": "Bouyon",
+  "parent_slug": null
+ },
+ {
+  "slug": "boyfriend-country",
+  "label": "Boyfriend Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "brass-band",
+  "label": "Brass Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "brazilian-bass",
+  "label": "Brazilian Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "brazilian-phonk",
+  "label": "Brazilian Phonk",
+  "parent_slug": null
+ },
+ {
+  "slug": "break-in",
+  "label": "Break-In",
+  "parent_slug": null
+ },
+ {
+  "slug": "breakbeat",
+  "label": "Breakbeat",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "breakbeat-hardcore",
+  "label": "Breakbeat Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "breakbeat-kota",
+  "label": "Breakbeat Kota",
+  "parent_slug": null
+ },
+ {
+  "slug": "breakcore",
+  "label": "Breakcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "breaks",
+  "label": "Breaks",
+  "parent_slug": null
+ },
+ {
+  "slug": "breakstep",
+  "label": "Breakstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "brega",
+  "label": "Brega",
+  "parent_slug": null
+ },
+ {
+  "slug": "brega-calypso",
+  "label": "Brega Calypso",
+  "parent_slug": "calypso"
+ },
+ {
+  "slug": "brega-funk",
+  "label": "Brega Funk",
+  "parent_slug": "funk-carioca"
+ },
+ {
+  "slug": "briddim",
+  "label": "Briddim",
+  "parent_slug": null
+ },
+ {
+  "slug": "brill-building",
+  "label": "Brill Building",
+  "parent_slug": null
+ },
+ {
+  "slug": "brit-funk",
+  "label": "Brit Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "britcore",
+  "label": "Britcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "british-blues",
+  "label": "British Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "british-brass-band",
+  "label": "British Brass Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "british-folk-rock",
+  "label": "British Folk Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "british-rhythm-blues",
+  "label": "British Rhythm & Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "britpop",
+  "label": "Britpop",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "bro-country",
+  "label": "Bro-Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "broadband-noise",
+  "label": "Broadband Noise",
+  "parent_slug": "noise"
+ },
+ {
+  "slug": "broken-beat",
+  "label": "Broken Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "broken-transmission",
+  "label": "Broken Transmission",
+  "parent_slug": null
+ },
+ {
+  "slug": "brostep",
+  "label": "Brostep",
+  "parent_slug": null
+ },
+ {
+  "slug": "brutal-death-metal",
+  "label": "Brutal Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "brutal-prog",
+  "label": "Brutal Prog",
+  "parent_slug": null
+ },
+ {
+  "slug": "bubblegum-bass",
+  "label": "Bubblegum Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "bubblegum-dance",
+  "label": "Bubblegum Dance",
+  "parent_slug": null
+ },
+ {
+  "slug": "bubblegum-pop",
+  "label": "Bubblegum Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "bubbling",
+  "label": "Bubbling",
+  "parent_slug": null
+ },
+ {
+  "slug": "bubbling-house",
+  "label": "Bubbling House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "buchiage-trance",
+  "label": "Buchiage Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "budget-rock",
+  "label": "Budget Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "budots",
+  "label": "Budots",
+  "parent_slug": null
+ },
+ {
+  "slug": "buleria",
+  "label": "Bulería",
+  "parent_slug": null
+ },
+ {
+  "slug": "bullerengue",
+  "label": "Bullerengue",
+  "parent_slug": null
+ },
+ {
+  "slug": "burger-highlife",
+  "label": "Burger-Highlife",
+  "parent_slug": "highlife"
+ },
+ {
+  "slug": "burmese-classical",
+  "label": "Burmese Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "burmese-mono",
+  "label": "Burmese Mono",
+  "parent_slug": null
+ },
+ {
+  "slug": "burmese-stereo",
+  "label": "Burmese Stereo",
+  "parent_slug": null
+ },
+ {
+  "slug": "burning-spirits",
+  "label": "Burning Spirits",
+  "parent_slug": null
+ },
+ {
+  "slug": "burrakatha",
+  "label": "Burrakatha",
+  "parent_slug": null
+ },
+ {
+  "slug": "bytebeat",
+  "label": "Bytebeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "byzantine-chant",
+  "label": "Byzantine Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "c-pop",
+  "label": "C-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "c86",
+  "label": "C86",
+  "parent_slug": null
+ },
+ {
+  "slug": "ca-tru",
+  "label": "Ca Trù",
+  "parent_slug": null
+ },
+ {
+  "slug": "cabaret",
+  "label": "Cabaret",
+  "parent_slug": null
+ },
+ {
+  "slug": "cabo-zouk",
+  "label": "Cabo Zouk",
+  "parent_slug": null
+ },
+ {
+  "slug": "cadence-lypso",
+  "label": "Cadence Lypso",
+  "parent_slug": null
+ },
+ {
+  "slug": "cadence-rampa",
+  "label": "Cadence Rampa",
+  "parent_slug": null
+ },
+ {
+  "slug": "cai-luong",
+  "label": "Cải Lương",
+  "parent_slug": null
+ },
+ {
+  "slug": "cajun",
+  "label": "Cajun",
+  "parent_slug": null
+ },
+ {
+  "slug": "cakewalk",
+  "label": "Cakewalk",
+  "parent_slug": null
+ },
+ {
+  "slug": "calgija",
+  "label": "Čalgija",
+  "parent_slug": null
+ },
+ {
+  "slug": "calipso-venezolano",
+  "label": "Calipso Venezolano",
+  "parent_slug": null
+ },
+ {
+  "slug": "calypso",
+  "label": "Calypso",
+  "parent_slug": null
+ },
+ {
+  "slug": "campursari",
+  "label": "Campursari",
+  "parent_slug": null
+ },
+ {
+  "slug": "campus-folk",
+  "label": "Campus Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "cancion-melodica",
+  "label": "Canción Melódica",
+  "parent_slug": null
+ },
+ {
+  "slug": "candombe",
+  "label": "Candombe",
+  "parent_slug": null
+ },
+ {
+  "slug": "candombe-beat",
+  "label": "Candombe Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "cantata",
+  "label": "Cantata",
+  "parent_slug": null
+ },
+ {
+  "slug": "cante-alentejano",
+  "label": "Cante Alentejano",
+  "parent_slug": null
+ },
+ {
+  "slug": "canterbury-scene",
+  "label": "Canterbury Scene",
+  "parent_slug": null
+ },
+ {
+  "slug": "canto-a-lo-poeta",
+  "label": "Canto a Lo Poeta",
+  "parent_slug": null
+ },
+ {
+  "slug": "canto-cardenche",
+  "label": "Canto Cardenche",
+  "parent_slug": null
+ },
+ {
+  "slug": "canto-degli-alpini",
+  "label": "Canto Degli Alpini",
+  "parent_slug": null
+ },
+ {
+  "slug": "cantonese-opera",
+  "label": "Cantonese Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "cantopop",
+  "label": "Cantopop",
+  "parent_slug": null
+ },
+ {
+  "slug": "cantoria",
+  "label": "Cantoria",
+  "parent_slug": null
+ },
+ {
+  "slug": "cantu-a-chiterra",
+  "label": "Cantu a Chiterra",
+  "parent_slug": null
+ },
+ {
+  "slug": "cantu-a-tenore",
+  "label": "Cantu a Tenore",
+  "parent_slug": null
+ },
+ {
+  "slug": "canzona",
+  "label": "Canzona",
+  "parent_slug": null
+ },
+ {
+  "slug": "canzone-d-autore",
+  "label": "Canzone D'autore",
+  "parent_slug": null
+ },
+ {
+  "slug": "canzone-napoletana",
+  "label": "Canzone Napoletana",
+  "parent_slug": null
+ },
+ {
+  "slug": "canzone-neomelodica",
+  "label": "Canzone Neomelodica",
+  "parent_slug": null
+ },
+ {
+  "slug": "cape-breton-fiddling",
+  "label": "Cape Breton Fiddling",
+  "parent_slug": null
+ },
+ {
+  "slug": "cape-jazz",
+  "label": "Cape Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "caporal",
+  "label": "Caporal",
+  "parent_slug": null
+ },
+ {
+  "slug": "capriccio",
+  "label": "Capriccio",
+  "parent_slug": null
+ },
+ {
+  "slug": "carimbo",
+  "label": "Carimbó",
+  "parent_slug": null
+ },
+ {
+  "slug": "carnatic-classical",
+  "label": "Carnatic Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "carnavalito",
+  "label": "Carnavalito",
+  "parent_slug": null
+ },
+ {
+  "slug": "carranga",
+  "label": "Carranga",
+  "parent_slug": null
+ },
+ {
+  "slug": "celtic",
+  "label": "Celtic",
+  "parent_slug": null
+ },
+ {
+  "slug": "celtic-chant",
+  "label": "Celtic Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "celtic-electronica",
+  "label": "Celtic Electronica",
+  "parent_slug": null
+ },
+ {
+  "slug": "celtic-metal",
+  "label": "Celtic Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "celtic-new-age",
+  "label": "Celtic New Age",
+  "parent_slug": null
+ },
+ {
+  "slug": "celtic-punk",
+  "label": "Celtic Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "celtic-rock",
+  "label": "Celtic Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "central-asian-throat-singing",
+  "label": "Central Asian Throat Singing",
+  "parent_slug": null
+ },
+ {
+  "slug": "chacarera",
+  "label": "Chacarera",
+  "parent_slug": null
+ },
+ {
+  "slug": "chachacha",
+  "label": "Chachachá",
+  "parent_slug": null
+ },
+ {
+  "slug": "chakacha",
+  "label": "Chakacha",
+  "parent_slug": null
+ },
+ {
+  "slug": "chalga",
+  "label": "Chalga",
+  "parent_slug": null
+ },
+ {
+  "slug": "chamame",
+  "label": "Chamamé",
+  "parent_slug": null
+ },
+ {
+  "slug": "chamame-tropical",
+  "label": "Chamamé Tropical",
+  "parent_slug": null
+ },
+ {
+  "slug": "chamarrita-acoriana",
+  "label": "Chamarrita Açoriana",
+  "parent_slug": null
+ },
+ {
+  "slug": "chamarrita-rioplatense",
+  "label": "Chamarrita Rioplatense",
+  "parent_slug": null
+ },
+ {
+  "slug": "chamber-folk",
+  "label": "Chamber Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "chamber-pop",
+  "label": "Chamber Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "champeta",
+  "label": "Champeta",
+  "parent_slug": null
+ },
+ {
+  "slug": "changa-tuki",
+  "label": "Changa Tuki",
+  "parent_slug": null
+ },
+ {
+  "slug": "change-ringing",
+  "label": "Change Ringing",
+  "parent_slug": null
+ },
+ {
+  "slug": "changjak-gugak",
+  "label": "Changjak Gugak",
+  "parent_slug": null
+ },
+ {
+  "slug": "changui",
+  "label": "Changüí",
+  "parent_slug": null
+ },
+ {
+  "slug": "chanson-a-texte",
+  "label": "Chanson À Texte",
+  "parent_slug": null
+ },
+ {
+  "slug": "chanson-francaise",
+  "label": "Chanson Française",
+  "parent_slug": null
+ },
+ {
+  "slug": "chanson-quebecoise",
+  "label": "Chanson Québécoise",
+  "parent_slug": null
+ },
+ {
+  "slug": "chanson-realiste",
+  "label": "Chanson Réaliste",
+  "parent_slug": null
+ },
+ {
+  "slug": "chaozhou-xianshi",
+  "label": "Chaozhou Xianshi",
+  "parent_slug": null
+ },
+ {
+  "slug": "chap-hop",
+  "label": "Chap Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "character-piece",
+  "label": "Character Piece",
+  "parent_slug": null
+ },
+ {
+  "slug": "charanga",
+  "label": "Charanga",
+  "parent_slug": null
+ },
+ {
+  "slug": "chazzanut",
+  "label": "Chazzanut",
+  "parent_slug": null
+ },
+ {
+  "slug": "cheo",
+  "label": "Chèo",
+  "parent_slug": null
+ },
+ {
+  "slug": "chicago-blues",
+  "label": "Chicago Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "chicago-bop",
+  "label": "Chicago Bop",
+  "parent_slug": null
+ },
+ {
+  "slug": "chicago-drill",
+  "label": "Chicago Drill",
+  "parent_slug": null
+ },
+ {
+  "slug": "chicago-house",
+  "label": "Chicago House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "chicago-polka",
+  "label": "Chicago Polka",
+  "parent_slug": null
+ },
+ {
+  "slug": "chicago-soul",
+  "label": "Chicago Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "chicano-rap",
+  "label": "Chicano Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "chicha",
+  "label": "Chicha",
+  "parent_slug": null
+ },
+ {
+  "slug": "children-s-music",
+  "label": "Children's Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "chilena",
+  "label": "Chilena",
+  "parent_slug": null
+ },
+ {
+  "slug": "chillout",
+  "label": "Chillout",
+  "parent_slug": null
+ },
+ {
+  "slug": "chillstep",
+  "label": "Chillstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "chillsynth",
+  "label": "Chillsynth",
+  "parent_slug": null
+ },
+ {
+  "slug": "chillwave",
+  "label": "Chillwave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "chimayche",
+  "label": "Chimayche",
+  "parent_slug": null
+ },
+ {
+  "slug": "chimurenga",
+  "label": "Chimurenga",
+  "parent_slug": null
+ },
+ {
+  "slug": "chinese-classical",
+  "label": "Chinese Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "chinese-literati-music",
+  "label": "Chinese Literati Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "chinese-opera",
+  "label": "Chinese Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "chinese-revolutionary-opera",
+  "label": "Chinese Revolutionary Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "chipmunk-soul",
+  "label": "Chipmunk Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "chiptune",
+  "label": "Chiptune",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "chod",
+  "label": "Chöd",
+  "parent_slug": null
+ },
+ {
+  "slug": "chopped-and-screwed",
+  "label": "Chopped and Screwed",
+  "parent_slug": null
+ },
+ {
+  "slug": "chopper",
+  "label": "Chopper",
+  "parent_slug": null
+ },
+ {
+  "slug": "choral-symphony",
+  "label": "Choral Symphony",
+  "parent_slug": null
+ },
+ {
+  "slug": "choro",
+  "label": "Choro",
+  "parent_slug": null
+ },
+ {
+  "slug": "chotis-madrileno",
+  "label": "Chotis Madrileño",
+  "parent_slug": null
+ },
+ {
+  "slug": "christian-hardcore",
+  "label": "Christian Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "christian-hip-hop",
+  "label": "Christian Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "christian-metal",
+  "label": "Christian Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "christian-rock",
+  "label": "Christian Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "christmas-music",
+  "label": "Christmas Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "church-music",
+  "label": "Church Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "chuscada",
+  "label": "Chuscada",
+  "parent_slug": null
+ },
+ {
+  "slug": "chutney",
+  "label": "Chutney",
+  "parent_slug": null
+ },
+ {
+  "slug": "chutney-soca",
+  "label": "Chutney Soca",
+  "parent_slug": "soca"
+ },
+ {
+  "slug": "cilokaq",
+  "label": "Cilokaq",
+  "parent_slug": null
+ },
+ {
+  "slug": "cinematic-classical",
+  "label": "Cinematic Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "ciranda",
+  "label": "Ciranda",
+  "parent_slug": null
+ },
+ {
+  "slug": "circus-march",
+  "label": "Circus March",
+  "parent_slug": null
+ },
+ {
+  "slug": "city-pop",
+  "label": "City Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "classic-blues",
+  "label": "Classic Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "classic-country",
+  "label": "Classic Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "classic-jazz",
+  "label": "Classic Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "classic-ragtime",
+  "label": "Classic Ragtime",
+  "parent_slug": null
+ },
+ {
+  "slug": "classic-rock",
+  "label": "Classic Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "classical",
+  "label": "Classical",
+  "parent_slug": null
+ },
+ {
+  "slug": "classical-crossover",
+  "label": "Classical Crossover",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "classical-period",
+  "label": "Classical Period",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "close-harmony",
+  "label": "Close Harmony",
+  "parent_slug": null
+ },
+ {
+  "slug": "cloud-rap",
+  "label": "Cloud Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "club",
+  "label": "Club",
+  "parent_slug": null
+ },
+ {
+  "slug": "cocktail-nation",
+  "label": "Cocktail Nation",
+  "parent_slug": null
+ },
+ {
+  "slug": "coco",
+  "label": "Coco",
+  "parent_slug": null
+ },
+ {
+  "slug": "coke-rap",
+  "label": "Coke Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "coladeira",
+  "label": "Coladeira",
+  "parent_slug": null
+ },
+ {
+  "slug": "coldwave",
+  "label": "Coldwave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "colinda",
+  "label": "Colindă",
+  "parent_slug": null
+ },
+ {
+  "slug": "colour-bass",
+  "label": "Colour Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "comedie-ballet",
+  "label": "Comédie-Ballet",
+  "parent_slug": null
+ },
+ {
+  "slug": "comedy",
+  "label": "Comedy",
+  "parent_slug": null
+ },
+ {
+  "slug": "comedy-hip-hop",
+  "label": "Comedy Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "comedy-rock",
+  "label": "Comedy Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "comfy-synth",
+  "label": "Comfy Synth",
+  "parent_slug": null
+ },
+ {
+  "slug": "compas",
+  "label": "Compas",
+  "parent_slug": null
+ },
+ {
+  "slug": "complextro",
+  "label": "Complextro",
+  "parent_slug": null
+ },
+ {
+  "slug": "concert-band",
+  "label": "Concert Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "concert-spiritual",
+  "label": "Concert Spiritual",
+  "parent_slug": null
+ },
+ {
+  "slug": "concertina-band",
+  "label": "Concertina Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "concerto",
+  "label": "Concerto",
+  "parent_slug": null
+ },
+ {
+  "slug": "concerto-for-orchestra",
+  "label": "Concerto For Orchestra",
+  "parent_slug": null
+ },
+ {
+  "slug": "concerto-grosso",
+  "label": "Concerto Grosso",
+  "parent_slug": null
+ },
+ {
+  "slug": "conducted-improvisation",
+  "label": "Conducted Improvisation",
+  "parent_slug": null
+ },
+ {
+  "slug": "conga",
+  "label": "Conga",
+  "parent_slug": null
+ },
+ {
+  "slug": "congolese-rumba",
+  "label": "Congolese Rumba",
+  "parent_slug": null
+ },
+ {
+  "slug": "conscious-hip-hop",
+  "label": "Conscious Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "contemporary-christian",
+  "label": "Contemporary Christian",
+  "parent_slug": null
+ },
+ {
+  "slug": "contemporary-classical",
+  "label": "Contemporary Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "contemporary-country",
+  "label": "Contemporary Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "contemporary-folk",
+  "label": "Contemporary Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "contemporary-gospel",
+  "label": "Contemporary Gospel",
+  "parent_slug": "gospel"
+ },
+ {
+  "slug": "contemporary-jazz",
+  "label": "Contemporary Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "contemporary-rnb",
+  "label": "Contemporary R&b",
+  "parent_slug": "rnb"
+ },
+ {
+  "slug": "contenance-angloise",
+  "label": "Contenance Angloise",
+  "parent_slug": null
+ },
+ {
+  "slug": "contra",
+  "label": "Contra",
+  "parent_slug": null
+ },
+ {
+  "slug": "cool-jazz",
+  "label": "Cool Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "coon-song",
+  "label": "Coon Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "copla",
+  "label": "Copla",
+  "parent_slug": null
+ },
+ {
+  "slug": "copla-cajamarquina",
+  "label": "Copla Cajamarquina",
+  "parent_slug": null
+ },
+ {
+  "slug": "corrido",
+  "label": "Corrido",
+  "parent_slug": null
+ },
+ {
+  "slug": "corrido-tumbado",
+  "label": "Corrido Tumbado",
+  "parent_slug": null
+ },
+ {
+  "slug": "cosmic-country",
+  "label": "Cosmic Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "country",
+  "label": "Country",
+  "parent_slug": null
+ },
+ {
+  "slug": "country-and-irish",
+  "label": "Country and Irish",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "country-blues",
+  "label": "Country Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "country-boogie",
+  "label": "Country Boogie",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "country-folk",
+  "label": "Country Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "country-gospel",
+  "label": "Country Gospel",
+  "parent_slug": "gospel"
+ },
+ {
+  "slug": "country-pop",
+  "label": "Country Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "country-rap",
+  "label": "Country Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "country-rock",
+  "label": "Country Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "country-soul",
+  "label": "Country Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "country-yodeling",
+  "label": "Country Yodeling",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "countrypolitan",
+  "label": "Countrypolitan",
+  "parent_slug": null
+ },
+ {
+  "slug": "coupe-decale",
+  "label": "Coupé-Décalé",
+  "parent_slug": null
+ },
+ {
+  "slug": "cowboy-poetry",
+  "label": "Cowboy Poetry",
+  "parent_slug": null
+ },
+ {
+  "slug": "cowpunk",
+  "label": "Cowpunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "crack-rock-steady",
+  "label": "Crack Rock Steady",
+  "parent_slug": null
+ },
+ {
+  "slug": "crime-jazz",
+  "label": "Crime Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "crossbreed",
+  "label": "Crossbreed",
+  "parent_slug": null
+ },
+ {
+  "slug": "crossover-jazz",
+  "label": "Crossover Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "crossover-prog",
+  "label": "Crossover Prog",
+  "parent_slug": null
+ },
+ {
+  "slug": "crossover-thrash",
+  "label": "Crossover Thrash",
+  "parent_slug": null
+ },
+ {
+  "slug": "cruise",
+  "label": "Cruise",
+  "parent_slug": null
+ },
+ {
+  "slug": "crunk",
+  "label": "Crunk",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "crunkcore",
+  "label": "Crunkcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "crust-punk",
+  "label": "Crust Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "csardas",
+  "label": "Csárdás",
+  "parent_slug": null
+ },
+ {
+  "slug": "cuarteto",
+  "label": "Cuarteto",
+  "parent_slug": null
+ },
+ {
+  "slug": "cubaton",
+  "label": "Cubatón",
+  "parent_slug": null
+ },
+ {
+  "slug": "cuddlecore",
+  "label": "Cuddlecore",
+  "parent_slug": null
+ },
+ {
+  "slug": "cueca",
+  "label": "Cueca",
+  "parent_slug": null
+ },
+ {
+  "slug": "cueca-brava",
+  "label": "Cueca Brava",
+  "parent_slug": null
+ },
+ {
+  "slug": "cumbia",
+  "label": "Cumbia",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "cumbia-amazonica",
+  "label": "Cumbia Amazónica",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-argentina",
+  "label": "Cumbia Argentina",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-chilena",
+  "label": "Cumbia Chilena",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-colombiana",
+  "label": "Cumbia Colombiana",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-mexicana",
+  "label": "Cumbia Mexicana",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-nortena-mexicana",
+  "label": "Cumbia Norteña Mexicana",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-nortena-peruana",
+  "label": "Cumbia Norteña Peruana",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-peruana",
+  "label": "Cumbia Peruana",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-pop",
+  "label": "Cumbia Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "cumbia-rebajada",
+  "label": "Cumbia Rebajada",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-salvadorena",
+  "label": "Cumbia Salvadoreña",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-santafesina",
+  "label": "Cumbia Santafesina",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-sonidera",
+  "label": "Cumbia Sonidera",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-surena-peruana",
+  "label": "Cumbia Sureña Peruana",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-turra",
+  "label": "Cumbia Turra",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbia-villera",
+  "label": "Cumbia Villera",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "cumbiaton",
+  "label": "Cumbiatón",
+  "parent_slug": null
+ },
+ {
+  "slug": "cuple",
+  "label": "Cuplé",
+  "parent_slug": null
+ },
+ {
+  "slug": "currulao",
+  "label": "Currulao",
+  "parent_slug": null
+ },
+ {
+  "slug": "cururu",
+  "label": "Cururu",
+  "parent_slug": null
+ },
+ {
+  "slug": "cyber-metal",
+  "label": "Cyber Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "cybergrind",
+  "label": "Cybergrind",
+  "parent_slug": null
+ },
+ {
+  "slug": "cyberpunk",
+  "label": "Cyberpunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "d-beat",
+  "label": "D-Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "dabke",
+  "label": "Dabke",
+  "parent_slug": null
+ },
+ {
+  "slug": "dance",
+  "label": "Dance",
+  "parent_slug": null
+ },
+ {
+  "slug": "dance-pop",
+  "label": "Dance-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "dance-punk",
+  "label": "Dance-Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "dance-punk-revival",
+  "label": "Dance-Punk Revival",
+  "parent_slug": null
+ },
+ {
+  "slug": "dance-rock",
+  "label": "Dance-Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "dancefloor-drum-and-bass",
+  "label": "Dancefloor Drum and Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "dancehall",
+  "label": "Dancehall",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "dangak",
+  "label": "Dangak",
+  "parent_slug": null
+ },
+ {
+  "slug": "dangdut",
+  "label": "Dangdut",
+  "parent_slug": null
+ },
+ {
+  "slug": "danmono",
+  "label": "Danmono",
+  "parent_slug": null
+ },
+ {
+  "slug": "dansband",
+  "label": "Dansband",
+  "parent_slug": null
+ },
+ {
+  "slug": "dansktop",
+  "label": "Dansktop",
+  "parent_slug": null
+ },
+ {
+  "slug": "danzon",
+  "label": "Danzón",
+  "parent_slug": null
+ },
+ {
+  "slug": "dariacore",
+  "label": "Dariacore",
+  "parent_slug": null
+ },
+ {
+  "slug": "dark-ambient",
+  "label": "Dark Ambient",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "dark-cabaret",
+  "label": "Dark Cabaret",
+  "parent_slug": null
+ },
+ {
+  "slug": "dark-disco",
+  "label": "Dark Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "dark-electro",
+  "label": "Dark Electro",
+  "parent_slug": "electro"
+ },
+ {
+  "slug": "dark-folk",
+  "label": "Dark Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "dark-garage",
+  "label": "Dark Garage",
+  "parent_slug": "uk-garage"
+ },
+ {
+  "slug": "dark-jazz",
+  "label": "Dark Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "dark-plugg",
+  "label": "Dark Plugg",
+  "parent_slug": null
+ },
+ {
+  "slug": "dark-psytrance",
+  "label": "Dark Psytrance",
+  "parent_slug": null
+ },
+ {
+  "slug": "dark-wave",
+  "label": "Dark Wave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "darkcore",
+  "label": "Darkcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "darkcore-edm",
+  "label": "Darkcore EDM",
+  "parent_slug": null
+ },
+ {
+  "slug": "darkstep",
+  "label": "Darkstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "darksynth",
+  "label": "Darksynth",
+  "parent_slug": null
+ },
+ {
+  "slug": "data-sonification",
+  "label": "Data Sonification",
+  "parent_slug": null
+ },
+ {
+  "slug": "death-doom-metal",
+  "label": "Death-Doom Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "death-industrial",
+  "label": "Death Industrial",
+  "parent_slug": "industrial"
+ },
+ {
+  "slug": "death-metal",
+  "label": "Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "death-n-roll",
+  "label": "Death 'n' Roll",
+  "parent_slug": null
+ },
+ {
+  "slug": "deathchant-hardcore",
+  "label": "Deathchant Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "deathcore",
+  "label": "Deathcore",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "deathgrind",
+  "label": "Deathgrind",
+  "parent_slug": null
+ },
+ {
+  "slug": "deathrock",
+  "label": "Deathrock",
+  "parent_slug": null
+ },
+ {
+  "slug": "deathstep",
+  "label": "Deathstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "dechovka",
+  "label": "Dechovka",
+  "parent_slug": null
+ },
+ {
+  "slug": "deconstructed-club",
+  "label": "Deconstructed Club",
+  "parent_slug": null
+ },
+ {
+  "slug": "deejay",
+  "label": "Deejay",
+  "parent_slug": null
+ },
+ {
+  "slug": "deep-drum-and-bass",
+  "label": "Deep Drum and Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "deep-funk",
+  "label": "Deep Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "deep-house",
+  "label": "Deep House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "deep-soul",
+  "label": "Deep Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "deep-tech",
+  "label": "Deep Tech",
+  "parent_slug": null
+ },
+ {
+  "slug": "deep-techno",
+  "label": "Deep Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "delta-blues",
+  "label": "Delta Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "dembow",
+  "label": "Dembow",
+  "parent_slug": null
+ },
+ {
+  "slug": "demostyle",
+  "label": "Demostyle",
+  "parent_slug": null
+ },
+ {
+  "slug": "dennery-segment",
+  "label": "Dennery Segment",
+  "parent_slug": null
+ },
+ {
+  "slug": "denpa",
+  "label": "Denpa",
+  "parent_slug": null
+ },
+ {
+  "slug": "depressive-black-metal",
+  "label": "Depressive Black Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "descarga",
+  "label": "Descarga",
+  "parent_slug": null
+ },
+ {
+  "slug": "desert-blues",
+  "label": "Desert Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "desert-rock",
+  "label": "Desert Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "desgarrada",
+  "label": "Desgarrada",
+  "parent_slug": null
+ },
+ {
+  "slug": "detroit-techno",
+  "label": "Detroit Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "detroit-trap",
+  "label": "Detroit Trap",
+  "parent_slug": null
+ },
+ {
+  "slug": "dhaanto",
+  "label": "Dhaanto",
+  "parent_slug": null
+ },
+ {
+  "slug": "dhol-tasha",
+  "label": "Dhol Tasha",
+  "parent_slug": null
+ },
+ {
+  "slug": "dhrupad",
+  "label": "Dhrupad",
+  "parent_slug": null
+ },
+ {
+  "slug": "digicore",
+  "label": "Digicore",
+  "parent_slug": null
+ },
+ {
+  "slug": "digital-cumbia",
+  "label": "Digital Cumbia",
+  "parent_slug": "cumbia"
+ },
+ {
+  "slug": "digital-fusion",
+  "label": "Digital Fusion",
+  "parent_slug": null
+ },
+ {
+  "slug": "digital-hardcore",
+  "label": "Digital Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "dikir-barat",
+  "label": "Dikir Barat",
+  "parent_slug": null
+ },
+ {
+  "slug": "dimotiko",
+  "label": "Dimotiko",
+  "parent_slug": null
+ },
+ {
+  "slug": "dirty-south",
+  "label": "Dirty South",
+  "parent_slug": null
+ },
+ {
+  "slug": "disco",
+  "label": "Disco",
+  "parent_slug": null
+ },
+ {
+  "slug": "disco-polo",
+  "label": "Disco Polo",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "dissonant-black-metal",
+  "label": "Dissonant Black Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "dissonant-death-metal",
+  "label": "Dissonant Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "diva-house",
+  "label": "Diva House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "divertissement",
+  "label": "Divertissement",
+  "parent_slug": null
+ },
+ {
+  "slug": "dixieland",
+  "label": "Dixieland",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "djanba",
+  "label": "Djanba",
+  "parent_slug": null
+ },
+ {
+  "slug": "djent",
+  "label": "Djent",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "doble-paso",
+  "label": "Doble Paso",
+  "parent_slug": null
+ },
+ {
+  "slug": "dobrado",
+  "label": "Dobrado",
+  "parent_slug": null
+ },
+ {
+  "slug": "dohori",
+  "label": "Dohori",
+  "parent_slug": null
+ },
+ {
+  "slug": "doina",
+  "label": "Doina",
+  "parent_slug": null
+ },
+ {
+  "slug": "dondang-sayang",
+  "label": "Dondang Sayang",
+  "parent_slug": null
+ },
+ {
+  "slug": "dongjing",
+  "label": "Dongjing",
+  "parent_slug": null
+ },
+ {
+  "slug": "donk",
+  "label": "Donk",
+  "parent_slug": null
+ },
+ {
+  "slug": "donosti-sound",
+  "label": "Donosti Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "doo-wop",
+  "label": "Doo-Wop",
+  "parent_slug": null
+ },
+ {
+  "slug": "doom-metal",
+  "label": "Doom Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "doomcore",
+  "label": "Doomcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "doomgaze",
+  "label": "Doomgaze",
+  "parent_slug": null
+ },
+ {
+  "slug": "doskpop",
+  "label": "Doskpop",
+  "parent_slug": null
+ },
+ {
+  "slug": "downtempo",
+  "label": "Downtempo",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "downtempo-deathcore",
+  "label": "Downtempo Deathcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "dream-pop",
+  "label": "Dream Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "dream-trance",
+  "label": "Dream Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "dreampunk",
+  "label": "Dreampunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "dreamwave",
+  "label": "Dreamwave",
+  "parent_slug": null
+ },
+ {
+  "slug": "drift-phonk",
+  "label": "Drift Phonk",
+  "parent_slug": null
+ },
+ {
+  "slug": "drill",
+  "label": "Drill",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "drill-and-bass",
+  "label": "Drill and Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "drinking-song",
+  "label": "Drinking Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "drone",
+  "label": "Drone",
+  "parent_slug": "experimental"
+ },
+ {
+  "slug": "drone-metal",
+  "label": "Drone Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "drum-and-bass",
+  "label": "Drum and Bass",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "drum-and-bugle-corps",
+  "label": "Drum and Bugle Corps",
+  "parent_slug": null
+ },
+ {
+  "slug": "drumfunk",
+  "label": "Drumfunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "drumless-hip-hop",
+  "label": "Drumless Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "drumline",
+  "label": "Drumline",
+  "parent_slug": null
+ },
+ {
+  "slug": "drumstep",
+  "label": "Drumstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "dub",
+  "label": "Dub",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "dub-poetry",
+  "label": "Dub Poetry",
+  "parent_slug": "dub"
+ },
+ {
+  "slug": "dub-techno",
+  "label": "Dub Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "dubstep",
+  "label": "Dubstep",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "dubstyle",
+  "label": "Dubstyle",
+  "parent_slug": null
+ },
+ {
+  "slug": "dubwise",
+  "label": "Dubwise",
+  "parent_slug": null
+ },
+ {
+  "slug": "duma",
+  "label": "Duma",
+  "parent_slug": null
+ },
+ {
+  "slug": "dunedin-sound",
+  "label": "Dunedin Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "dungeon-chip",
+  "label": "Dungeon Chip",
+  "parent_slug": null
+ },
+ {
+  "slug": "dungeon-rap",
+  "label": "Dungeon Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "dungeon-sound",
+  "label": "Dungeon Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "dungeon-synth",
+  "label": "Dungeon Synth",
+  "parent_slug": null
+ },
+ {
+  "slug": "duranguense",
+  "label": "Duranguense",
+  "parent_slug": null
+ },
+ {
+  "slug": "dutch-house",
+  "label": "Dutch House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "eai",
+  "label": "EAI",
+  "parent_slug": null
+ },
+ {
+  "slug": "early-hardstyle",
+  "label": "Early Hardstyle",
+  "parent_slug": "hardstyle"
+ },
+ {
+  "slug": "east-coast-hip-hop",
+  "label": "East Coast Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "eastern-style-polka",
+  "label": "Eastern-Style Polka",
+  "parent_slug": null
+ },
+ {
+  "slug": "easy-listening",
+  "label": "Easy Listening",
+  "parent_slug": null
+ },
+ {
+  "slug": "easycore",
+  "label": "Easycore",
+  "parent_slug": null
+ },
+ {
+  "slug": "ebm",
+  "label": "EBM",
+  "parent_slug": null
+ },
+ {
+  "slug": "eccojams",
+  "label": "Eccojams",
+  "parent_slug": null
+ },
+ {
+  "slug": "edm",
+  "label": "EDM",
+  "parent_slug": null
+ },
+ {
+  "slug": "electric-blues",
+  "label": "Electric Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "electric-texas-blues",
+  "label": "Electric Texas Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "electro",
+  "label": "Electro",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "electro-disco",
+  "label": "Electro-Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "electro-funk",
+  "label": "Electro-Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "electro-hop",
+  "label": "Electro Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "electro-house",
+  "label": "Electro House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "electro-industrial",
+  "label": "Electro-Industrial",
+  "parent_slug": "industrial"
+ },
+ {
+  "slug": "electro-latino",
+  "label": "Electro Latino",
+  "parent_slug": "electro"
+ },
+ {
+  "slug": "electro-swing",
+  "label": "Electro Swing",
+  "parent_slug": "swing"
+ },
+ {
+  "slug": "electro-trance",
+  "label": "Electro Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "electroacoustic",
+  "label": "Electroacoustic",
+  "parent_slug": null
+ },
+ {
+  "slug": "electroclash",
+  "label": "Electroclash",
+  "parent_slug": null
+ },
+ {
+  "slug": "electronic",
+  "label": "Electronic",
+  "parent_slug": null
+ },
+ {
+  "slug": "electronic-rock",
+  "label": "Electronic Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "electronica",
+  "label": "Electronica",
+  "parent_slug": null
+ },
+ {
+  "slug": "electronicore",
+  "label": "Electronicore",
+  "parent_slug": null
+ },
+ {
+  "slug": "electropop",
+  "label": "Electropop",
+  "parent_slug": null
+ },
+ {
+  "slug": "electropunk",
+  "label": "Electropunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "electrotango",
+  "label": "Electrotango",
+  "parent_slug": null
+ },
+ {
+  "slug": "eleki",
+  "label": "Eleki",
+  "parent_slug": null
+ },
+ {
+  "slug": "eletrofunk",
+  "label": "Eletrofunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "embolada",
+  "label": "Embolada",
+  "parent_slug": "repente"
+ },
+ {
+  "slug": "emo",
+  "label": "Emo",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "emo-pop",
+  "label": "Emo Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "emo-rap",
+  "label": "Emo Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "emocore",
+  "label": "Emocore",
+  "parent_slug": null
+ },
+ {
+  "slug": "emoviolence",
+  "label": "Emoviolence",
+  "parent_slug": null
+ },
+ {
+  "slug": "english-pastoral-school",
+  "label": "English Pastoral School",
+  "parent_slug": null
+ },
+ {
+  "slug": "enka",
+  "label": "Enka",
+  "parent_slug": null
+ },
+ {
+  "slug": "entekhno",
+  "label": "Éntekhno",
+  "parent_slug": null
+ },
+ {
+  "slug": "epic-collage",
+  "label": "Epic Collage",
+  "parent_slug": null
+ },
+ {
+  "slug": "epic-doom-metal",
+  "label": "Epic Doom Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "epic-house",
+  "label": "Epic House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "estrada",
+  "label": "Estrada",
+  "parent_slug": null
+ },
+ {
+  "slug": "ethereal-wave",
+  "label": "Ethereal Wave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "ethio-jazz",
+  "label": "Ethio-Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "etude",
+  "label": "Étude",
+  "parent_slug": null
+ },
+ {
+  "slug": "euphoric-hardstyle",
+  "label": "Euphoric Hardstyle",
+  "parent_slug": "hardstyle"
+ },
+ {
+  "slug": "euro-disco",
+  "label": "Euro-Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "euro-house",
+  "label": "Euro House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "euro-trance",
+  "label": "Euro-Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "eurobeat",
+  "label": "Eurobeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "eurodance",
+  "label": "EURODANCE",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "europop",
+  "label": "Europop",
+  "parent_slug": null
+ },
+ {
+  "slug": "euskal-kantagintza-berria",
+  "label": "Euskal Kantagintza Berria",
+  "parent_slug": null
+ },
+ {
+  "slug": "exotica",
+  "label": "Exotica",
+  "parent_slug": null
+ },
+ {
+  "slug": "experimental",
+  "label": "Experimental",
+  "parent_slug": null
+ },
+ {
+  "slug": "experimental-big-band",
+  "label": "Experimental Big Band",
+  "parent_slug": "experimental"
+ },
+ {
+  "slug": "experimental-electronic",
+  "label": "Experimental Electronic",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "experimental-hip-hop",
+  "label": "Experimental Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "experimental-rock",
+  "label": "Experimental Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "expressionism",
+  "label": "Expressionism",
+  "parent_slug": null
+ },
+ {
+  "slug": "extratone",
+  "label": "Extratone",
+  "parent_slug": null
+ },
+ {
+  "slug": "fado",
+  "label": "Fado",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "fado-de-coimbra",
+  "label": "Fado de Coimbra",
+  "parent_slug": "fado"
+ },
+ {
+  "slug": "fairy-tale",
+  "label": "Fairy Tale",
+  "parent_slug": null
+ },
+ {
+  "slug": "fakaseasea",
+  "label": "Fakaseasea",
+  "parent_slug": null
+ },
+ {
+  "slug": "falak",
+  "label": "Falak",
+  "parent_slug": null
+ },
+ {
+  "slug": "famo",
+  "label": "Famo",
+  "parent_slug": null
+ },
+ {
+  "slug": "fandango",
+  "label": "Fandango",
+  "parent_slug": null
+ },
+ {
+  "slug": "fandango-caicara",
+  "label": "Fandango Caiçara",
+  "parent_slug": null
+ },
+ {
+  "slug": "fantasia",
+  "label": "Fantasia",
+  "parent_slug": null
+ },
+ {
+  "slug": "fantezi",
+  "label": "Fantezi",
+  "parent_slug": null
+ },
+ {
+  "slug": "festejo",
+  "label": "Festejo",
+  "parent_slug": null
+ },
+ {
+  "slug": "festival-progressive-house",
+  "label": "Festival Progressive House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "festival-trap",
+  "label": "Festival Trap",
+  "parent_slug": null
+ },
+ {
+  "slug": "fidget-house",
+  "label": "Fidget House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "field-recording",
+  "label": "Field Recording",
+  "parent_slug": null
+ },
+ {
+  "slug": "fife-and-drum",
+  "label": "Fife and Drum",
+  "parent_slug": null
+ },
+ {
+  "slug": "fife-and-drum-blues",
+  "label": "Fife and Drum Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "fijiri",
+  "label": "Fijiri",
+  "parent_slug": null
+ },
+ {
+  "slug": "filin",
+  "label": "Filin",
+  "parent_slug": null
+ },
+ {
+  "slug": "filipino-rondalla",
+  "label": "Filipino Rondalla",
+  "parent_slug": null
+ },
+ {
+  "slug": "filk",
+  "label": "Filk",
+  "parent_slug": null
+ },
+ {
+  "slug": "filmi",
+  "label": "Filmi",
+  "parent_slug": null
+ },
+ {
+  "slug": "finnish-tango",
+  "label": "Finnish Tango",
+  "parent_slug": "tango"
+ },
+ {
+  "slug": "flamenco",
+  "label": "Flamenco",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "flamenco-jazz",
+  "label": "Flamenco Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "flamenco-pop",
+  "label": "Flamenco Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "flashcore",
+  "label": "Flashcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "flex-dance-music",
+  "label": "Flex Dance Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "florida-breaks",
+  "label": "Florida Breaks",
+  "parent_slug": "breakbeat"
+ },
+ {
+  "slug": "fm-synthesis",
+  "label": "Fm Synthesis",
+  "parent_slug": null
+ },
+ {
+  "slug": "folk",
+  "label": "Folk",
+  "parent_slug": null
+ },
+ {
+  "slug": "folk-metal",
+  "label": "Folk Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "folk-pop",
+  "label": "Folk Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "folk-punk",
+  "label": "Folk Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "folk-rock",
+  "label": "Folk Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "folkhop",
+  "label": "Folkhop",
+  "parent_slug": null
+ },
+ {
+  "slug": "folktronica",
+  "label": "Folktronica",
+  "parent_slug": null
+ },
+ {
+  "slug": "fon-leb",
+  "label": "Fon Leb",
+  "parent_slug": null
+ },
+ {
+  "slug": "football-chant",
+  "label": "Football Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "footwork",
+  "label": "Footwork",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "footwork-jungle",
+  "label": "Footwork Jungle",
+  "parent_slug": "jungle"
+ },
+ {
+  "slug": "forest-psytrance",
+  "label": "Forest Psytrance",
+  "parent_slug": null
+ },
+ {
+  "slug": "forro",
+  "label": "Forró",
+  "parent_slug": null
+ },
+ {
+  "slug": "forro-de-favela",
+  "label": "Forró de Favela",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "forro-eletronico",
+  "label": "Forró Eletrônico",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "forro-universitario",
+  "label": "Forró Universitário",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "frapcore",
+  "label": "Frapcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "frat-rap",
+  "label": "Frat Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "frat-rock",
+  "label": "Frat Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "freak-folk",
+  "label": "Freak Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "freakbeat",
+  "label": "Freakbeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "free-car-music",
+  "label": "Free Car Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "free-folk",
+  "label": "Free Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "free-funk",
+  "label": "Free Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "free-improvisation",
+  "label": "Free Improvisation",
+  "parent_slug": null
+ },
+ {
+  "slug": "free-jazz",
+  "label": "Free Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "free-tekno",
+  "label": "Free Tekno",
+  "parent_slug": null
+ },
+ {
+  "slug": "freeform-hardcore",
+  "label": "Freeform Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "freestyle",
+  "label": "Freestyle",
+  "parent_slug": null
+ },
+ {
+  "slug": "french-electro",
+  "label": "French Electro",
+  "parent_slug": "electro"
+ },
+ {
+  "slug": "french-house",
+  "label": "French House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "frenchcore",
+  "label": "Frenchcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "frevo",
+  "label": "Frevo",
+  "parent_slug": null
+ },
+ {
+  "slug": "frevo-cancao",
+  "label": "Frevo-Canção",
+  "parent_slug": "frevo"
+ },
+ {
+  "slug": "frevo-de-bloco",
+  "label": "Frevo de Bloco",
+  "parent_slug": "frevo"
+ },
+ {
+  "slug": "frevo-de-rua",
+  "label": "Frevo de Rua",
+  "parent_slug": "frevo"
+ },
+ {
+  "slug": "frevo-eletrico",
+  "label": "Frevo Elétrico",
+  "parent_slug": "frevo"
+ },
+ {
+  "slug": "fugue",
+  "label": "Fugue",
+  "parent_slug": null
+ },
+ {
+  "slug": "fuji",
+  "label": "Fuji",
+  "parent_slug": null
+ },
+ {
+  "slug": "full-on",
+  "label": "Full-On",
+  "parent_slug": null
+ },
+ {
+  "slug": "funana",
+  "label": "Funaná",
+  "parent_slug": null
+ },
+ {
+  "slug": "funeral-doom-metal",
+  "label": "Funeral Doom Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "funeral-march",
+  "label": "Funeral March",
+  "parent_slug": null
+ },
+ {
+  "slug": "fungi",
+  "label": "Fungi",
+  "parent_slug": null
+ },
+ {
+  "slug": "funk",
+  "label": "Funk",
+  "parent_slug": null
+ },
+ {
+  "slug": "funk-automotivo",
+  "label": "Funk Automotivo",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "funk-brasileiro",
+  "label": "Funk Brasileiro",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "funk-carioca",
+  "label": "Funk Carioca",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "funk-consciente",
+  "label": "Funk Consciente",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "funk-de-bh",
+  "label": "Funk de Bh",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "funk-mandelao",
+  "label": "Funk Mandelão",
+  "parent_slug": "funk-carioca"
+ },
+ {
+  "slug": "funk-melody",
+  "label": "Funk Melody",
+  "parent_slug": "funk-carioca"
+ },
+ {
+  "slug": "funk-metal",
+  "label": "Funk Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "funk-ostentacao",
+  "label": "Funk Ostentação",
+  "parent_slug": "funk-carioca"
+ },
+ {
+  "slug": "funk-proibidao",
+  "label": "Funk Proibidão",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "funk-rock",
+  "label": "Funk Rock",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "funknejo",
+  "label": "Funknejo",
+  "parent_slug": null
+ },
+ {
+  "slug": "funkot",
+  "label": "Funkot",
+  "parent_slug": null
+ },
+ {
+  "slug": "funktronica",
+  "label": "Funktronica",
+  "parent_slug": null
+ },
+ {
+  "slug": "funky-breaks",
+  "label": "Funky Breaks",
+  "parent_slug": "breakbeat"
+ },
+ {
+  "slug": "funky-house",
+  "label": "Funky House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "fusion-gugak",
+  "label": "Fusion Gugak",
+  "parent_slug": null
+ },
+ {
+  "slug": "future-bass",
+  "label": "Future Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "future-bounce",
+  "label": "Future Bounce",
+  "parent_slug": null
+ },
+ {
+  "slug": "future-core",
+  "label": "Future Core",
+  "parent_slug": null
+ },
+ {
+  "slug": "future-funk",
+  "label": "Future Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "future-garage",
+  "label": "Future Garage",
+  "parent_slug": "uk-garage"
+ },
+ {
+  "slug": "future-house",
+  "label": "Future House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "future-rave",
+  "label": "Future Rave",
+  "parent_slug": null
+ },
+ {
+  "slug": "future-riddim",
+  "label": "Future Riddim",
+  "parent_slug": null
+ },
+ {
+  "slug": "futurepop",
+  "label": "Futurepop",
+  "parent_slug": null
+ },
+ {
+  "slug": "futurism",
+  "label": "Futurism",
+  "parent_slug": null
+ },
+ {
+  "slug": "g-ana",
+  "label": "Għana",
+  "parent_slug": null
+ },
+ {
+  "slug": "g-funk",
+  "label": "G-Funk",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "g-house",
+  "label": "G-House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "gaana",
+  "label": "Gaana",
+  "parent_slug": null
+ },
+ {
+  "slug": "gabber",
+  "label": "Gabber",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "gaelic-psalm-singing",
+  "label": "Gaelic Psalm Singing",
+  "parent_slug": null
+ },
+ {
+  "slug": "gagaku",
+  "label": "Gagaku",
+  "parent_slug": null
+ },
+ {
+  "slug": "gagok",
+  "label": "Gagok",
+  "parent_slug": null
+ },
+ {
+  "slug": "gaita-zuliana",
+  "label": "Gaita Zuliana",
+  "parent_slug": null
+ },
+ {
+  "slug": "gallican-chant",
+  "label": "Gallican Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "gambang-kromong",
+  "label": "Gambang Kromong",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan",
+  "label": "Gamelan",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-angklung",
+  "label": "Gamelan Angklung",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-beleganjur",
+  "label": "Gamelan Beleganjur",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-degung",
+  "label": "Gamelan Degung",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-gender-wayang",
+  "label": "Gamelan Gender Wayang",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-gong-gede",
+  "label": "Gamelan Gong Gede",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-gong-kebyar",
+  "label": "Gamelan Gong Kebyar",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-jegog",
+  "label": "Gamelan Jegog",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-joged-bumbung",
+  "label": "Gamelan Joged Bumbung",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-salendro",
+  "label": "Gamelan Salendro",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-sekaten",
+  "label": "Gamelan Sekaten",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-selunding",
+  "label": "Gamelan Selunding",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-semar-pegulingan",
+  "label": "Gamelan Semar Pegulingan",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-siteran",
+  "label": "Gamelan Siteran",
+  "parent_slug": null
+ },
+ {
+  "slug": "gamelan-surakarta",
+  "label": "Gamelan Surakarta",
+  "parent_slug": null
+ },
+ {
+  "slug": "gangsta-rap",
+  "label": "Gangsta Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "garage-house",
+  "label": "Garage House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "garage-psych",
+  "label": "Garage Psych",
+  "parent_slug": null
+ },
+ {
+  "slug": "garage-punk",
+  "label": "Garage Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "garage-rock",
+  "label": "Garage Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "garage-rock-revival",
+  "label": "Garage Rock Revival",
+  "parent_slug": null
+ },
+ {
+  "slug": "garba",
+  "label": "Garba",
+  "parent_slug": null
+ },
+ {
+  "slug": "geek-rock",
+  "label": "Geek Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "genero-chico",
+  "label": "Género Chico",
+  "parent_slug": null
+ },
+ {
+  "slug": "genero-grande",
+  "label": "Género Grande",
+  "parent_slug": null
+ },
+ {
+  "slug": "genge",
+  "label": "Genge",
+  "parent_slug": null
+ },
+ {
+  "slug": "gengetone",
+  "label": "Gengetone",
+  "parent_slug": null
+ },
+ {
+  "slug": "ghazal",
+  "label": "Ghazal",
+  "parent_slug": null
+ },
+ {
+  "slug": "ghetto-funk",
+  "label": "Ghetto Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "ghetto-house",
+  "label": "Ghetto House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "ghettotech",
+  "label": "Ghettotech",
+  "parent_slug": null
+ },
+ {
+  "slug": "ginan",
+  "label": "Ginan",
+  "parent_slug": null
+ },
+ {
+  "slug": "glam",
+  "label": "Glam",
+  "parent_slug": null
+ },
+ {
+  "slug": "glam-metal",
+  "label": "Glam Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "glam-punk",
+  "label": "Glam Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "glam-rock",
+  "label": "Glam Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "glitch",
+  "label": "Glitch",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "glitch-hop",
+  "label": "Glitch Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "glitch-hop-edm",
+  "label": "Glitch Hop EDM",
+  "parent_slug": null
+ },
+ {
+  "slug": "glitch-pop",
+  "label": "Glitch Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "gnawa",
+  "label": "Gnawa",
+  "parent_slug": null
+ },
+ {
+  "slug": "go-go",
+  "label": "Go-Go",
+  "parent_slug": null
+ },
+ {
+  "slug": "goa-trance",
+  "label": "Goa Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "gommance",
+  "label": "Gommance",
+  "parent_slug": null
+ },
+ {
+  "slug": "gondang",
+  "label": "Gondang",
+  "parent_slug": null
+ },
+ {
+  "slug": "goombay",
+  "label": "Goombay",
+  "parent_slug": null
+ },
+ {
+  "slug": "goregrind",
+  "label": "Goregrind",
+  "parent_slug": null
+ },
+ {
+  "slug": "gorenoise",
+  "label": "Gorenoise",
+  "parent_slug": null
+ },
+ {
+  "slug": "gospel",
+  "label": "Gospel",
+  "parent_slug": null
+ },
+ {
+  "slug": "gospel-house",
+  "label": "Gospel House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "gospel-hymn",
+  "label": "Gospel Hymn",
+  "parent_slug": "gospel"
+ },
+ {
+  "slug": "gospel-reggae",
+  "label": "Gospel Reggae",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "gothic",
+  "label": "Gothic",
+  "parent_slug": null
+ },
+ {
+  "slug": "gothic-country",
+  "label": "Gothic Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "gothic-metal",
+  "label": "Gothic Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "gothic-rock",
+  "label": "Gothic Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "gqom",
+  "label": "Gqom",
+  "parent_slug": null
+ },
+ {
+  "slug": "grand-opera",
+  "label": "Grand Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "graphical-sound",
+  "label": "Graphical Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "grebo",
+  "label": "Grebo",
+  "parent_slug": null
+ },
+ {
+  "slug": "gregorian-chant",
+  "label": "Gregorian Chant",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "grime",
+  "label": "Grime",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "grindcore",
+  "label": "Grindcore",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "griot",
+  "label": "Griot",
+  "parent_slug": null
+ },
+ {
+  "slug": "groove-metal",
+  "label": "Groove Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "group-sounds",
+  "label": "Group Sounds",
+  "parent_slug": null
+ },
+ {
+  "slug": "grunge",
+  "label": "Grunge",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "grupera",
+  "label": "Grupera",
+  "parent_slug": null
+ },
+ {
+  "slug": "gstanzl",
+  "label": "Gstanzl",
+  "parent_slug": null
+ },
+ {
+  "slug": "guaguanco",
+  "label": "Guaguancó",
+  "parent_slug": null
+ },
+ {
+  "slug": "guajira",
+  "label": "Guajira",
+  "parent_slug": null
+ },
+ {
+  "slug": "guangdong-yinyue",
+  "label": "Guangdong Yinyue",
+  "parent_slug": null
+ },
+ {
+  "slug": "guaracha",
+  "label": "Guaracha",
+  "parent_slug": null
+ },
+ {
+  "slug": "guaracha-edm",
+  "label": "Guaracha EDM",
+  "parent_slug": null
+ },
+ {
+  "slug": "guaracha-santiaguena",
+  "label": "Guaracha Santiagueña",
+  "parent_slug": null
+ },
+ {
+  "slug": "guarania",
+  "label": "Guarania",
+  "parent_slug": null
+ },
+ {
+  "slug": "guayla",
+  "label": "Guayla",
+  "parent_slug": null
+ },
+ {
+  "slug": "gufeng",
+  "label": "Gufeng",
+  "parent_slug": null
+ },
+ {
+  "slug": "guggenmusik",
+  "label": "Guggenmusik",
+  "parent_slug": null
+ },
+ {
+  "slug": "guided-meditation",
+  "label": "Guided Meditation",
+  "parent_slug": null
+ },
+ {
+  "slug": "guitarrada",
+  "label": "Guitarrada",
+  "parent_slug": "brega"
+ },
+ {
+  "slug": "gumbe",
+  "label": "Gumbe",
+  "parent_slug": null
+ },
+ {
+  "slug": "guoyue",
+  "label": "Guoyue",
+  "parent_slug": null
+ },
+ {
+  "slug": "gwo-ka",
+  "label": "Gwo Ka",
+  "parent_slug": null
+ },
+ {
+  "slug": "gypsy-jazz",
+  "label": "Gypsy Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "gypsy-punk",
+  "label": "Gypsy Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "habanera",
+  "label": "Habanera",
+  "parent_slug": null
+ },
+ {
+  "slug": "haitian-vodou-drumming",
+  "label": "Haitian Vodou Drumming",
+  "parent_slug": null
+ },
+ {
+  "slug": "halftime",
+  "label": "Halftime",
+  "parent_slug": null
+ },
+ {
+  "slug": "hambo",
+  "label": "Hambo",
+  "parent_slug": null
+ },
+ {
+  "slug": "hamburger-schule",
+  "label": "Hamburger Schule",
+  "parent_slug": null
+ },
+ {
+  "slug": "hands-up",
+  "label": "Hands Up",
+  "parent_slug": null
+ },
+ {
+  "slug": "hanmai",
+  "label": "Hanmai",
+  "parent_slug": null
+ },
+ {
+  "slug": "haozi",
+  "label": "Haozi",
+  "parent_slug": null
+ },
+ {
+  "slug": "hapa-haole",
+  "label": "Hapa Haole",
+  "parent_slug": null
+ },
+ {
+  "slug": "happy-hardcore",
+  "label": "Happy Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "harana",
+  "label": "Harana",
+  "parent_slug": null
+ },
+ {
+  "slug": "harawi",
+  "label": "Harawi",
+  "parent_slug": null
+ },
+ {
+  "slug": "hard-beat",
+  "label": "Hard Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "hard-bop",
+  "label": "Hard Bop",
+  "parent_slug": "bebop"
+ },
+ {
+  "slug": "hard-drum",
+  "label": "Hard Drum",
+  "parent_slug": null
+ },
+ {
+  "slug": "hard-house",
+  "label": "Hard House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "hard-nrg",
+  "label": "Hard Nrg",
+  "parent_slug": null
+ },
+ {
+  "slug": "hard-renaissance",
+  "label": "Hard Renaissance",
+  "parent_slug": null
+ },
+ {
+  "slug": "hard-rock",
+  "label": "Hard Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "hard-techno",
+  "label": "Hard Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "hard-trance",
+  "label": "Hard Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "hard-trap",
+  "label": "Hard Trap",
+  "parent_slug": null
+ },
+ {
+  "slug": "hardbag",
+  "label": "Hardbag",
+  "parent_slug": null
+ },
+ {
+  "slug": "hardbass",
+  "label": "Hardbass",
+  "parent_slug": null
+ },
+ {
+  "slug": "hardcore-breaks",
+  "label": "Hardcore Breaks",
+  "parent_slug": "breakbeat"
+ },
+ {
+  "slug": "hardcore-hip-hop",
+  "label": "Hardcore Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "hardcore-punk",
+  "label": "Hardcore Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "hardcore-techno",
+  "label": "Hardcore Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "hardgroove-techno",
+  "label": "Hardgroove Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "hardstep",
+  "label": "Hardstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "hardstyle",
+  "label": "Hardstyle",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "hardtekk",
+  "label": "Hardtekk",
+  "parent_slug": null
+ },
+ {
+  "slug": "hardvapour",
+  "label": "Hardvapour",
+  "parent_slug": null
+ },
+ {
+  "slug": "hardwave",
+  "label": "Hardwave",
+  "parent_slug": null
+ },
+ {
+  "slug": "harsh-noise",
+  "label": "Harsh Noise",
+  "parent_slug": "noise"
+ },
+ {
+  "slug": "harsh-noise-wall",
+  "label": "Harsh Noise Wall",
+  "parent_slug": null
+ },
+ {
+  "slug": "hat-tuong",
+  "label": "Hát Tuồng",
+  "parent_slug": null
+ },
+ {
+  "slug": "hauntology",
+  "label": "Hauntology",
+  "parent_slug": null
+ },
+ {
+  "slug": "heartland-rock",
+  "label": "Heartland Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "heaven-trap",
+  "label": "Heaven Trap",
+  "parent_slug": null
+ },
+ {
+  "slug": "heavy-metal",
+  "label": "Heavy Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "heavy-psych",
+  "label": "Heavy Psych",
+  "parent_slug": null
+ },
+ {
+  "slug": "heikyoku",
+  "label": "Heikyoku",
+  "parent_slug": null
+ },
+ {
+  "slug": "henan-opera",
+  "label": "Henan Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "hexd",
+  "label": "Hexd",
+  "parent_slug": null
+ },
+ {
+  "slug": "hi-nrg",
+  "label": "Hi-Nrg",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "hi-tech",
+  "label": "Hi-Tech",
+  "parent_slug": null
+ },
+ {
+  "slug": "hi-tech-full-on",
+  "label": "Hi-Tech Full-On",
+  "parent_slug": null
+ },
+ {
+  "slug": "highlife",
+  "label": "Highlife",
+  "parent_slug": null
+ },
+ {
+  "slug": "hill-country-blues",
+  "label": "Hill Country Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "himene-tarava",
+  "label": "Himene Tarava",
+  "parent_slug": null
+ },
+ {
+  "slug": "hindustani-classical",
+  "label": "Hindustani Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "hip-hop",
+  "label": "Hip Hop",
+  "parent_slug": null
+ },
+ {
+  "slug": "hip-hop-soul",
+  "label": "Hip Hop Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "hip-house",
+  "label": "Hip House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "hipco",
+  "label": "Hipco",
+  "parent_slug": null
+ },
+ {
+  "slug": "hiplife",
+  "label": "Hiplife",
+  "parent_slug": null
+ },
+ {
+  "slug": "holy-minimalism",
+  "label": "Holy Minimalism",
+  "parent_slug": null
+ },
+ {
+  "slug": "honky-tonk",
+  "label": "Honky Tonk",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "honkyoku",
+  "label": "Honkyoku",
+  "parent_slug": null
+ },
+ {
+  "slug": "hopepunk",
+  "label": "Hopepunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "hornpipe",
+  "label": "Hornpipe",
+  "parent_slug": null
+ },
+ {
+  "slug": "horror-punk",
+  "label": "Horror Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "horror-synth",
+  "label": "Horror Synth",
+  "parent_slug": null
+ },
+ {
+  "slug": "horrorcore",
+  "label": "Horrorcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "hot-rod-music",
+  "label": "Hot Rod Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "house",
+  "label": "House",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "houston-sound",
+  "label": "Houston Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "huapango",
+  "label": "Huapango",
+  "parent_slug": null
+ },
+ {
+  "slug": "huaylarsh",
+  "label": "Huaylarsh",
+  "parent_slug": null
+ },
+ {
+  "slug": "huayno",
+  "label": "Huayno",
+  "parent_slug": null
+ },
+ {
+  "slug": "humppa",
+  "label": "Humppa",
+  "parent_slug": null
+ },
+ {
+  "slug": "hungarian-folk",
+  "label": "Hungarian Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "hyangak",
+  "label": "Hyangak",
+  "parent_slug": null
+ },
+ {
+  "slug": "hybrid-trap",
+  "label": "Hybrid Trap",
+  "parent_slug": null
+ },
+ {
+  "slug": "hyper-techno",
+  "label": "Hyper Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "hyperpop",
+  "label": "Hyperpop",
+  "parent_slug": null
+ },
+ {
+  "slug": "hypertechno",
+  "label": "Hypertechno",
+  "parent_slug": null
+ },
+ {
+  "slug": "hyphy",
+  "label": "Hyphy",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "hypnagogic-pop",
+  "label": "Hypnagogic Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "iavnana",
+  "label": "Iavnana",
+  "parent_slug": null
+ },
+ {
+  "slug": "idm",
+  "label": "IDM",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "idol-kayo",
+  "label": "Idol Kayō",
+  "parent_slug": null
+ },
+ {
+  "slug": "illbient",
+  "label": "Illbient",
+  "parent_slug": null
+ },
+ {
+  "slug": "impressionism",
+  "label": "Impressionism",
+  "parent_slug": null
+ },
+ {
+  "slug": "impromptu",
+  "label": "Impromptu",
+  "parent_slug": null
+ },
+ {
+  "slug": "indeterminacy",
+  "label": "Indeterminacy",
+  "parent_slug": null
+ },
+ {
+  "slug": "indian-classical",
+  "label": "Indian Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "indian-pop",
+  "label": "Indian Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "indie-folk",
+  "label": "Indie Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "indie-pop",
+  "label": "Indie Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "indie-rock",
+  "label": "Indie Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "indie-surf",
+  "label": "Indie Surf",
+  "parent_slug": null
+ },
+ {
+  "slug": "indietronica",
+  "label": "Indietronica",
+  "parent_slug": null
+ },
+ {
+  "slug": "indo-jazz",
+  "label": "Indo Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "indorock",
+  "label": "Indorock",
+  "parent_slug": null
+ },
+ {
+  "slug": "industrial",
+  "label": "Industrial",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "industrial-folk-song",
+  "label": "Industrial Folk Song",
+  "parent_slug": "industrial"
+ },
+ {
+  "slug": "industrial-hardcore",
+  "label": "Industrial Hardcore",
+  "parent_slug": "industrial"
+ },
+ {
+  "slug": "industrial-hip-hop",
+  "label": "Industrial Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "industrial-metal",
+  "label": "Industrial Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "industrial-musical",
+  "label": "Industrial Musical",
+  "parent_slug": "industrial"
+ },
+ {
+  "slug": "industrial-rock",
+  "label": "Industrial Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "industrial-techno",
+  "label": "Industrial Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "instrumental",
+  "label": "Instrumental",
+  "parent_slug": null
+ },
+ {
+  "slug": "instrumental-hip-hop",
+  "label": "Instrumental Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "instrumental-jazz",
+  "label": "Instrumental Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "instrumental-rock",
+  "label": "Instrumental Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "integral-serialism",
+  "label": "Integral Serialism",
+  "parent_slug": null
+ },
+ {
+  "slug": "interview",
+  "label": "Interview",
+  "parent_slug": null
+ },
+ {
+  "slug": "iraqi-maqam",
+  "label": "Iraqi Maqam",
+  "parent_slug": null
+ },
+ {
+  "slug": "irish-folk",
+  "label": "Irish Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "isa",
+  "label": "Isa",
+  "parent_slug": null
+ },
+ {
+  "slug": "isicathamiya",
+  "label": "Isicathamiya",
+  "parent_slug": null
+ },
+ {
+  "slug": "islamic-modal-music",
+  "label": "Islamic Modal Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "italo-dance",
+  "label": "Italo Dance",
+  "parent_slug": null
+ },
+ {
+  "slug": "italo-disco",
+  "label": "Italo-Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "italo-house",
+  "label": "Italo House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "izlan",
+  "label": "Izlan",
+  "parent_slug": null
+ },
+ {
+  "slug": "izvorna-bosanska-muzika",
+  "label": "Izvorna Bosanska Muzika",
+  "parent_slug": null
+ },
+ {
+  "slug": "j-core",
+  "label": "J-Core",
+  "parent_slug": null
+ },
+ {
+  "slug": "j-euro",
+  "label": "J-Euro",
+  "parent_slug": null
+ },
+ {
+  "slug": "j-pop",
+  "label": "J-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "j-rock",
+  "label": "J-Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "jacara",
+  "label": "Jácara",
+  "parent_slug": null
+ },
+ {
+  "slug": "jackin-house",
+  "label": "Jackin House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "jaipongan",
+  "label": "Jaipongan",
+  "parent_slug": null
+ },
+ {
+  "slug": "jam-band",
+  "label": "Jam Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "jamaican-ska",
+  "label": "Jamaican Ska",
+  "parent_slug": "ska"
+ },
+ {
+  "slug": "james-bay-fiddling",
+  "label": "James Bay Fiddling",
+  "parent_slug": null
+ },
+ {
+  "slug": "jamgrass",
+  "label": "Jamgrass",
+  "parent_slug": null
+ },
+ {
+  "slug": "jangle-pop",
+  "label": "Jangle Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "japanese-classical",
+  "label": "Japanese Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "javanese-gamelan",
+  "label": "Javanese Gamelan",
+  "parent_slug": null
+ },
+ {
+  "slug": "jawaiian",
+  "label": "Jawaiian",
+  "parent_slug": null
+ },
+ {
+  "slug": "jazz",
+  "label": "Jazz",
+  "parent_slug": null
+ },
+ {
+  "slug": "jazz-blues",
+  "label": "Jazz Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "jazz-funk",
+  "label": "Jazz-Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "jazz-fusion",
+  "label": "Jazz Fusion",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "jazz-guachaca",
+  "label": "Jazz Guachaca",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "jazz-house",
+  "label": "Jazz House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "jazz-mugham",
+  "label": "Jazz Mugham",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "jazz-poetry",
+  "label": "Jazz Poetry",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "jazz-pop",
+  "label": "Jazz Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "jazz-rap",
+  "label": "Jazz Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "jazz-rock",
+  "label": "Jazz Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "jazzstep",
+  "label": "Jazzstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "jeongak",
+  "label": "Jeongak",
+  "parent_slug": null
+ },
+ {
+  "slug": "jerk",
+  "label": "Jerk",
+  "parent_slug": null
+ },
+ {
+  "slug": "jerk-rap",
+  "label": "Jerk Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "jersey-club",
+  "label": "Jersey Club",
+  "parent_slug": null
+ },
+ {
+  "slug": "jersey-club-rap",
+  "label": "Jersey Club Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "jersey-drill",
+  "label": "Jersey Drill",
+  "parent_slug": null
+ },
+ {
+  "slug": "jersey-sound",
+  "label": "Jersey Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "jesus-music",
+  "label": "Jesus Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "jiangnan-sizhu",
+  "label": "Jiangnan Sizhu",
+  "parent_slug": null
+ },
+ {
+  "slug": "jit",
+  "label": "Jit",
+  "parent_slug": null
+ },
+ {
+  "slug": "jiuta",
+  "label": "Jiuta",
+  "parent_slug": null
+ },
+ {
+  "slug": "joik",
+  "label": "Joik",
+  "parent_slug": null
+ },
+ {
+  "slug": "jongo",
+  "label": "Jongo",
+  "parent_slug": null
+ },
+ {
+  "slug": "joropo",
+  "label": "Joropo",
+  "parent_slug": null
+ },
+ {
+  "slug": "joruri",
+  "label": "Jōruri",
+  "parent_slug": null
+ },
+ {
+  "slug": "jota",
+  "label": "Jota",
+  "parent_slug": null
+ },
+ {
+  "slug": "jovem-guarda",
+  "label": "Jovem Guarda",
+  "parent_slug": "mpb"
+ },
+ {
+  "slug": "jubilee",
+  "label": "Jubilee",
+  "parent_slug": null
+ },
+ {
+  "slug": "jug-band",
+  "label": "Jug Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "juju",
+  "label": "Jùjú",
+  "parent_slug": null
+ },
+ {
+  "slug": "juke",
+  "label": "Juke",
+  "parent_slug": "footwork"
+ },
+ {
+  "slug": "jump-blues",
+  "label": "Jump Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "jump-up",
+  "label": "Jump Up",
+  "parent_slug": null
+ },
+ {
+  "slug": "jumpstyle",
+  "label": "Jumpstyle",
+  "parent_slug": null
+ },
+ {
+  "slug": "jungle",
+  "label": "Jungle",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "jungle-dutch",
+  "label": "Jungle Dutch",
+  "parent_slug": null
+ },
+ {
+  "slug": "jungle-techno",
+  "label": "Jungle Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "jungle-terror",
+  "label": "Jungle Terror",
+  "parent_slug": null
+ },
+ {
+  "slug": "junkanoo",
+  "label": "Junkanoo",
+  "parent_slug": null
+ },
+ {
+  "slug": "k-pop",
+  "label": "K-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "kabarett",
+  "label": "Kabarett",
+  "parent_slug": null
+ },
+ {
+  "slug": "kacapi-suling",
+  "label": "Kacapi Suling",
+  "parent_slug": null
+ },
+ {
+  "slug": "kadongo-kamu",
+  "label": "Kadongo Kamu",
+  "parent_slug": null
+ },
+ {
+  "slug": "kafi",
+  "label": "Kafi",
+  "parent_slug": null
+ },
+ {
+  "slug": "kagura",
+  "label": "Kagura",
+  "parent_slug": null
+ },
+ {
+  "slug": "kai",
+  "label": "Kai",
+  "parent_slug": null
+ },
+ {
+  "slug": "kakawin",
+  "label": "Kakawin",
+  "parent_slug": null
+ },
+ {
+  "slug": "kalattut",
+  "label": "Kalattut",
+  "parent_slug": null
+ },
+ {
+  "slug": "kalindula",
+  "label": "Kalindula",
+  "parent_slug": null
+ },
+ {
+  "slug": "kalon-ny-fahiny",
+  "label": "Kalon'ny Fahiny",
+  "parent_slug": null
+ },
+ {
+  "slug": "kan-ha-diskan",
+  "label": "Kan Ha Diskan",
+  "parent_slug": null
+ },
+ {
+  "slug": "kaneka",
+  "label": "Kaneka",
+  "parent_slug": null
+ },
+ {
+  "slug": "kankyo-ongaku",
+  "label": "Kankyō Ongaku",
+  "parent_slug": null
+ },
+ {
+  "slug": "kantan-chamorrita",
+  "label": "Kantan Chamorrita",
+  "parent_slug": null
+ },
+ {
+  "slug": "kanto",
+  "label": "Kanto",
+  "parent_slug": null
+ },
+ {
+  "slug": "kantruem",
+  "label": "Kantruem",
+  "parent_slug": null
+ },
+ {
+  "slug": "kapuka",
+  "label": "Kapuka",
+  "parent_slug": null
+ },
+ {
+  "slug": "kaseko",
+  "label": "Kasékò",
+  "parent_slug": null
+ },
+ {
+  "slug": "kawaii-future-bass",
+  "label": "Kawaii Future Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "kawaii-metal",
+  "label": "Kawaii Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "kayokyoku",
+  "label": "Kayōkyoku",
+  "parent_slug": null
+ },
+ {
+  "slug": "kecak",
+  "label": "Kecak",
+  "parent_slug": null
+ },
+ {
+  "slug": "keller-synth",
+  "label": "Keller Synth",
+  "parent_slug": null
+ },
+ {
+  "slug": "keroncong",
+  "label": "Keroncong",
+  "parent_slug": null
+ },
+ {
+  "slug": "kete",
+  "label": "Kete",
+  "parent_slug": null
+ },
+ {
+  "slug": "ketuk-tilu",
+  "label": "Ketuk Tilu",
+  "parent_slug": null
+ },
+ {
+  "slug": "khrueang-sai",
+  "label": "Khrueang Sai",
+  "parent_slug": null
+ },
+ {
+  "slug": "khyal",
+  "label": "Khyal",
+  "parent_slug": null
+ },
+ {
+  "slug": "kidandali",
+  "label": "Kidandali",
+  "parent_slug": null
+ },
+ {
+  "slug": "kidumbak",
+  "label": "Kidumbak",
+  "parent_slug": null
+ },
+ {
+  "slug": "kilapanga",
+  "label": "Kilapanga",
+  "parent_slug": null
+ },
+ {
+  "slug": "kirtan",
+  "label": "Kirtan",
+  "parent_slug": null
+ },
+ {
+  "slug": "kizomba",
+  "label": "Kizomba",
+  "parent_slug": null
+ },
+ {
+  "slug": "klapa",
+  "label": "Klapa",
+  "parent_slug": null
+ },
+ {
+  "slug": "klasik",
+  "label": "Klasik",
+  "parent_slug": null
+ },
+ {
+  "slug": "kleinkunst",
+  "label": "Kleinkunst",
+  "parent_slug": null
+ },
+ {
+  "slug": "klezmer",
+  "label": "Klezmer",
+  "parent_slug": null
+ },
+ {
+  "slug": "kliningan",
+  "label": "Kliningan",
+  "parent_slug": null
+ },
+ {
+  "slug": "konnakol",
+  "label": "Konnakol",
+  "parent_slug": null
+ },
+ {
+  "slug": "konsrock",
+  "label": "Könsrock",
+  "parent_slug": null
+ },
+ {
+  "slug": "kontakion",
+  "label": "Kontakion",
+  "parent_slug": null
+ },
+ {
+  "slug": "koplo",
+  "label": "Koplo",
+  "parent_slug": null
+ },
+ {
+  "slug": "korean-ballad",
+  "label": "Korean Ballad",
+  "parent_slug": null
+ },
+ {
+  "slug": "korean-classical",
+  "label": "Korean Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "korean-revolutionary-opera",
+  "label": "Korean Revolutionary Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "kouta",
+  "label": "Kouta",
+  "parent_slug": null
+ },
+ {
+  "slug": "krakowiak",
+  "label": "Krakowiak",
+  "parent_slug": null
+ },
+ {
+  "slug": "krautrock",
+  "label": "Krautrock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "kreyol-djaz",
+  "label": "Kréyol Djaz",
+  "parent_slug": null
+ },
+ {
+  "slug": "krushclub",
+  "label": "Krushclub",
+  "parent_slug": null
+ },
+ {
+  "slug": "kuda-lumping",
+  "label": "Kuda Lumping",
+  "parent_slug": null
+ },
+ {
+  "slug": "kuduro",
+  "label": "Kuduro",
+  "parent_slug": null
+ },
+ {
+  "slug": "kujawiak",
+  "label": "Kujawiak",
+  "parent_slug": null
+ },
+ {
+  "slug": "kulintang",
+  "label": "Kulintang",
+  "parent_slug": null
+ },
+ {
+  "slug": "kumi-daiko",
+  "label": "Kumi-Daiko",
+  "parent_slug": null
+ },
+ {
+  "slug": "kumiuta",
+  "label": "Kumiuta",
+  "parent_slug": null
+ },
+ {
+  "slug": "kundiman",
+  "label": "Kundiman",
+  "parent_slug": null
+ },
+ {
+  "slug": "kunqu",
+  "label": "Kunqu",
+  "parent_slug": null
+ },
+ {
+  "slug": "kwaito",
+  "label": "Kwaito",
+  "parent_slug": null
+ },
+ {
+  "slug": "kwassa-kwassa",
+  "label": "Kwassa Kwassa",
+  "parent_slug": null
+ },
+ {
+  "slug": "kwela",
+  "label": "Kwela",
+  "parent_slug": null
+ },
+ {
+  "slug": "kyivan-chant",
+  "label": "Kyivan Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "laiko",
+  "label": "Laiko",
+  "parent_slug": null
+ },
+ {
+  "slug": "lambada",
+  "label": "Lambada",
+  "parent_slug": null
+ },
+ {
+  "slug": "landlermusik",
+  "label": "Ländlermusik",
+  "parent_slug": null
+ },
+ {
+  "slug": "lando",
+  "label": "Landó",
+  "parent_slug": null
+ },
+ {
+  "slug": "langgam-jawa",
+  "label": "Langgam Jawa",
+  "parent_slug": null
+ },
+ {
+  "slug": "latin",
+  "label": "Latin",
+  "parent_slug": null
+ },
+ {
+  "slug": "latin-ballad",
+  "label": "Latin Ballad",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "latin-disco",
+  "label": "Latin Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "latin-funk",
+  "label": "Latin Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "latin-house",
+  "label": "Latin House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "latin-jazz",
+  "label": "Latin Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "latin-pop",
+  "label": "Latin Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "latin-rock",
+  "label": "Latin Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "latin-soul",
+  "label": "Latin Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "lauda",
+  "label": "Lauda",
+  "parent_slug": null
+ },
+ {
+  "slug": "lavani",
+  "label": "Lavani",
+  "parent_slug": null
+ },
+ {
+  "slug": "lecture",
+  "label": "Lecture",
+  "parent_slug": null
+ },
+ {
+  "slug": "leftfield",
+  "label": "Leftfield",
+  "parent_slug": null
+ },
+ {
+  "slug": "lento-violento",
+  "label": "Lento Violento",
+  "parent_slug": null
+ },
+ {
+  "slug": "levenslied",
+  "label": "Levenslied",
+  "parent_slug": null
+ },
+ {
+  "slug": "lied",
+  "label": "Lied",
+  "parent_slug": null
+ },
+ {
+  "slug": "liedermacher",
+  "label": "Liedermacher",
+  "parent_slug": null
+ },
+ {
+  "slug": "liquid-funk",
+  "label": "Liquid Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "liquid-riddim",
+  "label": "Liquid Riddim",
+  "parent_slug": null
+ },
+ {
+  "slug": "liscio",
+  "label": "Liscio",
+  "parent_slug": null
+ },
+ {
+  "slug": "livetronica",
+  "label": "Livetronica",
+  "parent_slug": null
+ },
+ {
+  "slug": "liwa",
+  "label": "Liwa",
+  "parent_slug": null
+ },
+ {
+  "slug": "lo-fi",
+  "label": "Lo-Fi",
+  "parent_slug": null
+ },
+ {
+  "slug": "lo-fi-hip-hop",
+  "label": "Lo-Fi Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "lo-fi-house",
+  "label": "Lo-Fi House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "lolicore",
+  "label": "Lolicore",
+  "parent_slug": null
+ },
+ {
+  "slug": "loner-folk",
+  "label": "Loner Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "loud-kei",
+  "label": "Loud Kei",
+  "parent_slug": null
+ },
+ {
+  "slug": "louisiana-blues",
+  "label": "Louisiana Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "lounge",
+  "label": "Lounge",
+  "parent_slug": null
+ },
+ {
+  "slug": "lovers-rock",
+  "label": "Lovers Rock",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "lowend",
+  "label": "Lowend",
+  "parent_slug": null
+ },
+ {
+  "slug": "lowercase",
+  "label": "Lowercase",
+  "parent_slug": null
+ },
+ {
+  "slug": "luk-krung",
+  "label": "Luk Krung",
+  "parent_slug": null
+ },
+ {
+  "slug": "luk-thung",
+  "label": "Luk Thung",
+  "parent_slug": null
+ },
+ {
+  "slug": "lullaby",
+  "label": "Lullaby",
+  "parent_slug": null
+ },
+ {
+  "slug": "lundu",
+  "label": "Lundu",
+  "parent_slug": null
+ },
+ {
+  "slug": "lute-song",
+  "label": "Lute Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "machine-rock",
+  "label": "Machine Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "mad",
+  "label": "Mad",
+  "parent_slug": null
+ },
+ {
+  "slug": "madchester",
+  "label": "Madchester",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "maddahi",
+  "label": "Maddahi",
+  "parent_slug": null
+ },
+ {
+  "slug": "madrigal",
+  "label": "Madrigal",
+  "parent_slug": null
+ },
+ {
+  "slug": "mafioso-rap",
+  "label": "Mafioso Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "maftirim",
+  "label": "Maftirim",
+  "parent_slug": null
+ },
+ {
+  "slug": "mahori",
+  "label": "Mahori",
+  "parent_slug": null
+ },
+ {
+  "slug": "mahraganat",
+  "label": "Mahraganat",
+  "parent_slug": null
+ },
+ {
+  "slug": "mainstream-rock",
+  "label": "Mainstream Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "makina",
+  "label": "Makina",
+  "parent_slug": null
+ },
+ {
+  "slug": "makossa",
+  "label": "Makossa",
+  "parent_slug": null
+ },
+ {
+  "slug": "malaguena-venezolana",
+  "label": "Malagueña Venezolana",
+  "parent_slug": null
+ },
+ {
+  "slug": "malay-gamelan",
+  "label": "Malay Gamelan",
+  "parent_slug": null
+ },
+ {
+  "slug": "malhun",
+  "label": "Malhun",
+  "parent_slug": null
+ },
+ {
+  "slug": "mallsoft",
+  "label": "Mallsoft",
+  "parent_slug": null
+ },
+ {
+  "slug": "malouf",
+  "label": "Malouf",
+  "parent_slug": null
+ },
+ {
+  "slug": "maloya",
+  "label": "Maloya",
+  "parent_slug": null
+ },
+ {
+  "slug": "maloya-electronique",
+  "label": "Maloya Électronique",
+  "parent_slug": null
+ },
+ {
+  "slug": "maloya-elektrik",
+  "label": "Maloya Élektrik",
+  "parent_slug": null
+ },
+ {
+  "slug": "mambo",
+  "label": "Mambo",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "mambo-chileno",
+  "label": "Mambo Chileno",
+  "parent_slug": null
+ },
+ {
+  "slug": "mambo-urbano",
+  "label": "Mambo Urbano",
+  "parent_slug": null
+ },
+ {
+  "slug": "mandopop",
+  "label": "Mandopop",
+  "parent_slug": null
+ },
+ {
+  "slug": "manele",
+  "label": "Manele",
+  "parent_slug": null
+ },
+ {
+  "slug": "mangambeu",
+  "label": "Mangambeu",
+  "parent_slug": null
+ },
+ {
+  "slug": "mangue-beat",
+  "label": "Mangue Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "manila-sound",
+  "label": "Manila Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "mantra",
+  "label": "Mantra",
+  "parent_slug": null
+ },
+ {
+  "slug": "manyao",
+  "label": "Manyao",
+  "parent_slug": null
+ },
+ {
+  "slug": "mappila",
+  "label": "Mappila",
+  "parent_slug": null
+ },
+ {
+  "slug": "marabi",
+  "label": "Marabi",
+  "parent_slug": null
+ },
+ {
+  "slug": "maracatu",
+  "label": "Maracatu",
+  "parent_slug": null
+ },
+ {
+  "slug": "march",
+  "label": "March",
+  "parent_slug": null
+ },
+ {
+  "slug": "marching-band",
+  "label": "Marching Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "marchinha",
+  "label": "Marchinha",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "mariachi",
+  "label": "Mariachi",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "marinera",
+  "label": "Marinera",
+  "parent_slug": null
+ },
+ {
+  "slug": "marrabenta",
+  "label": "Marrabenta",
+  "parent_slug": null
+ },
+ {
+  "slug": "martial-industrial",
+  "label": "Martial Industrial",
+  "parent_slug": "industrial"
+ },
+ {
+  "slug": "mashcore",
+  "label": "Mashcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "maskanda",
+  "label": "Maskanda",
+  "parent_slug": null
+ },
+ {
+  "slug": "mass",
+  "label": "Mass",
+  "parent_slug": null
+ },
+ {
+  "slug": "mataali",
+  "label": "Mataali",
+  "parent_slug": null
+ },
+ {
+  "slug": "math-pop",
+  "label": "Math Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "math-rock",
+  "label": "Math Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "mathcore",
+  "label": "Mathcore",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "maxixe",
+  "label": "Maxixe",
+  "parent_slug": null
+ },
+ {
+  "slug": "mazurka",
+  "label": "Mazurka",
+  "parent_slug": null
+ },
+ {
+  "slug": "mbalax",
+  "label": "Mbalax",
+  "parent_slug": null
+ },
+ {
+  "slug": "mbaqanga",
+  "label": "Mbaqanga",
+  "parent_slug": null
+ },
+ {
+  "slug": "mbole",
+  "label": "Mbolé",
+  "parent_slug": null
+ },
+ {
+  "slug": "mbube",
+  "label": "Mbube",
+  "parent_slug": null
+ },
+ {
+  "slug": "mchiriku",
+  "label": "Mchiriku",
+  "parent_slug": null
+ },
+ {
+  "slug": "medieval",
+  "label": "Medieval",
+  "parent_slug": null
+ },
+ {
+  "slug": "medieval-lyric-poetry",
+  "label": "Medieval Lyric Poetry",
+  "parent_slug": null
+ },
+ {
+  "slug": "medieval-metal",
+  "label": "Medieval Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "medieval-rock",
+  "label": "Medieval Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "mega-funk",
+  "label": "Mega Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "meiji-shinkyoku",
+  "label": "Meiji Shinkyoku",
+  "parent_slug": null
+ },
+ {
+  "slug": "melbourne-bounce",
+  "label": "Melbourne Bounce",
+  "parent_slug": null
+ },
+ {
+  "slug": "melodic-bass",
+  "label": "Melodic Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "melodic-black-metal",
+  "label": "Melodic Black Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "melodic-death-metal",
+  "label": "Melodic Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "melodic-dubstep",
+  "label": "Melodic Dubstep",
+  "parent_slug": "dubstep"
+ },
+ {
+  "slug": "melodic-hardcore",
+  "label": "Melodic Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "melodic-house",
+  "label": "Melodic House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "melodic-metalcore",
+  "label": "Melodic Metalcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "melodic-techno",
+  "label": "Melodic Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "melodic-trance",
+  "label": "Melodic Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "melodie",
+  "label": "Mélodie",
+  "parent_slug": null
+ },
+ {
+  "slug": "memphis-rap",
+  "label": "Memphis Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "mento",
+  "label": "Mento",
+  "parent_slug": null
+ },
+ {
+  "slug": "menzuma",
+  "label": "Menzuma",
+  "parent_slug": null
+ },
+ {
+  "slug": "merecumbe",
+  "label": "Merecumbé",
+  "parent_slug": null
+ },
+ {
+  "slug": "merengue",
+  "label": "Merengue",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "merengue-tipico",
+  "label": "Merengue Típico",
+  "parent_slug": null
+ },
+ {
+  "slug": "merenhouse",
+  "label": "Merenhouse",
+  "parent_slug": null
+ },
+ {
+  "slug": "merequetengue",
+  "label": "Merequetengue",
+  "parent_slug": null
+ },
+ {
+  "slug": "meringue",
+  "label": "Méringue",
+  "parent_slug": null
+ },
+ {
+  "slug": "merseybeat",
+  "label": "Merseybeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "metal",
+  "label": "Metal",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "metalcore",
+  "label": "Metalcore",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "metis-fiddling",
+  "label": "Métis Fiddling",
+  "parent_slug": null
+ },
+ {
+  "slug": "meyxana",
+  "label": "Meyxana",
+  "parent_slug": null
+ },
+ {
+  "slug": "mgodro",
+  "label": "Mgodro",
+  "parent_slug": null
+ },
+ {
+  "slug": "miami-bass",
+  "label": "Miami Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "microfunk",
+  "label": "Microfunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "microhouse",
+  "label": "Microhouse",
+  "parent_slug": null
+ },
+ {
+  "slug": "microsound",
+  "label": "Microsound",
+  "parent_slug": null
+ },
+ {
+  "slug": "microtonal-classical",
+  "label": "Microtonal Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "midtempo-bass",
+  "label": "Midtempo Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "midwest-emo",
+  "label": "Midwest Emo",
+  "parent_slug": "emo"
+ },
+ {
+  "slug": "miejski-folk",
+  "label": "Miejski Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "military-cadence",
+  "label": "Military Cadence",
+  "parent_slug": null
+ },
+ {
+  "slug": "milonga",
+  "label": "Milonga",
+  "parent_slug": null
+ },
+ {
+  "slug": "min-yo",
+  "label": "Min'yō",
+  "parent_slug": null
+ },
+ {
+  "slug": "minatory",
+  "label": "Minatory",
+  "parent_slug": null
+ },
+ {
+  "slug": "mincecore",
+  "label": "Mincecore",
+  "parent_slug": null
+ },
+ {
+  "slug": "minimal-drum-and-bass",
+  "label": "Minimal Drum and Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "minimal-synth",
+  "label": "Minimal Synth",
+  "parent_slug": null
+ },
+ {
+  "slug": "minimal-techno",
+  "label": "Minimal Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "minimal-wave",
+  "label": "Minimal Wave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "minimalism",
+  "label": "Minimalism",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "minneapolis-sound",
+  "label": "Minneapolis Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "minstrelsy",
+  "label": "Minstrelsy",
+  "parent_slug": null
+ },
+ {
+  "slug": "mobb-music",
+  "label": "Mobb Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "mod",
+  "label": "Mod",
+  "parent_slug": null
+ },
+ {
+  "slug": "mod-revival",
+  "label": "Mod Revival",
+  "parent_slug": null
+ },
+ {
+  "slug": "moda-de-viola",
+  "label": "Moda de Viola",
+  "parent_slug": "sertanejo"
+ },
+ {
+  "slug": "modal-jazz",
+  "label": "Modal Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "modern-blues",
+  "label": "Modern Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "modern-classical",
+  "label": "Modern Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "modern-creative",
+  "label": "Modern Creative",
+  "parent_slug": null
+ },
+ {
+  "slug": "modern-hardtek",
+  "label": "Modern Hardtek",
+  "parent_slug": null
+ },
+ {
+  "slug": "modern-laiko",
+  "label": "Modern Laiko",
+  "parent_slug": null
+ },
+ {
+  "slug": "modinha",
+  "label": "Modinha",
+  "parent_slug": null
+ },
+ {
+  "slug": "moe-song",
+  "label": "Moe Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "monodrama",
+  "label": "Monodrama",
+  "parent_slug": null
+ },
+ {
+  "slug": "mood-kayo",
+  "label": "Mood Kayō",
+  "parent_slug": null
+ },
+ {
+  "slug": "moogsploitation",
+  "label": "Moogsploitation",
+  "parent_slug": null
+ },
+ {
+  "slug": "moombahcore",
+  "label": "Moombahcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "moombahton",
+  "label": "Moombahton",
+  "parent_slug": null
+ },
+ {
+  "slug": "mor-lam",
+  "label": "Mor Lam",
+  "parent_slug": null
+ },
+ {
+  "slug": "mor-lam-sing",
+  "label": "Mor Lam Sing",
+  "parent_slug": null
+ },
+ {
+  "slug": "morenada",
+  "label": "Morenada",
+  "parent_slug": null
+ },
+ {
+  "slug": "morna",
+  "label": "Morna",
+  "parent_slug": null
+ },
+ {
+  "slug": "moroccan-chaabi",
+  "label": "Moroccan Chaabi",
+  "parent_slug": null
+ },
+ {
+  "slug": "motet",
+  "label": "Motet",
+  "parent_slug": null
+ },
+ {
+  "slug": "motown",
+  "label": "Motown",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "moutya",
+  "label": "Moutya",
+  "parent_slug": null
+ },
+ {
+  "slug": "movimiento-alterado",
+  "label": "Movimiento Alterado",
+  "parent_slug": null
+ },
+ {
+  "slug": "mozarabic-chant",
+  "label": "Mozarabic Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "mpb",
+  "label": "MPB",
+  "parent_slug": null
+ },
+ {
+  "slug": "muak",
+  "label": "Muak",
+  "parent_slug": null
+ },
+ {
+  "slug": "mugham",
+  "label": "Mugham",
+  "parent_slug": null
+ },
+ {
+  "slug": "mugithi",
+  "label": "Mugithi",
+  "parent_slug": null
+ },
+ {
+  "slug": "muineira",
+  "label": "Muiñeira",
+  "parent_slug": null
+ },
+ {
+  "slug": "mulatos",
+  "label": "Mulatós",
+  "parent_slug": null
+ },
+ {
+  "slug": "muliza",
+  "label": "Muliza",
+  "parent_slug": null
+ },
+ {
+  "slug": "murga",
+  "label": "Murga",
+  "parent_slug": null
+ },
+ {
+  "slug": "murga-uruguaya",
+  "label": "Murga Uruguaya",
+  "parent_slug": null
+ },
+ {
+  "slug": "musette",
+  "label": "Musette",
+  "parent_slug": null
+ },
+ {
+  "slug": "music-hall",
+  "label": "Music Hall",
+  "parent_slug": null
+ },
+ {
+  "slug": "musica-cebolla",
+  "label": "Música Cebolla",
+  "parent_slug": null
+ },
+ {
+  "slug": "musica-criolla",
+  "label": "Música Criolla",
+  "parent_slug": null
+ },
+ {
+  "slug": "musica-de-intervencao",
+  "label": "Música de Intervenção",
+  "parent_slug": null
+ },
+ {
+  "slug": "musica-festera",
+  "label": "Música Festera",
+  "parent_slug": null
+ },
+ {
+  "slug": "musica-llanera",
+  "label": "Música Llanera",
+  "parent_slug": null
+ },
+ {
+  "slug": "musica-tipica-chilena",
+  "label": "Música Típica Chilena",
+  "parent_slug": null
+ },
+ {
+  "slug": "musical",
+  "label": "Musical",
+  "parent_slug": null
+ },
+ {
+  "slug": "musiqa-lubnaniyya",
+  "label": "Mūsīqā Lubnāniyya",
+  "parent_slug": null
+ },
+ {
+  "slug": "musique-concrete",
+  "label": "Musique Concrète",
+  "parent_slug": "experimental"
+ },
+ {
+  "slug": "musique-concrete-instrumentale",
+  "label": "Musique Concrète Instrumentale",
+  "parent_slug": null
+ },
+ {
+  "slug": "muzika-mizrahit",
+  "label": "Muzika Mizrahit",
+  "parent_slug": null
+ },
+ {
+  "slug": "muzika-yehudit-mekorit",
+  "label": "Muzika Yehudit Mekorit",
+  "parent_slug": null
+ },
+ {
+  "slug": "muzikat-dika-on",
+  "label": "Muzikat Dika'on",
+  "parent_slug": null
+ },
+ {
+  "slug": "muziki-wa-dansi",
+  "label": "Muziki Wa Dansi",
+  "parent_slug": null
+ },
+ {
+  "slug": "nagauta",
+  "label": "Nagauta",
+  "parent_slug": null
+ },
+ {
+  "slug": "nanguan",
+  "label": "Nanguan",
+  "parent_slug": null
+ },
+ {
+  "slug": "narcocorrido",
+  "label": "Narcocorrido",
+  "parent_slug": null
+ },
+ {
+  "slug": "narodnozabavna-glasba",
+  "label": "Narodnozabavna Glasba",
+  "parent_slug": null
+ },
+ {
+  "slug": "nasheed",
+  "label": "Nasheed",
+  "parent_slug": null
+ },
+ {
+  "slug": "nashville-sound",
+  "label": "Nashville Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "native-american-new-age",
+  "label": "Native American New Age",
+  "parent_slug": null
+ },
+ {
+  "slug": "nature-sounds",
+  "label": "Nature Sounds",
+  "parent_slug": null
+ },
+ {
+  "slug": "natya-sangeet",
+  "label": "Natya Sangeet",
+  "parent_slug": null
+ },
+ {
+  "slug": "nederbeat",
+  "label": "Nederbeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "nederpop",
+  "label": "Nederpop",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-acoustic",
+  "label": "Neo-Acoustic",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-bop",
+  "label": "Neo-Bop",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-city-pop",
+  "label": "Neo-City Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "neo-grime",
+  "label": "Neo-Grime",
+  "parent_slug": "grime"
+ },
+ {
+  "slug": "neo-kyma",
+  "label": "Neo Kyma",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-medieval-folk",
+  "label": "Neo-Medieval Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "neo-progressive-rock",
+  "label": "Neo-Progressive Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "neo-psychedelia",
+  "label": "Neo-Psychedelia",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-rave",
+  "label": "Neo Rave",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-rockabilly",
+  "label": "Neo-Rockabilly",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-soul",
+  "label": "Neo Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "neo-trad",
+  "label": "Néo-Trad",
+  "parent_slug": null
+ },
+ {
+  "slug": "neo-traditional-country",
+  "label": "Neo-Traditional Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "neoclassical-dark-wave",
+  "label": "Neoclassical Dark Wave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "neoclassical-metal",
+  "label": "Neoclassical Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "neoclassical-new-age",
+  "label": "Neoclassical New Age",
+  "parent_slug": null
+ },
+ {
+  "slug": "neoclassicism",
+  "label": "Neoclassicism",
+  "parent_slug": null
+ },
+ {
+  "slug": "neocrust",
+  "label": "Neocrust",
+  "parent_slug": null
+ },
+ {
+  "slug": "neofolk",
+  "label": "Neofolk",
+  "parent_slug": null
+ },
+ {
+  "slug": "neofolklore",
+  "label": "Neofolklore",
+  "parent_slug": null
+ },
+ {
+  "slug": "neon-pop-punk",
+  "label": "Neon Pop Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "neoperreo",
+  "label": "Neoperreo",
+  "parent_slug": null
+ },
+ {
+  "slug": "neoromanticism",
+  "label": "Neoromanticism",
+  "parent_slug": null
+ },
+ {
+  "slug": "nepali-lok-geet",
+  "label": "Nepali Lok Geet",
+  "parent_slug": null
+ },
+ {
+  "slug": "nerdcore",
+  "label": "Nerdcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "nerdcore-techno",
+  "label": "Nerdcore Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "neue-deutsche-harte",
+  "label": "Neue Deutsche Härte",
+  "parent_slug": null
+ },
+ {
+  "slug": "neue-deutsche-todeskunst",
+  "label": "Neue Deutsche Todeskunst",
+  "parent_slug": null
+ },
+ {
+  "slug": "neue-deutsche-welle",
+  "label": "Neue Deutsche Welle",
+  "parent_slug": null
+ },
+ {
+  "slug": "neurofunk",
+  "label": "Neurofunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "neurohop",
+  "label": "Neurohop",
+  "parent_slug": null
+ },
+ {
+  "slug": "new-age",
+  "label": "New Age",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "new-beat",
+  "label": "New Beat",
+  "parent_slug": null
+ },
+ {
+  "slug": "new-complexity",
+  "label": "New Complexity",
+  "parent_slug": null
+ },
+ {
+  "slug": "new-jack-swing",
+  "label": "New Jack Swing",
+  "parent_slug": "rnb"
+ },
+ {
+  "slug": "new-jazz",
+  "label": "New Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "new-mexico-music",
+  "label": "New Mexico Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "new-orleans-blues",
+  "label": "New Orleans Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "new-orleans-rnb",
+  "label": "New Orleans R&b",
+  "parent_slug": "rnb"
+ },
+ {
+  "slug": "new-rave",
+  "label": "New Rave",
+  "parent_slug": null
+ },
+ {
+  "slug": "new-romantic",
+  "label": "New Romantic",
+  "parent_slug": null
+ },
+ {
+  "slug": "new-wave",
+  "label": "New Wave",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "new-york-drill",
+  "label": "New York Drill",
+  "parent_slug": null
+ },
+ {
+  "slug": "ngam-tho",
+  "label": "Ngâm Thơ",
+  "parent_slug": null
+ },
+ {
+  "slug": "ngoma",
+  "label": "Ngoma",
+  "parent_slug": null
+ },
+ {
+  "slug": "nhac-o",
+  "label": "Nhạc Đỏ",
+  "parent_slug": null
+ },
+ {
+  "slug": "nhac-tien-chien",
+  "label": "Nhạc Tiền Chiến",
+  "parent_slug": null
+ },
+ {
+  "slug": "nhac-vang",
+  "label": "Nhạc Vàng",
+  "parent_slug": null
+ },
+ {
+  "slug": "night-full-on",
+  "label": "Night Full-On",
+  "parent_slug": null
+ },
+ {
+  "slug": "nightcore",
+  "label": "Nightcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "nigun",
+  "label": "Nigun",
+  "parent_slug": null
+ },
+ {
+  "slug": "nintendocore",
+  "label": "Nintendocore",
+  "parent_slug": null
+ },
+ {
+  "slug": "nitzhonot",
+  "label": "Nitzhonot",
+  "parent_slug": null
+ },
+ {
+  "slug": "njuup",
+  "label": "Njuup",
+  "parent_slug": null
+ },
+ {
+  "slug": "no-melody-trap",
+  "label": "No Melody Trap",
+  "parent_slug": null
+ },
+ {
+  "slug": "no-wave",
+  "label": "No Wave",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "nocturne",
+  "label": "Nocturne",
+  "parent_slug": null
+ },
+ {
+  "slug": "noh",
+  "label": "Noh",
+  "parent_slug": null
+ },
+ {
+  "slug": "noiadance",
+  "label": "Noiadance",
+  "parent_slug": null
+ },
+ {
+  "slug": "noise",
+  "label": "Noise",
+  "parent_slug": "experimental"
+ },
+ {
+  "slug": "noise-pop",
+  "label": "Noise Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "noise-rock",
+  "label": "Noise Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "noisecore",
+  "label": "Noisecore",
+  "parent_slug": null
+ },
+ {
+  "slug": "noisegrind",
+  "label": "Noisegrind",
+  "parent_slug": null
+ },
+ {
+  "slug": "non-music",
+  "label": "Non-Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "nortec",
+  "label": "Nortec",
+  "parent_slug": null
+ },
+ {
+  "slug": "norteno",
+  "label": "Norteño",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "northern-soul",
+  "label": "Northern Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "nota",
+  "label": "Nóta",
+  "parent_slug": null
+ },
+ {
+  "slug": "nouveau-zydeco",
+  "label": "Nouveau Zydeco",
+  "parent_slug": null
+ },
+ {
+  "slug": "nova-canco",
+  "label": "Nova Cançó",
+  "parent_slug": null
+ },
+ {
+  "slug": "novelty-piano",
+  "label": "Novelty Piano",
+  "parent_slug": null
+ },
+ {
+  "slug": "novo-dub",
+  "label": "Novo Dub",
+  "parent_slug": "dub"
+ },
+ {
+  "slug": "nu-disco",
+  "label": "Nu Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "nu-jazz",
+  "label": "Nu Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "nu-metal",
+  "label": "Nu Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "nu-skool-breaks",
+  "label": "Nu Skool Breaks",
+  "parent_slug": "breakbeat"
+ },
+ {
+  "slug": "nu-style-gabber",
+  "label": "Nu Style Gabber",
+  "parent_slug": "gabber"
+ },
+ {
+  "slug": "nueva-cancion",
+  "label": "Nueva Canción",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "nueva-cancion-chilena",
+  "label": "Nueva Canción Chilena",
+  "parent_slug": null
+ },
+ {
+  "slug": "nueva-cancion-espanola",
+  "label": "Nueva Canción Española",
+  "parent_slug": null
+ },
+ {
+  "slug": "nueva-cumbia-chilena",
+  "label": "Nueva Cumbia Chilena",
+  "parent_slug": null
+ },
+ {
+  "slug": "nueva-trova",
+  "label": "Nueva Trova",
+  "parent_slug": null
+ },
+ {
+  "slug": "nuevo-cancionero",
+  "label": "Nuevo Cancionero",
+  "parent_slug": null
+ },
+ {
+  "slug": "nuevo-flamenco",
+  "label": "Nuevo Flamenco",
+  "parent_slug": "flamenco"
+ },
+ {
+  "slug": "nuevo-tango",
+  "label": "Nuevo Tango",
+  "parent_slug": "tango"
+ },
+ {
+  "slug": "nustyle",
+  "label": "Nustyle",
+  "parent_slug": null
+ },
+ {
+  "slug": "nwobhm",
+  "label": "Nwobhm",
+  "parent_slug": null
+ },
+ {
+  "slug": "nyu-myujikku",
+  "label": "Nyū Myūjikku",
+  "parent_slug": null
+ },
+ {
+  "slug": "oberek",
+  "label": "Oberek",
+  "parent_slug": null
+ },
+ {
+  "slug": "occult-rock",
+  "label": "Occult Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "odissi-classical",
+  "label": "Odissi Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "ogene-music",
+  "label": "Ogene Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "oi",
+  "label": "Oi",
+  "parent_slug": null
+ },
+ {
+  "slug": "old-roman-chant",
+  "label": "Old Roman Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "old-school-death-metal",
+  "label": "Old School Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "old-school-hip-hop",
+  "label": "Old School Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "old-time",
+  "label": "Old-Time",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "omutibo",
+  "label": "Omutibo",
+  "parent_slug": null
+ },
+ {
+  "slug": "onda-nueva",
+  "label": "Onda Nueva",
+  "parent_slug": null
+ },
+ {
+  "slug": "ondo",
+  "label": "Ondō",
+  "parent_slug": null
+ },
+ {
+  "slug": "onkyo",
+  "label": "Onkyo",
+  "parent_slug": null
+ },
+ {
+  "slug": "opera",
+  "label": "Opera",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "opera-ballet",
+  "label": "Opera-Ballet",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "opera-buffa",
+  "label": "Opera Buffa",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "opera-comique",
+  "label": "Opéra Comique",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "opera-semiseria",
+  "label": "Opera Semiseria",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "opera-seria",
+  "label": "Opera Seria",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "operatic-pop",
+  "label": "Operatic Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "operetta",
+  "label": "Operetta",
+  "parent_slug": null
+ },
+ {
+  "slug": "opm",
+  "label": "Opm",
+  "parent_slug": null
+ },
+ {
+  "slug": "oratorio",
+  "label": "Oratorio",
+  "parent_slug": null
+ },
+ {
+  "slug": "orchestral",
+  "label": "Orchestral",
+  "parent_slug": null
+ },
+ {
+  "slug": "orchestral-jazz",
+  "label": "Orchestral Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "orchestral-song",
+  "label": "Orchestral Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "organic-house",
+  "label": "Organic House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "ori-deck",
+  "label": "Ori Deck",
+  "parent_slug": null
+ },
+ {
+  "slug": "oriental-ballad",
+  "label": "Oriental Ballad",
+  "parent_slug": null
+ },
+ {
+  "slug": "orkes-gambus",
+  "label": "Orkes Gambus",
+  "parent_slug": null
+ },
+ {
+  "slug": "orthodox-pop",
+  "label": "Orthodox Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "ote-a",
+  "label": "ʻōteʻa",
+  "parent_slug": null
+ },
+ {
+  "slug": "outlaw-country",
+  "label": "Outlaw Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "outrun",
+  "label": "Outrun",
+  "parent_slug": null
+ },
+ {
+  "slug": "outsider-house",
+  "label": "Outsider House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "overture",
+  "label": "Overture",
+  "parent_slug": null
+ },
+ {
+  "slug": "ozgun-muzik",
+  "label": "Özgün Müzik",
+  "parent_slug": null
+ },
+ {
+  "slug": "p-funk",
+  "label": "P-Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "pachanga",
+  "label": "Pachanga",
+  "parent_slug": null
+ },
+ {
+  "slug": "pacific-reggae",
+  "label": "Pacific Reggae",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "pagan-black-metal",
+  "label": "Pagan Black Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "pagan-folk",
+  "label": "Pagan Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "paghjella",
+  "label": "Paghjella",
+  "parent_slug": null
+ },
+ {
+  "slug": "pagodao",
+  "label": "Pagodão",
+  "parent_slug": null
+ },
+ {
+  "slug": "pagode",
+  "label": "Pagode",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "pagode-romantico",
+  "label": "Pagode Romântico",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "paisley-underground",
+  "label": "Paisley Underground",
+  "parent_slug": null
+ },
+ {
+  "slug": "palingsound",
+  "label": "Palingsound",
+  "parent_slug": null
+ },
+ {
+  "slug": "palm-wine",
+  "label": "Palm-Wine",
+  "parent_slug": null
+ },
+ {
+  "slug": "palo-de-mayo",
+  "label": "Palo de Mayo",
+  "parent_slug": null
+ },
+ {
+  "slug": "pandilla",
+  "label": "Pandilla",
+  "parent_slug": null
+ },
+ {
+  "slug": "pansori",
+  "label": "Pansori",
+  "parent_slug": null
+ },
+ {
+  "slug": "paramaribop",
+  "label": "Paramaribop",
+  "parent_slug": null
+ },
+ {
+  "slug": "parang",
+  "label": "Parang",
+  "parent_slug": null
+ },
+ {
+  "slug": "parlour-music",
+  "label": "Parlour Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "partido-alto",
+  "label": "Partido Alto",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "partyschlager",
+  "label": "Partyschlager",
+  "parent_slug": null
+ },
+ {
+  "slug": "pasillo",
+  "label": "Pasillo",
+  "parent_slug": null
+ },
+ {
+  "slug": "pasodoble",
+  "label": "Pasodoble",
+  "parent_slug": null
+ },
+ {
+  "slug": "passion-setting",
+  "label": "Passion Setting",
+  "parent_slug": null
+ },
+ {
+  "slug": "pasztordal",
+  "label": "Pásztordal",
+  "parent_slug": null
+ },
+ {
+  "slug": "payada",
+  "label": "Payada",
+  "parent_slug": null
+ },
+ {
+  "slug": "peak-time-techno",
+  "label": "Peak Time Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "pep-band",
+  "label": "Pep Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "persian-classical",
+  "label": "Persian Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "persian-pop",
+  "label": "Persian Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "philly-club",
+  "label": "Philly Club",
+  "parent_slug": null
+ },
+ {
+  "slug": "philly-club-rap",
+  "label": "Philly Club Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "philly-drill",
+  "label": "Philly Drill",
+  "parent_slug": null
+ },
+ {
+  "slug": "philly-soul",
+  "label": "Philly Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "phleng-phuea-chiwit",
+  "label": "Phleng Phuea Chiwit",
+  "parent_slug": null
+ },
+ {
+  "slug": "phonk",
+  "label": "Phonk",
+  "parent_slug": null
+ },
+ {
+  "slug": "phonk-house",
+  "label": "Phonk House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "piano-blues",
+  "label": "Piano Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "piano-rock",
+  "label": "Piano Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "picopop",
+  "label": "Picopop",
+  "parent_slug": null
+ },
+ {
+  "slug": "piedmont-blues",
+  "label": "Piedmont Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "pigfuck",
+  "label": "Pigfuck",
+  "parent_slug": null
+ },
+ {
+  "slug": "pilon",
+  "label": "Pilón",
+  "parent_slug": null
+ },
+ {
+  "slug": "pimba",
+  "label": "Pimba",
+  "parent_slug": null
+ },
+ {
+  "slug": "pinpeat",
+  "label": "Pinpeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "piobaireachd",
+  "label": "Pìobaireachd",
+  "parent_slug": null
+ },
+ {
+  "slug": "piosenka-aktorska",
+  "label": "Piosenka Aktorska",
+  "parent_slug": null
+ },
+ {
+  "slug": "pipe-band-music",
+  "label": "Pipe Band Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "piphat",
+  "label": "Piphat",
+  "parent_slug": null
+ },
+ {
+  "slug": "pirekua",
+  "label": "Pirekua",
+  "parent_slug": null
+ },
+ {
+  "slug": "piseiro",
+  "label": "Piseiro",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "piyyut",
+  "label": "Piyyut",
+  "parent_slug": null
+ },
+ {
+  "slug": "pizzica",
+  "label": "Pizzica",
+  "parent_slug": null
+ },
+ {
+  "slug": "plainchant",
+  "label": "Plainchant",
+  "parent_slug": null
+ },
+ {
+  "slug": "plena",
+  "label": "Plena",
+  "parent_slug": null
+ },
+ {
+  "slug": "plugg",
+  "label": "Plugg",
+  "parent_slug": null
+ },
+ {
+  "slug": "pluggnb",
+  "label": "Pluggnb",
+  "parent_slug": null
+ },
+ {
+  "slug": "plunderphonics",
+  "label": "Plunderphonics",
+  "parent_slug": null
+ },
+ {
+  "slug": "poetry",
+  "label": "Poetry",
+  "parent_slug": null
+ },
+ {
+  "slug": "polca-criolla",
+  "label": "Polca Criolla",
+  "parent_slug": null
+ },
+ {
+  "slug": "polifonia-occitana",
+  "label": "Polifonia Occitana",
+  "parent_slug": null
+ },
+ {
+  "slug": "political-hip-hop",
+  "label": "Political Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "polka",
+  "label": "Polka",
+  "parent_slug": null
+ },
+ {
+  "slug": "polka-paraguaya",
+  "label": "Polka Paraguaya",
+  "parent_slug": null
+ },
+ {
+  "slug": "polonaise",
+  "label": "Polonaise",
+  "parent_slug": null
+ },
+ {
+  "slug": "pon-chak-disco",
+  "label": "Pon-Chak Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "pop",
+  "label": "Pop",
+  "parent_slug": null
+ },
+ {
+  "slug": "pop-ghazal",
+  "label": "Pop Ghazal",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "pop-kreatif",
+  "label": "Pop Kreatif",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "pop-metal",
+  "label": "Pop Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "pop-minang",
+  "label": "Pop Minang",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "pop-punk",
+  "label": "Pop Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "pop-rai",
+  "label": "Pop Raï",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "pop-rap",
+  "label": "Pop Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "pop-rock",
+  "label": "Pop Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "pop-screamo",
+  "label": "Pop Screamo",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "pop-soul",
+  "label": "Pop Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "pop-yeh-yeh",
+  "label": "Pop Yeh-Yeh",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "porn-groove",
+  "label": "Porn Groove",
+  "parent_slug": null
+ },
+ {
+  "slug": "pornogrind",
+  "label": "Pornogrind",
+  "parent_slug": null
+ },
+ {
+  "slug": "porro",
+  "label": "Porro",
+  "parent_slug": null
+ },
+ {
+  "slug": "post-bop",
+  "label": "Post-Bop",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "post-britpop",
+  "label": "Post-Britpop",
+  "parent_slug": null
+ },
+ {
+  "slug": "post-classical",
+  "label": "Post-Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "post-dubstep",
+  "label": "Post-Dubstep",
+  "parent_slug": "dubstep"
+ },
+ {
+  "slug": "post-grunge",
+  "label": "Post-Grunge",
+  "parent_slug": "grunge"
+ },
+ {
+  "slug": "post-hardcore",
+  "label": "Post-Hardcore",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "post-industrial",
+  "label": "Post-Industrial",
+  "parent_slug": "industrial"
+ },
+ {
+  "slug": "post-metal",
+  "label": "Post-Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "post-minimalism",
+  "label": "Post-Minimalism",
+  "parent_slug": null
+ },
+ {
+  "slug": "post-punk",
+  "label": "Post-Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "post-punk-revival",
+  "label": "Post-Punk Revival",
+  "parent_slug": null
+ },
+ {
+  "slug": "post-rock",
+  "label": "Post-Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "powada",
+  "label": "Powada",
+  "parent_slug": null
+ },
+ {
+  "slug": "power-electronics",
+  "label": "Power Electronics",
+  "parent_slug": null
+ },
+ {
+  "slug": "power-metal",
+  "label": "Power Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "power-noise",
+  "label": "Power Noise",
+  "parent_slug": "noise"
+ },
+ {
+  "slug": "power-pop",
+  "label": "Power Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "power-soca",
+  "label": "Power Soca",
+  "parent_slug": "soca"
+ },
+ {
+  "slug": "powerstomp",
+  "label": "Powerstomp",
+  "parent_slug": null
+ },
+ {
+  "slug": "powerviolence",
+  "label": "Powerviolence",
+  "parent_slug": null
+ },
+ {
+  "slug": "praise-break",
+  "label": "Praise Break",
+  "parent_slug": null
+ },
+ {
+  "slug": "praise-worship",
+  "label": "Praise & Worship",
+  "parent_slug": null
+ },
+ {
+  "slug": "prank-calls",
+  "label": "Prank Calls",
+  "parent_slug": null
+ },
+ {
+  "slug": "prelude",
+  "label": "Prelude",
+  "parent_slug": null
+ },
+ {
+  "slug": "process-music",
+  "label": "Process Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "production-music",
+  "label": "Production Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "progressive",
+  "label": "Progressive",
+  "parent_slug": null
+ },
+ {
+  "slug": "progressive-bluegrass",
+  "label": "Progressive Bluegrass",
+  "parent_slug": "bluegrass"
+ },
+ {
+  "slug": "progressive-breaks",
+  "label": "Progressive Breaks",
+  "parent_slug": "breakbeat"
+ },
+ {
+  "slug": "progressive-country",
+  "label": "Progressive Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "progressive-electronic",
+  "label": "Progressive Electronic",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "progressive-folk",
+  "label": "Progressive Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "progressive-house",
+  "label": "Progressive House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "progressive-metal",
+  "label": "Progressive Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "progressive-metalcore",
+  "label": "Progressive Metalcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "progressive-pop",
+  "label": "Progressive Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "progressive-psytrance",
+  "label": "Progressive Psytrance",
+  "parent_slug": null
+ },
+ {
+  "slug": "progressive-rock",
+  "label": "Progressive Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "progressive-soul",
+  "label": "Progressive Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "progressive-trance",
+  "label": "Progressive Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "proto-punk",
+  "label": "Proto-Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "psichedelia-occulta-italiana",
+  "label": "Psichedelia Occulta Italiana",
+  "parent_slug": null
+ },
+ {
+  "slug": "psybient",
+  "label": "Psybient",
+  "parent_slug": null
+ },
+ {
+  "slug": "psybreaks",
+  "label": "Psybreaks",
+  "parent_slug": null
+ },
+ {
+  "slug": "psychedelic",
+  "label": "Psychedelic",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "psychedelic-folk",
+  "label": "Psychedelic Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "psychedelic-pop",
+  "label": "Psychedelic Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "psychedelic-rock",
+  "label": "Psychedelic Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "psychedelic-soul",
+  "label": "Psychedelic Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "psychobilly",
+  "label": "Psychobilly",
+  "parent_slug": "rockabilly"
+ },
+ {
+  "slug": "psychploitation",
+  "label": "Psychploitation",
+  "parent_slug": null
+ },
+ {
+  "slug": "psycore",
+  "label": "Psycore",
+  "parent_slug": null
+ },
+ {
+  "slug": "psystyle",
+  "label": "Psystyle",
+  "parent_slug": null
+ },
+ {
+  "slug": "psytrance",
+  "label": "Psytrance",
+  "parent_slug": null
+ },
+ {
+  "slug": "pub-rock",
+  "label": "Pub Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "puirt-a-beul",
+  "label": "Puirt À Beul",
+  "parent_slug": null
+ },
+ {
+  "slug": "pumpcore",
+  "label": "Pumpcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "pungmul",
+  "label": "Pungmul",
+  "parent_slug": null
+ },
+ {
+  "slug": "punk",
+  "label": "Punk",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "punk-blues",
+  "label": "Punk Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "punk-poetry",
+  "label": "Punk Poetry",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "punk-rap",
+  "label": "Punk Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "punk-rock",
+  "label": "Punk Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "punta",
+  "label": "Punta",
+  "parent_slug": null
+ },
+ {
+  "slug": "punto",
+  "label": "Punto",
+  "parent_slug": null
+ },
+ {
+  "slug": "purple-sound",
+  "label": "Purple Sound",
+  "parent_slug": null
+ },
+ {
+  "slug": "puxa",
+  "label": "Puxa",
+  "parent_slug": null
+ },
+ {
+  "slug": "q-pop",
+  "label": "Q-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "qaraami",
+  "label": "Qaraami",
+  "parent_slug": null
+ },
+ {
+  "slug": "qasidah-modern",
+  "label": "Qasidah Modern",
+  "parent_slug": null
+ },
+ {
+  "slug": "qawwali",
+  "label": "Qawwali",
+  "parent_slug": null
+ },
+ {
+  "slug": "quan-ho",
+  "label": "Quan Họ",
+  "parent_slug": null
+ },
+ {
+  "slug": "queercore",
+  "label": "Queercore",
+  "parent_slug": null
+ },
+ {
+  "slug": "quiet-storm",
+  "label": "Quiet Storm",
+  "parent_slug": "rnb"
+ },
+ {
+  "slug": "quyi",
+  "label": "Quyi",
+  "parent_slug": null
+ },
+ {
+  "slug": "rabbit-song",
+  "label": "Rabbit Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "rabiz",
+  "label": "Rabiz",
+  "parent_slug": null
+ },
+ {
+  "slug": "raga-rock",
+  "label": "Raga Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rage",
+  "label": "Rage",
+  "parent_slug": null
+ },
+ {
+  "slug": "ragga",
+  "label": "Ragga",
+  "parent_slug": "dancehall"
+ },
+ {
+  "slug": "ragga-hip-hop",
+  "label": "Ragga Hip-Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "ragga-jungle",
+  "label": "Ragga Jungle",
+  "parent_slug": "jungle"
+ },
+ {
+  "slug": "raggacore",
+  "label": "Raggacore",
+  "parent_slug": null
+ },
+ {
+  "slug": "raggatek",
+  "label": "Raggatek",
+  "parent_slug": null
+ },
+ {
+  "slug": "ragtime",
+  "label": "Ragtime",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "ragtime-song",
+  "label": "Ragtime Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "rai",
+  "label": "Raï",
+  "parent_slug": null
+ },
+ {
+  "slug": "rain-sounds",
+  "label": "Rain Sounds",
+  "parent_slug": null
+ },
+ {
+  "slug": "ranchera",
+  "label": "Ranchera",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "rap-metal",
+  "label": "Rap Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "rap-rock",
+  "label": "Rap Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rapcore",
+  "label": "Rapcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "rapso",
+  "label": "Rapso",
+  "parent_slug": null
+ },
+ {
+  "slug": "raqs-baladi",
+  "label": "Raqs Baladi",
+  "parent_slug": null
+ },
+ {
+  "slug": "rara",
+  "label": "Rara",
+  "parent_slug": null
+ },
+ {
+  "slug": "rasin",
+  "label": "Rasin",
+  "parent_slug": null
+ },
+ {
+  "slug": "rasqueado-cuiabano",
+  "label": "Rasqueado Cuiabano",
+  "parent_slug": null
+ },
+ {
+  "slug": "rasteirinha",
+  "label": "Rasteirinha",
+  "parent_slug": "funk-carioca"
+ },
+ {
+  "slug": "ratchet-music",
+  "label": "Ratchet Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "rautalanka",
+  "label": "Rautalanka",
+  "parent_slug": null
+ },
+ {
+  "slug": "rave",
+  "label": "Rave",
+  "parent_slug": null
+ },
+ {
+  "slug": "raw-punk",
+  "label": "Raw Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "rawphoric",
+  "label": "Rawphoric",
+  "parent_slug": null
+ },
+ {
+  "slug": "rawstyle",
+  "label": "Rawstyle",
+  "parent_slug": null
+ },
+ {
+  "slug": "rebetiko",
+  "label": "Rebetiko",
+  "parent_slug": null
+ },
+ {
+  "slug": "red-dirt",
+  "label": "Red Dirt",
+  "parent_slug": null
+ },
+ {
+  "slug": "red-disco",
+  "label": "Red Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "red-song",
+  "label": "Red Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "reductionism",
+  "label": "Reductionism",
+  "parent_slug": null
+ },
+ {
+  "slug": "regalia",
+  "label": "Regalia",
+  "parent_slug": null
+ },
+ {
+  "slug": "reggae",
+  "label": "Reggae",
+  "parent_slug": null
+ },
+ {
+  "slug": "reggae-pop",
+  "label": "Reggae-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "reggae-rock",
+  "label": "Reggae Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "reggaeton",
+  "label": "Reggaeton",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "regional-mexicano",
+  "label": "Regional Mexicano",
+  "parent_slug": null
+ },
+ {
+  "slug": "renaissance",
+  "label": "Renaissance",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "reparto",
+  "label": "Reparto",
+  "parent_slug": null
+ },
+ {
+  "slug": "repente",
+  "label": "Repente",
+  "parent_slug": null
+ },
+ {
+  "slug": "requiem",
+  "label": "Requiem",
+  "parent_slug": null
+ },
+ {
+  "slug": "revue",
+  "label": "Revue",
+  "parent_slug": null
+ },
+ {
+  "slug": "rhumba",
+  "label": "Rhumba",
+  "parent_slug": null
+ },
+ {
+  "slug": "ricercar",
+  "label": "Ricercar",
+  "parent_slug": null
+ },
+ {
+  "slug": "riddim-dubstep",
+  "label": "Riddim Dubstep",
+  "parent_slug": "dubstep"
+ },
+ {
+  "slug": "rigsar",
+  "label": "Rigsar",
+  "parent_slug": null
+ },
+ {
+  "slug": "ring-shout",
+  "label": "Ring Shout",
+  "parent_slug": null
+ },
+ {
+  "slug": "riot-grrrl",
+  "label": "Riot Grrrl",
+  "parent_slug": null
+ },
+ {
+  "slug": "ripsaw",
+  "label": "Ripsaw",
+  "parent_slug": null
+ },
+ {
+  "slug": "ritmada",
+  "label": "Ritmada",
+  "parent_slug": null
+ },
+ {
+  "slug": "ritual-ambient",
+  "label": "Ritual Ambient",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "rizitika",
+  "label": "Rizitika",
+  "parent_slug": null
+ },
+ {
+  "slug": "rkt",
+  "label": "Rkt",
+  "parent_slug": null
+ },
+ {
+  "slug": "rnb",
+  "label": "R&b",
+  "parent_slug": null
+ },
+ {
+  "slug": "rock",
+  "label": "Rock",
+  "parent_slug": null
+ },
+ {
+  "slug": "rock-and-roll",
+  "label": "Rock and Roll",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rock-andaluz",
+  "label": "Rock Andaluz",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rock-andino",
+  "label": "Rock Andino",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rock-kapak",
+  "label": "Rock Kapak",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rock-musical",
+  "label": "Rock Musical",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rock-opera",
+  "label": "Rock Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "rock-rural",
+  "label": "Rock Rural",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rock-urbano",
+  "label": "Rock Urbano",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rock-urbano-mexicano",
+  "label": "Rock Urbano Mexicano",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rockabilly",
+  "label": "Rockabilly",
+  "parent_slug": "rock-and-roll"
+ },
+ {
+  "slug": "rocksteady",
+  "label": "Rocksteady",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "rokyoku",
+  "label": "Rōkyoku",
+  "parent_slug": null
+ },
+ {
+  "slug": "rom-kbach",
+  "label": "Rom Kbach",
+  "parent_slug": null
+ },
+ {
+  "slug": "romanian-popcorn",
+  "label": "Romanian Popcorn",
+  "parent_slug": null
+ },
+ {
+  "slug": "romantic-classical",
+  "label": "Romantic Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "romantic-flow",
+  "label": "Romantic Flow",
+  "parent_slug": null
+ },
+ {
+  "slug": "romantische-oper",
+  "label": "Romantische Oper",
+  "parent_slug": null
+ },
+ {
+  "slug": "rominimal",
+  "label": "Rominimal",
+  "parent_slug": null
+ },
+ {
+  "slug": "roots-reggae",
+  "label": "Roots Reggae",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "roots-rock",
+  "label": "Roots Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "rumba",
+  "label": "Rumba",
+  "parent_slug": null
+ },
+ {
+  "slug": "rumba-catalana",
+  "label": "Rumba Catalana",
+  "parent_slug": null
+ },
+ {
+  "slug": "rumba-cubana",
+  "label": "Rumba Cubana",
+  "parent_slug": null
+ },
+ {
+  "slug": "rumba-flamenca",
+  "label": "Rumba Flamenca",
+  "parent_slug": null
+ },
+ {
+  "slug": "runo-song",
+  "label": "Runo Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "russian-chanson",
+  "label": "Russian Chanson",
+  "parent_slug": null
+ },
+ {
+  "slug": "russian-orthodox-liturgical-music",
+  "label": "Russian Orthodox Liturgical Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "russian-romance",
+  "label": "Russian Romance",
+  "parent_slug": null
+ },
+ {
+  "slug": "rustic-stomp",
+  "label": "Rustic Stomp",
+  "parent_slug": null
+ },
+ {
+  "slug": "ryukoka",
+  "label": "Ryūkōka",
+  "parent_slug": null
+ },
+ {
+  "slug": "sa-idi",
+  "label": "Sa'idi",
+  "parent_slug": null
+ },
+ {
+  "slug": "sacred-harp",
+  "label": "Sacred Harp",
+  "parent_slug": null
+ },
+ {
+  "slug": "sacred-steel",
+  "label": "Sacred Steel",
+  "parent_slug": null
+ },
+ {
+  "slug": "saeta",
+  "label": "Saeta",
+  "parent_slug": null
+ },
+ {
+  "slug": "salegy",
+  "label": "Salegy",
+  "parent_slug": null
+ },
+ {
+  "slug": "salsa",
+  "label": "Salsa",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "salsa-choke",
+  "label": "Salsa Choke",
+  "parent_slug": "salsa"
+ },
+ {
+  "slug": "salsa-dura",
+  "label": "Salsa Dura",
+  "parent_slug": "salsa"
+ },
+ {
+  "slug": "salsa-romantica",
+  "label": "Salsa Romántica",
+  "parent_slug": "salsa"
+ },
+ {
+  "slug": "saluang-klasik",
+  "label": "Saluang Klasik",
+  "parent_slug": null
+ },
+ {
+  "slug": "samba",
+  "label": "Samba",
+  "parent_slug": null
+ },
+ {
+  "slug": "samba-cancao",
+  "label": "Samba-Canção",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-choro",
+  "label": "Samba-Choro",
+  "parent_slug": "choro"
+ },
+ {
+  "slug": "samba-de-breque",
+  "label": "Samba de Breque",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-de-gafieira",
+  "label": "Samba de Gafieira",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-de-roda",
+  "label": "Samba de Roda",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-de-terreiro",
+  "label": "Samba de Terreiro",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-enredo",
+  "label": "Samba-Enredo",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-exaltacao",
+  "label": "Samba-Exaltação",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-jazz",
+  "label": "Samba-Jazz",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-joia",
+  "label": "Samba-Joia",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-rap",
+  "label": "Samba Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "samba-reggae",
+  "label": "Samba-Reggae",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-rock",
+  "label": "Samba-Rock",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "samba-soul",
+  "label": "Samba Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "sambalanco",
+  "label": "Sambalanço",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "sambass",
+  "label": "Sambass",
+  "parent_slug": "samba"
+ },
+ {
+  "slug": "sample-drill",
+  "label": "Sample Drill",
+  "parent_slug": null
+ },
+ {
+  "slug": "sampledelia",
+  "label": "Sampledelia",
+  "parent_slug": null
+ },
+ {
+  "slug": "samri",
+  "label": "Samri",
+  "parent_slug": null
+ },
+ {
+  "slug": "sanjo",
+  "label": "Sanjo",
+  "parent_slug": null
+ },
+ {
+  "slug": "sante-engage",
+  "label": "Santé Engagé",
+  "parent_slug": null
+ },
+ {
+  "slug": "sarala-gee",
+  "label": "Sarala Gee",
+  "parent_slug": null
+ },
+ {
+  "slug": "sardana",
+  "label": "Sardana",
+  "parent_slug": null
+ },
+ {
+  "slug": "sarum-chant",
+  "label": "Sarum Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "sasscore",
+  "label": "Sasscore",
+  "parent_slug": null
+ },
+ {
+  "slug": "sawt",
+  "label": "Sawt",
+  "parent_slug": null
+ },
+ {
+  "slug": "saya-afroboliviana",
+  "label": "Saya Afroboliviana",
+  "parent_slug": null
+ },
+ {
+  "slug": "scam-rap",
+  "label": "Scam Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "schlager",
+  "label": "Schlager",
+  "parent_slug": null
+ },
+ {
+  "slug": "schottische",
+  "label": "Schottische",
+  "parent_slug": null
+ },
+ {
+  "slug": "schranz",
+  "label": "Schranz",
+  "parent_slug": null
+ },
+ {
+  "slug": "scottish-country-dance-music",
+  "label": "Scottish Country Dance Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "screamo",
+  "label": "Screamo",
+  "parent_slug": null
+ },
+ {
+  "slug": "scrumpy-and-western",
+  "label": "Scrumpy and Western",
+  "parent_slug": null
+ },
+ {
+  "slug": "sea-shanty",
+  "label": "Sea Shanty",
+  "parent_slug": null
+ },
+ {
+  "slug": "sean-nos",
+  "label": "Sean-Nós",
+  "parent_slug": null
+ },
+ {
+  "slug": "seapunk",
+  "label": "Seapunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "sega",
+  "label": "Séga",
+  "parent_slug": null
+ },
+ {
+  "slug": "sega-tambour",
+  "label": "Séga Tambour",
+  "parent_slug": null
+ },
+ {
+  "slug": "seggae",
+  "label": "Seggae",
+  "parent_slug": null
+ },
+ {
+  "slug": "seguidilla",
+  "label": "Seguidilla",
+  "parent_slug": null
+ },
+ {
+  "slug": "seishun-punk",
+  "label": "Seishun Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "semba",
+  "label": "Semba",
+  "parent_slug": null
+ },
+ {
+  "slug": "semi-trot",
+  "label": "Semi-Trot",
+  "parent_slug": null
+ },
+ {
+  "slug": "serenade",
+  "label": "Serenade",
+  "parent_slug": null
+ },
+ {
+  "slug": "seresta",
+  "label": "Seresta",
+  "parent_slug": null
+ },
+ {
+  "slug": "serialism",
+  "label": "Serialism",
+  "parent_slug": null
+ },
+ {
+  "slug": "sermon",
+  "label": "Sermon",
+  "parent_slug": null
+ },
+ {
+  "slug": "sertanejo",
+  "label": "Sertanejo",
+  "parent_slug": null
+ },
+ {
+  "slug": "sertanejo-raiz",
+  "label": "Sertanejo Raiz",
+  "parent_slug": "sertanejo"
+ },
+ {
+  "slug": "sertanejo-romantico",
+  "label": "Sertanejo Romântico",
+  "parent_slug": "sertanejo"
+ },
+ {
+  "slug": "sertanejo-universitario",
+  "label": "Sertanejo Universitário",
+  "parent_slug": "sertanejo"
+ },
+ {
+  "slug": "seto-leelo",
+  "label": "Seto Leelo",
+  "parent_slug": null
+ },
+ {
+  "slug": "sevdalinka",
+  "label": "Sevdalinka",
+  "parent_slug": null
+ },
+ {
+  "slug": "sevillanas",
+  "label": "Sevillanas",
+  "parent_slug": null
+ },
+ {
+  "slug": "sexy-drill",
+  "label": "Sexy Drill",
+  "parent_slug": null
+ },
+ {
+  "slug": "shaabi",
+  "label": "Shaabi",
+  "parent_slug": null
+ },
+ {
+  "slug": "shabad-kirtan",
+  "label": "Shabad Kirtan",
+  "parent_slug": null
+ },
+ {
+  "slug": "shan-ge",
+  "label": "Shan'ge",
+  "parent_slug": null
+ },
+ {
+  "slug": "shangaan-electro",
+  "label": "Shangaan Electro",
+  "parent_slug": "electro"
+ },
+ {
+  "slug": "shanto",
+  "label": "Shanto",
+  "parent_slug": null
+ },
+ {
+  "slug": "shashmaqam",
+  "label": "Shashmaqam",
+  "parent_slug": null
+ },
+ {
+  "slug": "shatta",
+  "label": "Shatta",
+  "parent_slug": null
+ },
+ {
+  "slug": "shibuya-kei",
+  "label": "Shibuya-Kei",
+  "parent_slug": null
+ },
+ {
+  "slug": "shidaiqu",
+  "label": "Shidaiqu",
+  "parent_slug": null
+ },
+ {
+  "slug": "shima-uta",
+  "label": "Shima-Uta",
+  "parent_slug": null
+ },
+ {
+  "slug": "shinkyoku",
+  "label": "Shinkyoku",
+  "parent_slug": null
+ },
+ {
+  "slug": "shitgaze",
+  "label": "Shitgaze",
+  "parent_slug": null
+ },
+ {
+  "slug": "shoegaze",
+  "label": "Shoegaze",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "shomyo",
+  "label": "Shōmyō",
+  "parent_slug": null
+ },
+ {
+  "slug": "shoor",
+  "label": "Shoor",
+  "parent_slug": null
+ },
+ {
+  "slug": "sichuan-opera",
+  "label": "Sichuan Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "sierreno",
+  "label": "Sierreño",
+  "parent_slug": null
+ },
+ {
+  "slug": "sigidrigi",
+  "label": "Sigidrigi",
+  "parent_slug": null
+ },
+ {
+  "slug": "sigilkore",
+  "label": "Sigilkore",
+  "parent_slug": null
+ },
+ {
+  "slug": "sinawi",
+  "label": "Sinawi",
+  "parent_slug": null
+ },
+ {
+  "slug": "sinfonia-concertante",
+  "label": "Sinfonia Concertante",
+  "parent_slug": null
+ },
+ {
+  "slug": "singeli",
+  "label": "Singeli",
+  "parent_slug": null
+ },
+ {
+  "slug": "singer-songwriter",
+  "label": "Singer-Songwriter",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "singspiel",
+  "label": "Singspiel",
+  "parent_slug": null
+ },
+ {
+  "slug": "sissy-bounce",
+  "label": "Sissy Bounce",
+  "parent_slug": null
+ },
+ {
+  "slug": "sitarsploitation",
+  "label": "Sitarsploitation",
+  "parent_slug": null
+ },
+ {
+  "slug": "sizhu-music",
+  "label": "Sizhu Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "ska",
+  "label": "Ska",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "ska-punk",
+  "label": "Ska Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "skacore",
+  "label": "Skacore",
+  "parent_slug": null
+ },
+ {
+  "slug": "skate-punk",
+  "label": "Skate Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "sketch-comedy",
+  "label": "Sketch Comedy",
+  "parent_slug": null
+ },
+ {
+  "slug": "skiffle",
+  "label": "Skiffle",
+  "parent_slug": null
+ },
+ {
+  "slug": "skiladiko",
+  "label": "Skiladiko",
+  "parent_slug": null
+ },
+ {
+  "slug": "skinhead-reggae",
+  "label": "Skinhead Reggae",
+  "parent_slug": "reggae"
+ },
+ {
+  "slug": "skullstep",
+  "label": "Skullstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "skweee",
+  "label": "Skweee",
+  "parent_slug": null
+ },
+ {
+  "slug": "slack-key-guitar",
+  "label": "Slack-Key Guitar",
+  "parent_slug": null
+ },
+ {
+  "slug": "slacker-rock",
+  "label": "Slacker Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "slam-death-metal",
+  "label": "Slam Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "slam-poetry",
+  "label": "Slam Poetry",
+  "parent_slug": null
+ },
+ {
+  "slug": "slap-house",
+  "label": "Slap House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "sleaze-rock",
+  "label": "Sleaze Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "slimepunk",
+  "label": "Slimepunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "slow-waltz",
+  "label": "Slow Waltz",
+  "parent_slug": null
+ },
+ {
+  "slug": "slowcore",
+  "label": "Slowcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "slowed-reverb",
+  "label": "Slowed & Reverb",
+  "parent_slug": null
+ },
+ {
+  "slug": "sludge-metal",
+  "label": "Sludge Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "slushwave",
+  "label": "Slushwave",
+  "parent_slug": null
+ },
+ {
+  "slug": "smooth-jazz",
+  "label": "Smooth Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "smooth-soul",
+  "label": "Smooth Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "snap",
+  "label": "Snap",
+  "parent_slug": null
+ },
+ {
+  "slug": "soca",
+  "label": "Soca",
+  "parent_slug": "calypso"
+ },
+ {
+  "slug": "soft-rock",
+  "label": "Soft Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "soft-visual",
+  "label": "Soft Visual",
+  "parent_slug": null
+ },
+ {
+  "slug": "sokyoku",
+  "label": "Sōkyoku",
+  "parent_slug": null
+ },
+ {
+  "slug": "son-calentano",
+  "label": "Son Calentano",
+  "parent_slug": null
+ },
+ {
+  "slug": "son-cubano",
+  "label": "Son Cubano",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "son-de-pascua",
+  "label": "Son de Pascua",
+  "parent_slug": null
+ },
+ {
+  "slug": "son-huasteco",
+  "label": "Son Huasteco",
+  "parent_slug": null
+ },
+ {
+  "slug": "son-istmeno",
+  "label": "Son Istmeño",
+  "parent_slug": null
+ },
+ {
+  "slug": "son-jarocho",
+  "label": "Son Jarocho",
+  "parent_slug": null
+ },
+ {
+  "slug": "son-montuno",
+  "label": "Son Montuno",
+  "parent_slug": null
+ },
+ {
+  "slug": "son-nica",
+  "label": "Son Nica",
+  "parent_slug": null
+ },
+ {
+  "slug": "sonata",
+  "label": "Sonata",
+  "parent_slug": null
+ },
+ {
+  "slug": "songo",
+  "label": "Songo",
+  "parent_slug": null
+ },
+ {
+  "slug": "sonorism",
+  "label": "Sonorism",
+  "parent_slug": null
+ },
+ {
+  "slug": "sophisti-pop",
+  "label": "Sophisti-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "soukous",
+  "label": "Soukous",
+  "parent_slug": null
+ },
+ {
+  "slug": "soul",
+  "label": "Soul",
+  "parent_slug": null
+ },
+ {
+  "slug": "soul-blues",
+  "label": "Soul Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "soul-jazz",
+  "label": "Soul Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "sound-art",
+  "label": "Sound Art",
+  "parent_slug": null
+ },
+ {
+  "slug": "sound-collage",
+  "label": "Sound Collage",
+  "parent_slug": null
+ },
+ {
+  "slug": "sound-effects",
+  "label": "Sound Effects",
+  "parent_slug": null
+ },
+ {
+  "slug": "sound-poetry",
+  "label": "Sound Poetry",
+  "parent_slug": null
+ },
+ {
+  "slug": "southeast-asian-classical",
+  "label": "Southeast Asian Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "southern-gospel",
+  "label": "Southern Gospel",
+  "parent_slug": "gospel"
+ },
+ {
+  "slug": "southern-hip-hop",
+  "label": "Southern Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "southern-metal",
+  "label": "Southern Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "southern-rock",
+  "label": "Southern Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "southern-soul",
+  "label": "Southern Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "sovietwave",
+  "label": "Sovietwave",
+  "parent_slug": null
+ },
+ {
+  "slug": "space-age-pop",
+  "label": "Space Age Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "space-ambient",
+  "label": "Space Ambient",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "space-disco",
+  "label": "Space Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "space-rock",
+  "label": "Space Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "space-rock-revival",
+  "label": "Space Rock Revival",
+  "parent_slug": null
+ },
+ {
+  "slug": "spacesynth",
+  "label": "Spacesynth",
+  "parent_slug": null
+ },
+ {
+  "slug": "spamwave",
+  "label": "Spamwave",
+  "parent_slug": null
+ },
+ {
+  "slug": "spectralism",
+  "label": "Spectralism",
+  "parent_slug": null
+ },
+ {
+  "slug": "speech",
+  "label": "Speech",
+  "parent_slug": null
+ },
+ {
+  "slug": "speed-garage",
+  "label": "Speed Garage",
+  "parent_slug": "uk-garage"
+ },
+ {
+  "slug": "speed-house",
+  "label": "Speed House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "speed-metal",
+  "label": "Speed Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "speedcore",
+  "label": "Speedcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "spiritual-art-song",
+  "label": "Spiritual Art Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "spiritual-jazz",
+  "label": "Spiritual Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "spirituals",
+  "label": "Spirituals",
+  "parent_slug": null
+ },
+ {
+  "slug": "splittercore",
+  "label": "Splittercore",
+  "parent_slug": null
+ },
+ {
+  "slug": "spoken-word",
+  "label": "Spoken Word",
+  "parent_slug": null
+ },
+ {
+  "slug": "spouge",
+  "label": "Spouge",
+  "parent_slug": null
+ },
+ {
+  "slug": "staifi",
+  "label": "Staïfi",
+  "parent_slug": null
+ },
+ {
+  "slug": "standup-comedy",
+  "label": "Standup Comedy",
+  "parent_slug": null
+ },
+ {
+  "slug": "steampunk",
+  "label": "Steampunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "steel-band",
+  "label": "Steel Band",
+  "parent_slug": null
+ },
+ {
+  "slug": "stenchcore",
+  "label": "Stenchcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "sticheron",
+  "label": "Sticheron",
+  "parent_slug": null
+ },
+ {
+  "slug": "stochastic-music",
+  "label": "Stochastic Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "stomp-and-holler",
+  "label": "Stomp and Holler",
+  "parent_slug": null
+ },
+ {
+  "slug": "stoner-metal",
+  "label": "Stoner Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "stoner-rap",
+  "label": "Stoner Rap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "stoner-rock",
+  "label": "Stoner Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "stornello",
+  "label": "Stornello",
+  "parent_slug": null
+ },
+ {
+  "slug": "street-punk",
+  "label": "Street Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "stride",
+  "label": "Stride",
+  "parent_slug": null
+ },
+ {
+  "slug": "string-quartet",
+  "label": "String Quartet",
+  "parent_slug": null
+ },
+ {
+  "slug": "stutter-house",
+  "label": "Stutter House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "sufi-rock",
+  "label": "Sufi Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "sufiana-kalam",
+  "label": "Sufiana Kalam",
+  "parent_slug": null
+ },
+ {
+  "slug": "sundanese-pop",
+  "label": "Sundanese Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "sungura",
+  "label": "Sungura",
+  "parent_slug": null
+ },
+ {
+  "slug": "sunshine-pop",
+  "label": "Sunshine Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "suomisaundi",
+  "label": "Suomisaundi",
+  "parent_slug": null
+ },
+ {
+  "slug": "surf",
+  "label": "Surf",
+  "parent_slug": null
+ },
+ {
+  "slug": "surf-punk",
+  "label": "Surf Punk",
+  "parent_slug": "punk"
+ },
+ {
+  "slug": "surf-rock",
+  "label": "Surf Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "sutartines",
+  "label": "Sutartinės",
+  "parent_slug": null
+ },
+ {
+  "slug": "swamp-blues",
+  "label": "Swamp Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "swamp-pop",
+  "label": "Swamp Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "swamp-rock",
+  "label": "Swamp Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "swancore",
+  "label": "Swancore",
+  "parent_slug": null
+ },
+ {
+  "slug": "sweet-jazz",
+  "label": "Sweet Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "swing",
+  "label": "Swing",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "swing-revival",
+  "label": "Swing Revival",
+  "parent_slug": "swing"
+ },
+ {
+  "slug": "symphonic-black-metal",
+  "label": "Symphonic Black Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "symphonic-metal",
+  "label": "Symphonic Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "symphonic-mugham",
+  "label": "Symphonic Mugham",
+  "parent_slug": null
+ },
+ {
+  "slug": "symphonic-poem",
+  "label": "Symphonic Poem",
+  "parent_slug": null
+ },
+ {
+  "slug": "symphonic-prog",
+  "label": "Symphonic Prog",
+  "parent_slug": null
+ },
+ {
+  "slug": "symphonic-rock",
+  "label": "Symphonic Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "symphony",
+  "label": "Symphony",
+  "parent_slug": null
+ },
+ {
+  "slug": "synth-funk",
+  "label": "Synth Funk",
+  "parent_slug": "funk"
+ },
+ {
+  "slug": "synth-pop",
+  "label": "Synth-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "synthwave",
+  "label": "Synthwave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "t-pop",
+  "label": "T-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "taarab",
+  "label": "Taarab",
+  "parent_slug": null
+ },
+ {
+  "slug": "tajaraste",
+  "label": "Tajaraste",
+  "parent_slug": null
+ },
+ {
+  "slug": "takamba",
+  "label": "Takamba",
+  "parent_slug": null
+ },
+ {
+  "slug": "talempong",
+  "label": "Talempong",
+  "parent_slug": null
+ },
+ {
+  "slug": "talempong-goyang",
+  "label": "Talempong Goyang",
+  "parent_slug": null
+ },
+ {
+  "slug": "talking-blues",
+  "label": "Talking Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "tallava",
+  "label": "Tallava",
+  "parent_slug": null
+ },
+ {
+  "slug": "tamborera",
+  "label": "Tamborera",
+  "parent_slug": null
+ },
+ {
+  "slug": "tamborito",
+  "label": "Tamborito",
+  "parent_slug": null
+ },
+ {
+  "slug": "tamborzao",
+  "label": "Tamborzão",
+  "parent_slug": null
+ },
+ {
+  "slug": "tammurriata",
+  "label": "Tammurriata",
+  "parent_slug": null
+ },
+ {
+  "slug": "tan-co-giao-duyen",
+  "label": "Tân Cổ Giao Duyên",
+  "parent_slug": null
+ },
+ {
+  "slug": "tango",
+  "label": "Tango",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "tanjidor",
+  "label": "Tanjidor",
+  "parent_slug": null
+ },
+ {
+  "slug": "taoist-ritual-music",
+  "label": "Taoist Ritual Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "tape-music",
+  "label": "Tape Music",
+  "parent_slug": null
+ },
+ {
+  "slug": "tappa",
+  "label": "Tappa",
+  "parent_slug": null
+ },
+ {
+  "slug": "taquirari",
+  "label": "Taquirari",
+  "parent_slug": null
+ },
+ {
+  "slug": "tarana",
+  "label": "Tarana",
+  "parent_slug": null
+ },
+ {
+  "slug": "tarantella",
+  "label": "Tarantella",
+  "parent_slug": null
+ },
+ {
+  "slug": "tarawangsa",
+  "label": "Tarawangsa",
+  "parent_slug": null
+ },
+ {
+  "slug": "tarraxinha",
+  "label": "Tarraxinha",
+  "parent_slug": null
+ },
+ {
+  "slug": "tassa",
+  "label": "Tassa",
+  "parent_slug": null
+ },
+ {
+  "slug": "tassu",
+  "label": "Tassu",
+  "parent_slug": null
+ },
+ {
+  "slug": "tbm",
+  "label": "Tbm",
+  "parent_slug": null
+ },
+ {
+  "slug": "tchinkoume",
+  "label": "Tchinkoumé",
+  "parent_slug": null
+ },
+ {
+  "slug": "tearout",
+  "label": "Tearout",
+  "parent_slug": null
+ },
+ {
+  "slug": "tearout-brostep",
+  "label": "Tearout Brostep",
+  "parent_slug": null
+ },
+ {
+  "slug": "tech-house",
+  "label": "Tech House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "tech-trance",
+  "label": "Tech Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "technical-death-metal",
+  "label": "Technical Death Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "technical-thrash-metal",
+  "label": "Technical Thrash Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "techno",
+  "label": "Techno",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "techno-bass",
+  "label": "Techno Bass",
+  "parent_slug": "drum-and-bass"
+ },
+ {
+  "slug": "techno-kayo",
+  "label": "Techno Kayō",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "technobanda",
+  "label": "Technobanda",
+  "parent_slug": null
+ },
+ {
+  "slug": "technoid",
+  "label": "Technoid",
+  "parent_slug": null
+ },
+ {
+  "slug": "techstep",
+  "label": "Techstep",
+  "parent_slug": null
+ },
+ {
+  "slug": "tecnobrega",
+  "label": "Tecnobrega",
+  "parent_slug": "brega"
+ },
+ {
+  "slug": "tecnofunk",
+  "label": "Tecnofunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "tecnomerengue",
+  "label": "Tecnomerengue",
+  "parent_slug": null
+ },
+ {
+  "slug": "tecnorumba",
+  "label": "Tecnorumba",
+  "parent_slug": null
+ },
+ {
+  "slug": "teen-pop",
+  "label": "Teen Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "tejano",
+  "label": "Tejano",
+  "parent_slug": null
+ },
+ {
+  "slug": "tembang-cianjuran",
+  "label": "Tembang Cianjuran",
+  "parent_slug": null
+ },
+ {
+  "slug": "terror-plugg",
+  "label": "Terror Plugg",
+  "parent_slug": null
+ },
+ {
+  "slug": "terrorcore",
+  "label": "Terrorcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "tex-mex",
+  "label": "Tex-Mex",
+  "parent_slug": null
+ },
+ {
+  "slug": "texas-blues",
+  "label": "Texas Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "texas-country",
+  "label": "Texas Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "thai-classical",
+  "label": "Thai Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "thall",
+  "label": "Thall",
+  "parent_slug": null
+ },
+ {
+  "slug": "theme-and-variations",
+  "label": "Theme and Variations",
+  "parent_slug": null
+ },
+ {
+  "slug": "third-stream",
+  "label": "Third Stream",
+  "parent_slug": null
+ },
+ {
+  "slug": "third-wave-ska",
+  "label": "Third Wave Ska",
+  "parent_slug": "ska"
+ },
+ {
+  "slug": "thrash-metal",
+  "label": "Thrash Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "thrashcore",
+  "label": "Thrashcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "thumri",
+  "label": "Thumri",
+  "parent_slug": null
+ },
+ {
+  "slug": "tibetan-buddhist-chant",
+  "label": "Tibetan Buddhist Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "tiento",
+  "label": "Tiento",
+  "parent_slug": null
+ },
+ {
+  "slug": "timba",
+  "label": "Timba",
+  "parent_slug": null
+ },
+ {
+  "slug": "timbila",
+  "label": "Timbila",
+  "parent_slug": null
+ },
+ {
+  "slug": "tin-pan-alley",
+  "label": "Tin Pan Alley",
+  "parent_slug": null
+ },
+ {
+  "slug": "tivaner-inngernerlu",
+  "label": "Tivaner Inngernerlu",
+  "parent_slug": null
+ },
+ {
+  "slug": "tizita",
+  "label": "Tizita",
+  "parent_slug": null
+ },
+ {
+  "slug": "toada-de-boi",
+  "label": "Toada de Boi",
+  "parent_slug": null
+ },
+ {
+  "slug": "toccata",
+  "label": "Toccata",
+  "parent_slug": null
+ },
+ {
+  "slug": "tonada-asturiana",
+  "label": "Tonada Asturiana",
+  "parent_slug": null
+ },
+ {
+  "slug": "tonada-potosina",
+  "label": "Tonada Potosina",
+  "parent_slug": null
+ },
+ {
+  "slug": "tonadilla",
+  "label": "Tonadilla",
+  "parent_slug": null
+ },
+ {
+  "slug": "tondero",
+  "label": "Tondero",
+  "parent_slug": null
+ },
+ {
+  "slug": "tontipop",
+  "label": "Tontipop",
+  "parent_slug": null
+ },
+ {
+  "slug": "totalism",
+  "label": "Totalism",
+  "parent_slug": null
+ },
+ {
+  "slug": "tough-guy-hardcore",
+  "label": "Tough Guy Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "township-bubblegum",
+  "label": "Township Bubblegum",
+  "parent_slug": null
+ },
+ {
+  "slug": "township-jive",
+  "label": "Township Jive",
+  "parent_slug": null
+ },
+ {
+  "slug": "toypop",
+  "label": "Toypop",
+  "parent_slug": null
+ },
+ {
+  "slug": "toytown-pop",
+  "label": "Toytown Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "toytown-techno",
+  "label": "Toytown Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "tradi-moderne-congolais",
+  "label": "Tradi-Moderne Congolais",
+  "parent_slug": null
+ },
+ {
+  "slug": "tradi-moderne-ivoirien",
+  "label": "Tradi-Moderne Ivoirien",
+  "parent_slug": null
+ },
+ {
+  "slug": "traditional-black-gospel",
+  "label": "Traditional Black Gospel",
+  "parent_slug": "gospel"
+ },
+ {
+  "slug": "traditional-bluegrass",
+  "label": "Traditional Bluegrass",
+  "parent_slug": "bluegrass"
+ },
+ {
+  "slug": "traditional-country",
+  "label": "Traditional Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "traditional-doom-metal",
+  "label": "Traditional Doom Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "traditional-pop",
+  "label": "Traditional Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "traditional-sega",
+  "label": "Traditional Séga",
+  "parent_slug": null
+ },
+ {
+  "slug": "tragedie-en-musique",
+  "label": "Tragédie En Musique",
+  "parent_slug": null
+ },
+ {
+  "slug": "trallalero",
+  "label": "Trallalero",
+  "parent_slug": null
+ },
+ {
+  "slug": "trampska-hudba",
+  "label": "Trampská Hudba",
+  "parent_slug": null
+ },
+ {
+  "slug": "trance",
+  "label": "Trance",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "trance-2-0",
+  "label": "Trance 2.0",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "trance-metal",
+  "label": "Trance Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "trancestep",
+  "label": "Trancestep",
+  "parent_slug": null
+ },
+ {
+  "slug": "trap",
+  "label": "Trap",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "trap-dancehall",
+  "label": "Trap Dancehall",
+  "parent_slug": "dancehall"
+ },
+ {
+  "slug": "trap-edm",
+  "label": "Trap EDM",
+  "parent_slug": null
+ },
+ {
+  "slug": "trap-latino",
+  "label": "Trap Latino",
+  "parent_slug": null
+ },
+ {
+  "slug": "trap-metal",
+  "label": "Trap Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "trap-shaabi",
+  "label": "Trap Shaabi",
+  "parent_slug": null
+ },
+ {
+  "slug": "trap-soul",
+  "label": "Trap Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "trapfunk",
+  "label": "Trapfunk",
+  "parent_slug": null
+ },
+ {
+  "slug": "tread",
+  "label": "Tread",
+  "parent_slug": null
+ },
+ {
+  "slug": "tribal-ambient",
+  "label": "Tribal Ambient",
+  "parent_slug": "ambient"
+ },
+ {
+  "slug": "tribal-guarachero",
+  "label": "Tribal Guarachero",
+  "parent_slug": null
+ },
+ {
+  "slug": "tribal-house",
+  "label": "Tribal House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "trikitixa",
+  "label": "Trikitixa",
+  "parent_slug": null
+ },
+ {
+  "slug": "trip-hop",
+  "label": "Trip Hop",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "troparion",
+  "label": "Troparion",
+  "parent_slug": null
+ },
+ {
+  "slug": "tropical-house",
+  "label": "Tropical House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "tropical-rock",
+  "label": "Tropical Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "tropicalia",
+  "label": "Tropicália",
+  "parent_slug": "mpb"
+ },
+ {
+  "slug": "tropicanibalismo",
+  "label": "Tropicanibalismo",
+  "parent_slug": null
+ },
+ {
+  "slug": "tropipop",
+  "label": "Tropipop",
+  "parent_slug": null
+ },
+ {
+  "slug": "trot",
+  "label": "Trot",
+  "parent_slug": null
+ },
+ {
+  "slug": "trova",
+  "label": "Trova",
+  "parent_slug": null
+ },
+ {
+  "slug": "trova-yucateca",
+  "label": "Trova Yucateca",
+  "parent_slug": null
+ },
+ {
+  "slug": "truck-driving-country",
+  "label": "Truck Driving Country",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "tsapiky",
+  "label": "Tsapiky",
+  "parent_slug": null
+ },
+ {
+  "slug": "tsonga-disco",
+  "label": "Tsonga Disco",
+  "parent_slug": "disco"
+ },
+ {
+  "slug": "tsugaru-jamisen",
+  "label": "Tsugaru-Jamisen",
+  "parent_slug": null
+ },
+ {
+  "slug": "tumba",
+  "label": "Tumba",
+  "parent_slug": null
+ },
+ {
+  "slug": "tumba-francesa",
+  "label": "Tumba Francesa",
+  "parent_slug": null
+ },
+ {
+  "slug": "tumbele",
+  "label": "Tumbélé",
+  "parent_slug": null
+ },
+ {
+  "slug": "turbo-folk",
+  "label": "Turbo-Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "turkish-classical",
+  "label": "Turkish Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "turkish-folk",
+  "label": "Turkish Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "turkish-pop",
+  "label": "Turkish Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "turntablism",
+  "label": "Turntablism",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "twee-pop",
+  "label": "Twee Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "twerk",
+  "label": "Twerk",
+  "parent_slug": null
+ },
+ {
+  "slug": "twoubadou",
+  "label": "Twoubadou",
+  "parent_slug": null
+ },
+ {
+  "slug": "uaajeerneq",
+  "label": "Uaajeerneq",
+  "parent_slug": null
+ },
+ {
+  "slug": "udigrudi",
+  "label": "Udigrudi",
+  "parent_slug": null
+ },
+ {
+  "slug": "uk-drill",
+  "label": "UK Drill",
+  "parent_slug": null
+ },
+ {
+  "slug": "uk-funky",
+  "label": "UK Funky",
+  "parent_slug": null
+ },
+ {
+  "slug": "uk-garage",
+  "label": "UK Garage",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "uk-hardcore",
+  "label": "UK Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "uk-jackin",
+  "label": "UK Jackin",
+  "parent_slug": null
+ },
+ {
+  "slug": "uk-street-soul",
+  "label": "UK Street Soul",
+  "parent_slug": "soul"
+ },
+ {
+  "slug": "uk82",
+  "label": "Uk82",
+  "parent_slug": null
+ },
+ {
+  "slug": "unakesa",
+  "label": "Unakesa",
+  "parent_slug": null
+ },
+ {
+  "slug": "underground-hip-hop",
+  "label": "Underground Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "unyago",
+  "label": "Unyago",
+  "parent_slug": null
+ },
+ {
+  "slug": "upopo",
+  "label": "Upopo",
+  "parent_slug": null
+ },
+ {
+  "slug": "uptempo-hardcore",
+  "label": "Uptempo Hardcore",
+  "parent_slug": null
+ },
+ {
+  "slug": "urban-contemporary-gospel",
+  "label": "Urban Contemporary Gospel",
+  "parent_slug": "gospel"
+ },
+ {
+  "slug": "urban-cowboy",
+  "label": "Urban Cowboy",
+  "parent_slug": null
+ },
+ {
+  "slug": "urtiin-duu",
+  "label": "Urtiin Duu",
+  "parent_slug": null
+ },
+ {
+  "slug": "urumi-melam",
+  "label": "Urumi Melam",
+  "parent_slug": null
+ },
+ {
+  "slug": "us-power-metal",
+  "label": "US Power Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "utopian-virtual",
+  "label": "Utopian Virtual",
+  "parent_slug": null
+ },
+ {
+  "slug": "uyghur-muqam",
+  "label": "Uyghur Muqam",
+  "parent_slug": null
+ },
+ {
+  "slug": "uzun-hava",
+  "label": "Uzun Hava",
+  "parent_slug": null
+ },
+ {
+  "slug": "v-pop",
+  "label": "V-Pop",
+  "parent_slug": "pop"
+ },
+ {
+  "slug": "vaigat",
+  "label": "Vaigat",
+  "parent_slug": null
+ },
+ {
+  "slug": "valaam-chant",
+  "label": "Valaam Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "vallenato",
+  "label": "Vallenato",
+  "parent_slug": "latin"
+ },
+ {
+  "slug": "vals-criollo",
+  "label": "Vals Criollo",
+  "parent_slug": null
+ },
+ {
+  "slug": "vals-venezolano",
+  "label": "Vals Venezolano",
+  "parent_slug": null
+ },
+ {
+  "slug": "valsa-brasileira",
+  "label": "Valsa Brasileira",
+  "parent_slug": null
+ },
+ {
+  "slug": "vanera",
+  "label": "Vanera",
+  "parent_slug": null
+ },
+ {
+  "slug": "vapornoise",
+  "label": "Vapornoise",
+  "parent_slug": null
+ },
+ {
+  "slug": "vaportrap",
+  "label": "Vaportrap",
+  "parent_slug": null
+ },
+ {
+  "slug": "vaporwave",
+  "label": "Vaporwave",
+  "parent_slug": "electronic"
+ },
+ {
+  "slug": "vaudeville",
+  "label": "Vaudeville",
+  "parent_slug": null
+ },
+ {
+  "slug": "vaudeville-blues",
+  "label": "Vaudeville Blues",
+  "parent_slug": "blues"
+ },
+ {
+  "slug": "vedic-chant",
+  "label": "Vedic Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "verbunkos",
+  "label": "Verbunkos",
+  "parent_slug": null
+ },
+ {
+  "slug": "verismo",
+  "label": "Verismo",
+  "parent_slug": null
+ },
+ {
+  "slug": "vietnamese-bolero",
+  "label": "Vietnamese Bolero",
+  "parent_slug": null
+ },
+ {
+  "slug": "vietnamese-classical",
+  "label": "Vietnamese Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "viking-metal",
+  "label": "Viking Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "viking-rock",
+  "label": "Viking Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "villancico",
+  "label": "Villancico",
+  "parent_slug": null
+ },
+ {
+  "slug": "vinahouse",
+  "label": "Vinahouse",
+  "parent_slug": null
+ },
+ {
+  "slug": "visa",
+  "label": "Visa",
+  "parent_slug": null
+ },
+ {
+  "slug": "visual-kei",
+  "label": "Visual Kei",
+  "parent_slug": null
+ },
+ {
+  "slug": "vocal-house",
+  "label": "Vocal House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "vocal-jazz",
+  "label": "Vocal Jazz",
+  "parent_slug": "jazz"
+ },
+ {
+  "slug": "vocal-surf",
+  "label": "Vocal Surf",
+  "parent_slug": null
+ },
+ {
+  "slug": "vocal-trance",
+  "label": "Vocal Trance",
+  "parent_slug": "trance"
+ },
+ {
+  "slug": "vocalese",
+  "label": "Vocalese",
+  "parent_slug": null
+ },
+ {
+  "slug": "volkstumliche-musik",
+  "label": "Volkstümliche Musik",
+  "parent_slug": null
+ },
+ {
+  "slug": "vude",
+  "label": "Vude",
+  "parent_slug": null
+ },
+ {
+  "slug": "wa-euro",
+  "label": "Wa Euro",
+  "parent_slug": null
+ },
+ {
+  "slug": "waila",
+  "label": "Waila",
+  "parent_slug": null
+ },
+ {
+  "slug": "waka",
+  "label": "Waka",
+  "parent_slug": null
+ },
+ {
+  "slug": "waltz",
+  "label": "Waltz",
+  "parent_slug": null
+ },
+ {
+  "slug": "wangga",
+  "label": "Wangga",
+  "parent_slug": null
+ },
+ {
+  "slug": "war-metal",
+  "label": "War Metal",
+  "parent_slug": "metal"
+ },
+ {
+  "slug": "wassoulou",
+  "label": "Wassoulou",
+  "parent_slug": null
+ },
+ {
+  "slug": "waulking-song",
+  "label": "Waulking Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "wave",
+  "label": "Wave",
+  "parent_slug": null
+ },
+ {
+  "slug": "weightless",
+  "label": "Weightless",
+  "parent_slug": null
+ },
+ {
+  "slug": "west-coast-breaks",
+  "label": "West Coast Breaks",
+  "parent_slug": "breakbeat"
+ },
+ {
+  "slug": "west-coast-hip-hop",
+  "label": "West Coast Hip Hop",
+  "parent_slug": "hip-hop"
+ },
+ {
+  "slug": "west-coast-swing",
+  "label": "West Coast Swing",
+  "parent_slug": "swing"
+ },
+ {
+  "slug": "western",
+  "label": "Western",
+  "parent_slug": null
+ },
+ {
+  "slug": "western-classical",
+  "label": "Western Classical",
+  "parent_slug": "classical"
+ },
+ {
+  "slug": "western-swing",
+  "label": "Western Swing",
+  "parent_slug": "country"
+ },
+ {
+  "slug": "whale-song",
+  "label": "Whale Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "whistling",
+  "label": "Whistling",
+  "parent_slug": null
+ },
+ {
+  "slug": "white-voice",
+  "label": "White Voice",
+  "parent_slug": null
+ },
+ {
+  "slug": "winter-synth",
+  "label": "Winter Synth",
+  "parent_slug": null
+ },
+ {
+  "slug": "witch-house",
+  "label": "Witch House",
+  "parent_slug": "house"
+ },
+ {
+  "slug": "wong-shadow",
+  "label": "Wong Shadow",
+  "parent_slug": null
+ },
+ {
+  "slug": "wonky",
+  "label": "Wonky",
+  "parent_slug": null
+ },
+ {
+  "slug": "wonky-techno",
+  "label": "Wonky Techno",
+  "parent_slug": "techno"
+ },
+ {
+  "slug": "work-song",
+  "label": "Work Song",
+  "parent_slug": null
+ },
+ {
+  "slug": "world-fusion",
+  "label": "World Fusion",
+  "parent_slug": null
+ },
+ {
+  "slug": "worldbeat",
+  "label": "Worldbeat",
+  "parent_slug": null
+ },
+ {
+  "slug": "wyrd-folk",
+  "label": "Wyrd Folk",
+  "parent_slug": "folk"
+ },
+ {
+  "slug": "xam",
+  "label": "Xẩm",
+  "parent_slug": null
+ },
+ {
+  "slug": "xaxado",
+  "label": "Xaxado",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "xian-psych",
+  "label": "Xian Psych",
+  "parent_slug": null
+ },
+ {
+  "slug": "xote",
+  "label": "Xote",
+  "parent_slug": "forro"
+ },
+ {
+  "slug": "xtra-raw",
+  "label": "Xtra Raw",
+  "parent_slug": null
+ },
+ {
+  "slug": "xuc",
+  "label": "Xuc",
+  "parent_slug": null
+ },
+ {
+  "slug": "yacht-rock",
+  "label": "Yacht Rock",
+  "parent_slug": "rock"
+ },
+ {
+  "slug": "yakousei",
+  "label": "Yakousei",
+  "parent_slug": null
+ },
+ {
+  "slug": "yangzhou-opera",
+  "label": "Yangzhou Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "yanyue",
+  "label": "Yanyue",
+  "parent_slug": null
+ },
+ {
+  "slug": "yaravi",
+  "label": "Yaraví",
+  "parent_slug": null
+ },
+ {
+  "slug": "yayue",
+  "label": "Yayue",
+  "parent_slug": null
+ },
+ {
+  "slug": "ye-ye",
+  "label": "Yé-Yé",
+  "parent_slug": null
+ },
+ {
+  "slug": "yodeling",
+  "label": "Yodeling",
+  "parent_slug": null
+ },
+ {
+  "slug": "ytpmv",
+  "label": "Ytpmv",
+  "parent_slug": null
+ },
+ {
+  "slug": "yu-mex",
+  "label": "Yu-Mex",
+  "parent_slug": null
+ },
+ {
+  "slug": "yue-opera",
+  "label": "Yue Opera",
+  "parent_slug": "opera"
+ },
+ {
+  "slug": "yukar",
+  "label": "Yukar",
+  "parent_slug": null
+ },
+ {
+  "slug": "zamacueca",
+  "label": "Zamacueca",
+  "parent_slug": null
+ },
+ {
+  "slug": "zamba",
+  "label": "Zamba",
+  "parent_slug": null
+ },
+ {
+  "slug": "zamrock",
+  "label": "Zamrock",
+  "parent_slug": null
+ },
+ {
+  "slug": "zarzuela",
+  "label": "Zarzuela",
+  "parent_slug": null
+ },
+ {
+  "slug": "zarzuela-barroca",
+  "label": "Zarzuela Barroca",
+  "parent_slug": null
+ },
+ {
+  "slug": "zeitoper",
+  "label": "Zeitoper",
+  "parent_slug": null
+ },
+ {
+  "slug": "zema",
+  "label": "Zema",
+  "parent_slug": null
+ },
+ {
+  "slug": "zemirot",
+  "label": "Zemirot",
+  "parent_slug": null
+ },
+ {
+  "slug": "zenonesque",
+  "label": "Zenonesque",
+  "parent_slug": null
+ },
+ {
+  "slug": "zess",
+  "label": "Zess",
+  "parent_slug": null
+ },
+ {
+  "slug": "zeuhl",
+  "label": "Zeuhl",
+  "parent_slug": null
+ },
+ {
+  "slug": "zeybek",
+  "label": "Zeybek",
+  "parent_slug": null
+ },
+ {
+  "slug": "zhongguo-feng",
+  "label": "Zhongguo Feng",
+  "parent_slug": null
+ },
+ {
+  "slug": "ziglibithy",
+  "label": "Ziglibithy",
+  "parent_slug": null
+ },
+ {
+  "slug": "zinli",
+  "label": "Zinli",
+  "parent_slug": null
+ },
+ {
+  "slug": "znamenny-chant",
+  "label": "Znamenny Chant",
+  "parent_slug": null
+ },
+ {
+  "slug": "zoblazo",
+  "label": "Zoblazo",
+  "parent_slug": null
+ },
+ {
+  "slug": "zohioliin-duu",
+  "label": "Zohioliin Duu",
+  "parent_slug": null
+ },
+ {
+  "slug": "zolo",
+  "label": "Zolo",
+  "parent_slug": null
+ },
+ {
+  "slug": "zouglou",
+  "label": "Zouglou",
+  "parent_slug": null
+ },
+ {
+  "slug": "zouk",
+  "label": "Zouk",
+  "parent_slug": null
+ },
+ {
+  "slug": "zouk-love",
+  "label": "Zouk Love",
+  "parent_slug": null
+ },
+ {
+  "slug": "zydeco",
+  "label": "Zydeco",
+  "parent_slug": null
+ }
+]

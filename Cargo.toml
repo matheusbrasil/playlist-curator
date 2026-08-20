@@ -1,0 +1,39 @@
+[workspace]
+members = ["core"]
+# `src-tauri` is deliberately NOT a member. It is its own workspace so that
+# building and testing the core pipeline never resolves or links the webview
+# system libraries (webkit2gtk et al.), which are unavailable on some hosts.
+exclude = ["src-tauri"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.77"
+license = "MIT"
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+reqwest = { version = "0.12", default-features = false, features = [
+    "rustls-tls",
+    "json",
+    "gzip",
+] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+r2d2 = "0.8"
+r2d2_sqlite = "0.25"
+governor = "0.6"
+keyring = { version = "3", features = ["sync-secret-service", "vendored"] }
+tiny_http = "0.12"
+sha2 = "0.10"
+base64 = "0.22"
+rand = "0.8"
+url = "2"
+time = { version = "0.3", features = ["formatting", "parsing", "macros"] }
+unicode-normalization = "0.1"

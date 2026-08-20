@@ -1,0 +1,42 @@
+[package]
+name = "pc-core"
+description = "Playlist Curator core: Spotify identity, metadata enrichment, taxonomy, suggestion engine."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+# This crate deliberately has NO dependency on `tauri`. All logic lives here so
+# the whole pipeline is testable with `cargo test` on any machine, with no
+# webview/system-GUI dependencies. `src-tauri` is a thin IPC shell over it.
+
+[dependencies]
+anyhow.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+reqwest.workspace = true
+rusqlite.workspace = true
+r2d2.workspace = true
+r2d2_sqlite.workspace = true
+governor.workspace = true
+tiny_http.workspace = true
+sha2.workspace = true
+base64.workspace = true
+rand.workspace = true
+url.workspace = true
+time.workspace = true
+unicode-normalization.workspace = true
+keyring = { workspace = true, optional = true }
+
+[features]
+default = ["keyring-store"]
+# OS credential vault for OAuth tokens. Disable on headless boxes with no
+# secret-service/dbus; the file-backed fallback (0600) is used instead.
+keyring-store = ["keyring"]
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time", "test-util"] }
