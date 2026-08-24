@@ -22,6 +22,7 @@ pub struct Artist {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
 pub struct Playlist {
     pub spotify_id: String,
     pub name: String,
@@ -285,6 +286,7 @@ impl EraSource {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct ReviewItem {
     pub entity_type: String,
     pub entity_id: String,

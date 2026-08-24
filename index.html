@@ -6,7 +6,20 @@
     <title>Playlist Curator</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><p style="font-family:sans-serif;padding:24px;color:#555">Loading Playlist Curator…</p></div>
+    <script>
+      window.onerror = function(msg, src, line, col, err) {
+        document.body.style.background = '#fff';
+        document.body.style.color = '#c00';
+        document.body.innerHTML = '<pre style="padding:20px;white-space:pre-wrap"><b>JS Error:</b>\n' + msg + '\n' + src + ':' + line + '\n' + (err && err.stack ? err.stack : '') + '</pre>';
+      };
+      window.addEventListener('unhandledrejection', function(e) {
+        document.body.style.background = '#fff';
+        document.body.style.color = '#c00';
+        var r = e.reason;
+        document.body.innerHTML = '<pre style="padding:20px;white-space:pre-wrap"><b>Unhandled rejection:</b>\n' + (r && r.stack ? r.stack : String(r)) + '</pre>';
+      });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

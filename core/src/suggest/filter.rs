@@ -25,7 +25,7 @@ pub enum GenreMode {
 
 /// A complete, executable description of a derived playlist.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, Default)]
-#[serde(default)]
+#[serde(default, rename_all = "camelCase")]
 pub struct PlaylistFilter {
     /// Canonical genre slugs. Always validated against `genre_canonical` before
     /// execution, so a hallucinated genre cannot reach the query.
@@ -241,13 +241,13 @@ mod tests {
 
     #[test]
     fn roundtrips_through_the_json_the_llm_produces() {
-        // Exactly the shape the NL parser is asked to emit.
+        // The LLM is prompted to emit camelCase to match the struct's serde format.
         let json = r#"{
             "genres": ["soul"],
-            "genre_mode": "any_with_children",
+            "genreMode": "any_with_children",
             "countries": ["BR"],
-            "year_range": [1970, 1979],
-            "min_tracks": 15
+            "yearRange": [1970, 1979],
+            "minTracks": 15
         }"#;
         let f: PlaylistFilter = serde_json::from_str(json).unwrap();
         assert_eq!(f.genres, vec!["soul".to_string()]);

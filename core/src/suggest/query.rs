@@ -14,6 +14,7 @@ use serde::{Deserialize, Serialize};
 /// Why one track ended up in a proposal. Shown in the review table so the user
 /// can judge the suggestion instead of trusting it.
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
 pub struct TrackReason {
     /// The listed genre this track matched, which for `AnyWithChildren` may be a
     /// descendant of the requested one.
@@ -27,6 +28,7 @@ pub struct TrackReason {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
 pub struct ScoredTrack {
     pub spotify_id: String,
     pub name: String,
@@ -36,6 +38,7 @@ pub struct ScoredTrack {
 
 /// A reviewable proposal: what would be created, and from what.
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct SuggestionCard {
     pub id: String,
     pub proposed_name: String,

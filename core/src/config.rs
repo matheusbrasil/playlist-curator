@@ -13,21 +13,22 @@ use std::path::{Path, PathBuf};
 pub const OAUTH_PORT: u16 = 14523;
 pub const OAUTH_REDIRECT_URI: &str = "http://127.0.0.1:14523/callback";
 
-/// Identifies this app to MusicBrainz, which requires a contactable User-Agent.
-pub const USER_AGENT: &str = concat!(
-    "PlaylistCurator/",
-    env!("CARGO_PKG_VERSION"),
-    " ( https://github.com/local/playlist-curator )"
-);
+/// Generic User-Agent for HTTP clients (Spotify, etc.) that don't require contact info.
+pub const APP_USER_AGENT: &str = concat!("PlaylistCurator/", env!("CARGO_PKG_VERSION"));
+
+const APP_VERSION_TAG: &str = APP_USER_AGENT;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(default)]
+#[serde(default, rename_all = "camelCase")]
 pub struct Settings {
     /// Spotify application Client ID. Public client — there is no secret, PKCE
     /// is mandatory.
     pub spotify_client_id: Option<String>,
     pub lastfm_api_key: Option<String>,
     pub discogs_token: Option<String>,
+    /// Contact email sent in the MusicBrainz User-Agent header. MB requires a
+    /// real address so they can reach out if the app exceeds rate limits.
+    pub mb_contact_email: Option<String>,
 
     pub llm: LlmSettings,
     pub cache: CacheSettings,
@@ -47,6 +48,7 @@ impl Default for Settings {
             spotify_client_id: None,
             lastfm_api_key: None,
             discogs_token: None,
+            mb_contact_email: None,
             llm: LlmSettings::default(),
             cache: CacheSettings::default(),
             weights: SourceWeights::default(),
@@ -57,7 +59,7 @@ impl Default for Settings {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(default)]
+#[serde(default, rename_all = "camelCase")]
 pub struct LlmSettings {
     pub provider: LlmProviderKind,
     /// Ollama base URL, OpenAI-compatible surface.
@@ -94,7 +96,7 @@ impl Default for LlmProviderKind {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(default)]
+#[serde(default, rename_all = "camelCase")]
 pub struct CacheSettings {
     /// MusicBrainz data is stable; cache it for a long time.
     pub musicbrainz_ttl_days: i64,
@@ -118,7 +120,7 @@ impl Default for CacheSettings {
 /// because reasonable people disagree, and reprocessing is free (raw signals are
 /// kept in `tag_signal`).
 #[derive(Debug, Clone, Copy, Serialize, Deserialize)]
-#[serde(default)]
+#[serde(default, rename_all = "camelCase")]
 pub struct SourceWeights {
     /// Curated, voted vocabulary.
     pub musicbrainz_genre: f64,
@@ -231,6 +233,19 @@ impl Settings {
         Ok(())
     }
 
+    /// Build the MusicBrainz User-Agent string for this user's installation.
+    ///
+    /// MB requires `Application/version ( contact )` where contact is a real
+    /// email or URL they can use to reach the developer if the app misbehaves.
+    pub fn user_agent(&self) -> String {
+        let contact = self
+            .mb_contact_email
+            .as_deref()
+            .filter(|s| !s.is_empty())
+            .unwrap_or("no-contact-set");
+        format!("{APP_VERSION_TAG} ( {contact} )")
+    }
+
     pub fn require_client_id(&self) -> Result<&str> {
         self.spotify_client_id.as_deref().filter(|s| !s.is_empty()).ok_or_else(|| {
             CoreError::Config("Spotify Client ID is not configured".into())
@@ -264,7 +279,7 @@ mod tests {
         assert!(!back.dry_run);
 
         // A file written by an older version must still load.
-        std::fs::write(&path, r#"{"spotify_client_id":"xyz"}"#).unwrap();
+        std::fs::write(&path, r#"{"spotifyClientId":"xyz"}"#).unwrap();
         let partial = Settings::load(&path).unwrap();
         assert_eq!(partial.spotify_client_id.as_deref(), Some("xyz"));
         assert_eq!(partial.weights.musicbrainz_genre, 1.0);
@@ -282,10 +297,18 @@ mod tests {
     }
 
     #[test]
-    fn user_agent_is_contactable() {
-        // MusicBrainz blocks generic agents; it must carry a URL or email.
-        assert!(USER_AGENT.contains("PlaylistCurator/"));
-        assert!(USER_AGENT.contains("http"));
+    fn user_agent_includes_app_version() {
+        let s = Settings::default();
+        let ua = s.user_agent();
+        assert!(ua.contains("PlaylistCurator/"), "missing app name in: {ua}");
+        assert!(ua.contains('('), "missing contact parens in: {ua}");
+    }
+
+    #[test]
+    fn user_agent_uses_configured_email() {
+        let mut s = Settings::default();
+        s.mb_contact_email = Some("dev@example.com".into());
+        assert!(s.user_agent().contains("dev@example.com"));
     }
 
     #[test]

@@ -951,6 +951,112 @@ impl Store {
         )?;
         Ok(())
     }
+
+    /// Returns true only when the track has at least one genre AND its primary
+    /// artist (position = 0) has a resolved origin. Both are required so that
+    /// "only unresolved" skips tracks where the full picture is already present.
+    pub fn track_is_fully_resolved(&self, track_id: &str) -> Result<bool> {
+        let conn = self.conn()?;
+        let has_genre: bool = conn.query_row(
+            "SELECT COUNT(*) > 0 FROM track_genre WHERE track_spotify_id = ?1",
+            params![track_id],
+            |r| r.get(0),
+        )?;
+        let has_origin: bool = conn.query_row(
+            "SELECT COUNT(*) > 0
+             FROM artist_origin ao
+             JOIN track_artist ta ON ta.artist_spotify_id = ao.artist_spotify_id
+             WHERE ta.track_spotify_id = ?1 AND ta.position = 0",
+            params![track_id],
+            |r| r.get(0),
+        )?;
+        Ok(has_genre && has_origin)
+    }
+
+    /// How many tracks in the playlist are unresolved (lack any entry in track_genre).
+    /// Returns (total, unresolved).
+    pub fn enrich_counts(&self, playlist_id: &str) -> Result<(i64, i64)> {
+        let conn = self.conn()?;
+        let total: i64 = conn.query_row(
+            "SELECT COUNT(*) FROM playlist_track WHERE playlist_id = ?1",
+            params![playlist_id],
+            |r| r.get(0),
+        )?;
+        let with_genre: i64 = conn.query_row(
+            "SELECT COUNT(DISTINCT pt.track_spotify_id)
+             FROM playlist_track pt
+             JOIN track_genre tg ON tg.track_spotify_id = pt.track_spotify_id
+             WHERE pt.playlist_id = ?1",
+            params![playlist_id],
+            |r| r.get(0),
+        )?;
+        Ok((total, total - with_genre))
+    }
+
+    // -------------------------------------------------------------- Distributions
+
+    pub fn genre_distribution(&self, playlist_id: &str) -> Result<Vec<(String, String, i64)>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT gc.slug, gc.label, COUNT(DISTINCT pt.track_spotify_id) AS cnt
+             FROM playlist_track pt
+             JOIN track_genre tg ON tg.track_spotify_id = pt.track_spotify_id
+             JOIN genre_canonical gc ON gc.slug = tg.canonical_slug
+             WHERE pt.playlist_id = ?1
+             GROUP BY gc.slug, gc.label
+             ORDER BY cnt DESC
+             LIMIT 30",
+        )?;
+        let rows = stmt.query_map(params![playlist_id], |r| {
+            Ok((r.get::<_, String>(0)?, r.get::<_, String>(1)?, r.get::<_, i64>(2)?))
+        })?;
+        Ok(rows.collect::<rusqlite::Result<_>>()?)
+    }
+
+    pub fn country_distribution(&self, playlist_id: &str) -> Result<Vec<(String, String, i64)>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT COALESCE(ao.country_code, '??') AS country_code,
+                    COALESCE(ao.country_label, ao.country_code, 'Unknown') AS country_label,
+                    COUNT(DISTINCT pt.track_spotify_id) AS cnt
+             FROM playlist_track pt
+             JOIN track_artist ta ON ta.track_spotify_id = pt.track_spotify_id
+             JOIN artist_origin ao ON ao.artist_spotify_id = ta.artist_spotify_id
+             WHERE pt.playlist_id = ?1 AND ta.position = 0
+             GROUP BY COALESCE(ao.country_code, '??')
+             ORDER BY cnt DESC",
+        )?;
+        let rows = stmt.query_map(params![playlist_id], |r| {
+            Ok((r.get::<_, String>(0)?, r.get::<_, String>(1)?, r.get::<_, i64>(2)?))
+        })?;
+        Ok(rows.collect::<rusqlite::Result<_>>()?)
+    }
+
+    pub fn decade_distribution(&self, playlist_id: &str) -> Result<Vec<(i64, i64)>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT te.decade, COUNT(*) AS cnt
+             FROM playlist_track pt
+             JOIN track_era te ON te.track_spotify_id = pt.track_spotify_id
+             WHERE pt.playlist_id = ?1
+             GROUP BY te.decade
+             ORDER BY te.decade",
+        )?;
+        let rows = stmt.query_map(params![playlist_id], |r| {
+            Ok((r.get::<_, i64>(0)?, r.get::<_, i64>(1)?))
+        })?;
+        Ok(rows.collect::<rusqlite::Result<_>>()?)
+    }
+
+    /// Copy the database to `dest_path` using SQLite's VACUUM INTO, which
+    /// produces a clean, defragmented copy that is safe to open independently.
+    pub fn export_to(&self, dest_path: &str) -> Result<()> {
+        let conn = self.conn()?;
+        // VACUUM INTO does not support parameter binding; escape single quotes.
+        let safe_path = dest_path.replace('\'', "''");
+        conn.execute_batch(&format!("VACUUM INTO '{safe_path}'"))?;
+        Ok(())
+    }
 }
 
 #[cfg(test)]

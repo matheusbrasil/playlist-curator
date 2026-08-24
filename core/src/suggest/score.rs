@@ -23,6 +23,7 @@ const W_CONFIDENCE: f64 = 0.15;
 const W_REDUNDANCY: f64 = 0.10;
 
 #[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Default)]
+#[serde(rename_all = "camelCase")]
 pub struct CandidateScore {
     pub total: f64,
     /// How close the track count is to a useful range.

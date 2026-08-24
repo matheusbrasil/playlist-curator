@@ -33,12 +33,21 @@ impl MusicBrainzClient {
     /// Returns the recording (with first_release_date taken from the earliest
     /// release in the response) and any genre/tag signals attached to it.
     /// Returns `None` if the ISRC is not in MusicBrainz.
+    /// Look up a recording by ISRC.
+    ///
+    /// Returns `(recording, tag_signals, artist_credits)` where `artist_credits`
+    /// is a list of `(mbid, name)` pairs from the recording's `artist-credit`
+    /// field. The pipeline uses these to link artist MBIDs without a separate
+    /// URL-rel lookup, which is the only reliable path for artists whose Spotify
+    /// URL is not yet in MusicBrainz.
     pub async fn resolve_isrc(
         &self,
         isrc: &str,
-    ) -> Result<Option<(MbRecording, Vec<TagSignal>)>> {
+    ) -> Result<Option<(MbRecording, Vec<TagSignal>, Vec<(String, String)>)>> {
+        // The /isrc/ endpoint does NOT accept `genres` or `tags` in `inc`.
+        // Genre/tag signals are fetched separately via the recording endpoint.
         let url = format!(
-            "{MB_BASE}/isrc/{isrc}?inc=artist-credits+genres+tags+releases&fmt=json"
+            "{MB_BASE}/isrc/{isrc}?inc=artist-credits+releases&fmt=json"
         );
         let body = match self
             .fetcher
@@ -64,8 +73,8 @@ impl MusicBrainzClient {
             return Ok(None);
         }
 
-        // Pick the earliest first_release_date across all releases in the response.
         let first_release_date = earliest_release_date(rec_json);
+        let credits = extract_artist_credits(rec_json);
 
         let recording = MbRecording {
             mbid: mbid.clone(),
@@ -75,12 +84,31 @@ impl MusicBrainzClient {
             confidence: 1.0,
         };
 
+        let signals = self.recording_tags(&mbid).await.unwrap_or_default();
+
+        Ok(Some((recording, signals, credits)))
+    }
+
+    /// Fetch genre and tag signals for a recording MBID.
+    ///
+    /// The recording endpoint supports `genres` and `tags` in `inc`; the ISRC
+    /// endpoint does not. The fetcher's response cache means repeat calls cost
+    /// nothing after the first.
+    pub async fn recording_tags(&self, recording_mbid: &str) -> Result<Vec<TagSignal>> {
+        let url = format!(
+            "{MB_BASE}/recording/{recording_mbid}?inc=genres+tags&fmt=json"
+        );
+        let body = self
+            .fetcher
+            .get(Host::MusicBrainz, Source::MusicBrainz, &url)
+            .await?;
+        let v: Value = serde_json::from_str(&body)?;
+
         let now = now_iso();
         let mut signals = Vec::new();
-        collect_mb_genres(rec_json, EntityType::MbRecording, &mbid, &now, &mut signals);
-        collect_mb_tags(rec_json, EntityType::MbRecording, &mbid, &now, &mut signals);
-
-        Ok(Some((recording, signals)))
+        collect_mb_genres(&v, EntityType::MbRecording, recording_mbid, &now, &mut signals);
+        collect_mb_tags(&v, EntityType::MbRecording, recording_mbid, &now, &mut signals);
+        Ok(signals)
     }
 
     /// Resolve a Spotify artist to their MusicBrainz entry via the URL relationship.
@@ -166,6 +194,41 @@ impl MusicBrainzClient {
         Ok(signals)
     }
 
+    /// Last-resort artist resolution: search MB by name.
+    ///
+    /// Returns the top hit (with full artist detail) if MB score ≥ 80, else None.
+    /// Used when neither URL-rel nor recording-credit matching found the artist.
+    pub async fn search_artist_by_name(&self, name: &str) -> Result<Option<MbArtist>> {
+        let q = format!("artist:\"{}\"", name.replace('"', "\\\""));
+        let encoded: String = form_urlencoded::byte_serialize(q.as_bytes()).collect();
+        let url = format!("{MB_BASE}/artist?query={encoded}&limit=3&fmt=json");
+
+        let body = match self.fetcher.get(Host::MusicBrainz, Source::MusicBrainz, &url).await {
+            Ok(b) => b,
+            Err(CoreError::Upstream { message, .. }) if message.contains("not found") => return Ok(None),
+            Err(e) => return Err(e),
+        };
+
+        let v: Value = serde_json::from_str(&body)?;
+        let artists = match v["artists"].as_array() {
+            Some(arr) if !arr.is_empty() => arr,
+            _ => return Ok(None),
+        };
+
+        let top = &artists[0];
+        let score = top["score"].as_u64().unwrap_or(0);
+        if score < 80 {
+            return Ok(None);
+        }
+
+        let mbid = match top["id"].as_str() {
+            Some(id) if !id.is_empty() => id.to_string(),
+            _ => return Ok(None),
+        };
+
+        self.fetch_artist_detail(&mbid).await.map(Some)
+    }
+
     /// Name-based recording search — last resort after ISRC and URL-rel fail.
     ///
     /// Returns `(recording, confidence)` when the top hit scores ≥ 0.5, otherwise
@@ -175,7 +238,7 @@ impl MusicBrainzClient {
         &self,
         track_name: &str,
         artist_name: &str,
-    ) -> Result<Option<(MbRecording, f64)>> {
+    ) -> Result<Option<(MbRecording, f64, Vec<(String, String)>)>> {
         let q = format!(
             "recording:\"{}\" AND artist:\"{}\"",
             track_name.replace('"', "\\\""),
@@ -227,11 +290,31 @@ impl MusicBrainzClient {
             confidence: score,
         };
 
-        Ok(Some((recording, score)))
+        let credits = extract_artist_credits(rec_json);
+        Ok(Some((recording, score, credits)))
     }
 }
 
 // ── helpers ──────────────────────────────────────────────────────────────────
+
+/// Extract `(mbid, name)` pairs from the `artist-credit` array in a recording
+/// JSON object. The pipeline uses these to link artist MBIDs that are already
+/// present in a recording response without a separate URL-rel lookup.
+pub fn extract_artist_credits(rec_json: &Value) -> Vec<(String, String)> {
+    rec_json["artist-credit"]
+        .as_array()
+        .map(|credits| {
+            credits
+                .iter()
+                .filter_map(|c| {
+                    let id = c["artist"]["id"].as_str()?;
+                    let name = c["artist"]["name"].as_str().unwrap_or(c["name"].as_str().unwrap_or(""));
+                    if id.is_empty() { None } else { Some((id.to_string(), name.to_string())) }
+                })
+                .collect()
+        })
+        .unwrap_or_default()
+}
 
 fn earliest_release_date(rec_json: &Value) -> Option<String> {
     // `first-release-date` may be at top level (ISRC response) or in release array.
@@ -344,7 +427,8 @@ mod tests {
     use serde_json::json;
 
     #[test]
-    fn parses_genres_from_isrc_response() {
+    fn parses_genres_from_recording_response() {
+        // The recording endpoint (not the isrc endpoint) returns genres.
         let v = json!({
             "id": "abc123",
             "title": "Test Track",

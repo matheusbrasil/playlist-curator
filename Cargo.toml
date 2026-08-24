@@ -1,9 +1,5 @@
 [workspace]
-members = ["core"]
-# `src-tauri` is deliberately NOT a member. It is its own workspace so that
-# building and testing the core pipeline never resolves or links the webview
-# system libraries (webkit2gtk et al.), which are unavailable on some hosts.
-exclude = ["src-tauri"]
+members = ["core", "src-tauri"]
 resolver = "2"
 
 [workspace.package]

@@ -257,6 +257,7 @@ mod tests {
             raw_tag: tag.into(),
             weight,
             kind: None,
+            fetched_at: String::new(),
         }
     }
 

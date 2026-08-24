@@ -4,7 +4,9 @@
 //! shared bucket would throttle fast sources down to the slowest one.
 //!
 //! MusicBrainz's 1 req/s is not negotiable — exceeding it gets an IP blocked, and
-//! it is also a condition of use alongside the identifying User-Agent.
+//! it is also a condition of use alongside the identifying User-Agent. We use
+//! 1 req/2s (half the documented ceiling) so timing jitter, retries and the extra
+//! recording-tags call never push us over the line.
 
 use governor::clock::DefaultClock;
 use governor::state::{InMemoryState, NotKeyed};
@@ -12,6 +14,7 @@ use governor::{Quota, RateLimiter};
 use std::collections::HashMap;
 use std::num::NonZeroU32;
 use std::sync::Arc;
+use std::time::Duration;
 
 type Limiter = RateLimiter<NotKeyed, InMemoryState, DefaultClock>;
 
@@ -25,21 +28,6 @@ pub enum Host {
 }
 
 impl Host {
-    /// Requests per second allowed. These are deliberately at or below the
-    /// documented ceilings: being throttled costs far more time than going slow.
-    pub fn per_second(self) -> u32 {
-        match self {
-            // Hard published limit. Do not raise.
-            Host::MusicBrainz => 1,
-            // Documented as ~5/s for non-commercial keys; stay under it.
-            Host::Lastfm => 4,
-            // 60 requests/minute for authenticated clients.
-            Host::Discogs => 1,
-            // No published limit; be a good citizen on a free public endpoint.
-            Host::Wikidata => 2,
-        }
-    }
-
     pub fn as_str(self) -> &'static str {
         match self {
             Host::MusicBrainz => "musicbrainz",
@@ -66,22 +54,27 @@ impl RateLimiters {
     pub fn new() -> Self {
         let mut limiters = HashMap::new();
         for host in [Host::MusicBrainz, Host::Lastfm, Host::Discogs, Host::Wikidata] {
-            limiters.insert(host, Arc::new(Self::limiter_for(host.per_second())));
+            limiters.insert(host, Arc::new(Self::limiter_for(host)));
         }
         RateLimiters {
             limiters: Arc::new(limiters),
         }
     }
 
-    /// Build a limiter with no burst allowance beyond the per-second rate.
-    ///
-    /// `Quota::per_second(n)` would permit an initial burst of `n`; for
-    /// MusicBrainz at n=1 that is exactly one request, which is what we want, and
-    /// the replenish interval enforces the spacing thereafter.
-    fn limiter_for(per_second: u32) -> Limiter {
-        let quota = Quota::per_second(
-            NonZeroU32::new(per_second.max(1)).expect("per_second is at least 1"),
-        );
+    fn limiter_for(host: Host) -> Limiter {
+        let quota = match host {
+            // 1 req/2s — half of MB's published 1 req/s ceiling. The extra headroom
+            // absorbs retries and the recording-tags second call per ISRC without
+            // triggering a temporary IP ban.
+            Host::MusicBrainz => Quota::with_period(Duration::from_millis(2_000))
+                .expect("2 000 ms is a non-zero period"),
+            // Last.fm: ~5/s documented; stay conservatively under.
+            Host::Lastfm => Quota::per_second(NonZeroU32::new(4).unwrap()),
+            // Discogs: 60/minute for authenticated clients.
+            Host::Discogs => Quota::per_second(NonZeroU32::new(1).unwrap()),
+            // Wikidata: no published limit; be a good citizen.
+            Host::Wikidata => Quota::per_second(NonZeroU32::new(2).unwrap()),
+        };
         RateLimiter::direct(quota)
     }
 
@@ -99,31 +92,31 @@ mod tests {
     use std::time::Instant;
 
     #[test]
-    fn musicbrainz_limit_is_one_per_second() {
-        // Guards against a well-meaning change that would get the user's IP
-        // blocked by MusicBrainz.
-        assert_eq!(Host::MusicBrainz.per_second(), 1);
-    }
-
-    #[tokio::test]
-    async fn ten_musicbrainz_calls_take_at_least_nine_seconds() {
-        // 1 req/s with a burst of 1: the first is immediate, the remaining nine
-        // are spaced a second apart.
-        let limiters = RateLimiters::new();
-        let start = Instant::now();
-        for _ in 0..10 {
-            limiters.acquire(Host::MusicBrainz).await;
-        }
-        let elapsed = start.elapsed();
-        assert!(
-            elapsed.as_secs_f64() >= 8.9,
-            "10 MusicBrainz acquisitions took {elapsed:?}, expected >= ~9s"
-        );
+    fn musicbrainz_period_is_at_least_two_seconds() {
+        // Guards against a well-meaning change that would collapse the period
+        // back to 1 s and risk getting our IP blocked by MusicBrainz.
+        // Three acquisitions: first is immediate, second and third each wait
+        // one period, so total must be >= 2 x 2 s = 4 s.
+        let rt = tokio::runtime::Builder::new_current_thread()
+            .enable_all()
+            .build()
+            .unwrap();
+        rt.block_on(async {
+            let limiters = RateLimiters::new();
+            let start = Instant::now();
+            for _ in 0..3 {
+                limiters.acquire(Host::MusicBrainz).await;
+            }
+            let elapsed = start.elapsed();
+            assert!(
+                elapsed.as_secs_f64() >= 3.8,
+                "3 MusicBrainz acquisitions took {elapsed:?}, expected >= ~4 s (2 s period)"
+            );
+        });
     }
 
     #[tokio::test]
     async fn hosts_are_limited_independently() {
-        // A slow MusicBrainz queue must not stall Last.fm requests.
         let limiters = RateLimiters::new();
         limiters.acquire(Host::MusicBrainz).await;
 
@@ -137,8 +130,7 @@ mod tests {
 
     #[tokio::test]
     async fn limiter_is_shared_across_clones() {
-        // Cloning must not hand out a fresh allowance, or concurrent tasks would
-        // each get their own 1 req/s and collectively exceed the limit.
+        // Cloning must not hand out a fresh allowance.
         let a = RateLimiters::new();
         let b = a.clone();
         a.acquire(Host::MusicBrainz).await;
@@ -146,7 +138,7 @@ mod tests {
         let start = Instant::now();
         b.acquire(Host::MusicBrainz).await;
         assert!(
-            start.elapsed().as_millis() >= 900,
+            start.elapsed().as_millis() >= 1_800,
             "clone bypassed the shared limiter"
         );
     }

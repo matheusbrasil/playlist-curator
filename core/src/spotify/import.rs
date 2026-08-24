@@ -14,6 +14,7 @@ use serde::{Deserialize, Serialize};
 /// matters: the ISRC is the deterministic join key into MusicBrainz, so a poor
 /// ratio here means the enrichment cascade must lean on artist-level matching.
 #[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
 pub struct ImportStats {
     pub items_seen: usize,
     pub tracks_imported: usize,

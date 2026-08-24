@@ -1,20 +1,20 @@
 import { useCallback, useEffect, useState } from "react";
 
-export const ROUTES = ["connect", "playlists", "analysis", "suggestions", "settings"] as const;
+export const ROUTES = ["playlists", "analysis", "suggestions", "settings", "advanced"] as const;
 
 export type RouteName = (typeof ROUTES)[number];
 
 export const ROUTE_TITLES: Record<RouteName, string> = {
-  connect: "Connect",
   playlists: "Playlists",
   analysis: "Analysis",
   suggestions: "Suggestions",
   settings: "Settings",
+  advanced: "Advanced",
 };
 
 function parseHash(hash: string): RouteName {
   const name = hash.replace(/^#\/?/, "");
-  return (ROUTES as readonly string[]).includes(name) ? (name as RouteName) : "connect";
+  return (ROUTES as readonly string[]).includes(name) ? (name as RouteName) : "playlists";
 }
 
 /** Hash routing keeps deep links working inside the webview with no server. */

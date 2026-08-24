@@ -212,6 +212,21 @@ export function Connect({ status, settings, onSaveSettings, navigate }: Props) {
               <p className="hint">Optional. Discogs requires a token even for read-only access.</p>
             </div>
 
+            <div className="field">
+              <label htmlFor="mbContact">MusicBrainz contact email</label>
+              <input
+                id="mbContact"
+                type="email"
+                autoComplete="email"
+                value={draft.mbContactEmail ?? ""}
+                onChange={(e) => patch({ mbContactEmail: e.target.value || null })}
+              />
+              <p className="hint">
+                Required by MusicBrainz policy. Sent in the User-Agent header so they can reach you
+                if the app exceeds rate limits. Use a personal email, not a work address.
+              </p>
+            </div>
+
             <fieldset className="field">
               <legend>Genre-resolution LLM</legend>
               <label htmlFor="provider">Provider</label>

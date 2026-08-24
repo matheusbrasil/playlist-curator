@@ -8,7 +8,7 @@
 //! Tokens never reach the webview. They live in the OS credential vault (or a
 //! 0600 file where no vault exists) and are attached to requests inside Rust.
 
-use crate::config::{Settings, OAUTH_PORT, OAUTH_REDIRECT_URI, USER_AGENT};
+use crate::config::{Settings, APP_USER_AGENT, OAUTH_PORT, OAUTH_REDIRECT_URI};
 use crate::error::{CoreError, Result};
 use base64::Engine;
 use serde::{Deserialize, Serialize};
@@ -286,7 +286,7 @@ pub async fn refresh(
 async fn post_token(http: &reqwest::Client, form: &[(&str, &str)]) -> Result<TokenResponse> {
     let resp = http
         .post(TOKEN_URL)
-        .header(reqwest::header::USER_AGENT, USER_AGENT)
+        .header(reqwest::header::USER_AGENT, APP_USER_AGENT)
         .form(form)
         .send()
         .await?;
@@ -320,6 +320,14 @@ pub enum TokenStore {
 impl TokenStore {
     /// Prefer the OS vault, probing it once with a real round-trip because
     /// construction succeeds even when no backend is reachable.
+    pub fn name(&self) -> &'static str {
+        match self {
+            #[cfg(feature = "keyring-store")]
+            TokenStore::Keyring => "keyring",
+            TokenStore::File(_) => "file",
+        }
+    }
+
     pub fn detect(data_dir: &std::path::Path) -> Self {
         #[cfg(feature = "keyring-store")]
         {

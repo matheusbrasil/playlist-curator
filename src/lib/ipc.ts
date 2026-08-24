@@ -162,6 +162,8 @@ export type Settings = {
   spotifyClientId: string | null;
   lastfmApiKey: string | null;
   discogsToken: string | null;
+  /** Sent in the MusicBrainz User-Agent header — must be a real email MB can use to contact you. */
+  mbContactEmail: string | null;
   llm: LlmSettings;
   cache: CacheSettings;
   weights: SourceWeights;
@@ -234,12 +236,12 @@ export function importPlaylist(playlistId: string): Promise<ImportStats> {
 // ------------------------------------------------------------------ analysis
 
 export type EnrichStats = {
-  tracksTotal: number;
-  tracksMatched: number;
-  artistsTotal: number;
-  artistsMatched: number;
-  signalsRecorded: number;
+  tracksProcessed: number;
+  recordingsResolved: number;
+  artistsResolved: number;
+  nameMatched: number;
   needsReview: number;
+  tagSignalsInserted: number;
   cacheHits: number;
   networkCalls: number;
 };
@@ -303,8 +305,22 @@ export type ReviewItem = {
 };
 
 /** Long-running; progress arrives on `enrich://progress`. Resumable. */
-export function enrichPlaylist(playlistId: string): Promise<EnrichStats> {
-  return call<EnrichStats>("enrich_playlist", { playlistId });
+export function enrichPlaylist(
+  playlistId: string,
+  limit?: number,
+  onlyUnresolved?: boolean,
+): Promise<EnrichStats> {
+  return call<EnrichStats>("enrich_playlist", {
+    playlistId,
+    limit: limit ?? null,
+    onlyUnresolved: onlyUnresolved ?? null,
+  });
+}
+
+export function enrichCounts(
+  playlistId: string,
+): Promise<{ total: number; unresolved: number }> {
+  return call<{ total: number; unresolved: number }>("enrich_counts", { playlistId });
 }
 
 /** Recomputes from cached signals. No network — cheap enough to call on change. */
@@ -326,11 +342,13 @@ export function listReviews(): Promise<ReviewItem[]> {
 
 // ------------------------------------------------------------------ events
 
-export type EnrichProgress =
-  | { type: "started"; total: number }
-  | { type: "track"; done: number; total: number; name: string }
-  | { type: "artist"; done: number; total: number; name: string }
-  | { type: "finished"; stats: EnrichStats };
+export type EnrichProgress = {
+  playlistId: string;
+  current: number;
+  total: number;
+  trackName: string;
+  stats: EnrichStats;
+};
 
 export const ENRICH_PROGRESS_EVENT = "enrich://progress";
 
@@ -464,15 +482,15 @@ export type CreatedPlaylist = {
   recipe: PlaylistFilter;
 };
 
-export function createPlaylist(args: {
-  card: SuggestionCard;
-  public: boolean;
-  dryRunOverride: boolean | null;
-}): Promise<CreateResult> {
+export function createPlaylist(
+  card: SuggestionCard,
+  isPublic: boolean,
+  dryRun: boolean,
+): Promise<CreateResult> {
   return call<CreateResult>("create_playlist", {
-    card: args.card,
-    public: args.public,
-    dryRunOverride: args.dryRunOverride,
+    card,
+    public: isPublic,
+    dryRun,
   });
 }
 

@@ -13,6 +13,7 @@
 //!     opinion, and its answer is written to `genre_alias` so each tag is decided
 //!     once in the lifetime of the app.
 
+pub mod aggregate;
 pub mod aliases;
 pub mod derive;
 pub mod genres;

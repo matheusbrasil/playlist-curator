@@ -5,7 +5,7 @@
 //!  * a second run over the same playlist performs zero network I/O.
 
 use super::ratelimit::{Host, RateLimiters};
-use crate::config::{CacheSettings, USER_AGENT};
+use crate::config::CacheSettings;
 use crate::error::{CoreError, Result};
 use crate::model::Source;
 use crate::store::Store;
@@ -38,6 +38,7 @@ pub struct Fetcher {
     store: Store,
     limiters: RateLimiters,
     cache: CacheSettings,
+    user_agent: Arc<str>,
     pub counters: Arc<FetchCounters>,
 }
 
@@ -47,12 +48,14 @@ impl Fetcher {
         store: Store,
         limiters: RateLimiters,
         cache: CacheSettings,
+        user_agent: String,
     ) -> Self {
         Fetcher {
             http,
             store,
             limiters,
             cache,
+            user_agent: user_agent.into(),
             counters: Arc::new(FetchCounters::default()),
         }
     }
@@ -90,7 +93,7 @@ impl Fetcher {
     /// GET with retry, bypassing the cache. Retries on transport failures, 429
     /// and 5xx; anything else is returned as an error.
     async fn get_uncached(&self, host: Host, url: &str) -> Result<String> {
-        const MAX_RETRIES: u32 = 3;
+        const MAX_RETRIES: u32 = 5;
         let mut attempt = 0;
 
         loop {
@@ -98,7 +101,7 @@ impl Fetcher {
                 .http
                 .get(url)
                 // MusicBrainz rejects requests without an identifying agent.
-                .header(reqwest::header::USER_AGENT, USER_AGENT)
+                .header(reqwest::header::USER_AGENT, self.user_agent.as_ref())
                 .header(reqwest::header::ACCEPT, "application/json")
                 .send()
                 .await;
@@ -110,6 +113,9 @@ impl Fetcher {
                     let delay = Duration::from_secs(1u64 << attempt);
                     tracing::warn!(attempt, ?delay, error = %e, "transport error; retrying");
                     tokio::time::sleep(delay).await;
+                    // Re-enter the rate limiter so a flood of transport errors
+                    // does not bypass the per-host quota on recovery.
+                    self.limiters.acquire(host).await;
                     continue;
                 }
                 Err(e) => return Err(e.into()),
@@ -127,22 +133,31 @@ impl Fetcher {
                 return Err(CoreError::upstream(host.as_str(), "not found"));
             }
 
+            // Retry-After: 0 means "you may retry immediately" — treat it the
+            // same as no header so it cannot collapse the exponential floor.
             let retry_after = resp
                 .headers()
                 .get(reqwest::header::RETRY_AFTER)
                 .and_then(|v| v.to_str().ok())
-                .and_then(|s| s.trim().parse::<u64>().ok());
+                .and_then(|s| s.trim().parse::<u64>().ok())
+                .filter(|&s| s > 0);
 
             if (status.as_u16() == 429 || status.is_server_error()) && attempt < MAX_RETRIES {
                 attempt += 1;
-                // Back off hard on 429: we have already exceeded what this host
-                // tolerates, so being timid is cheaper than being blocked.
-                let delay = Duration::from_secs(retry_after.unwrap_or(1u64 << attempt).min(60));
+                // Exponential floor: 2 s, 4 s, 8 s. Honor Retry-After only when
+                // it is longer, so servers cannot force a zero-delay hammering.
+                let floor = 1u64 << attempt;
+                let delay = Duration::from_secs(
+                    retry_after.map(|s| s.max(floor)).unwrap_or(floor).min(60),
+                );
                 tracing::warn!(
                     attempt, status = status.as_u16(), ?delay,
                     host = host.as_str(), "throttled or server error; backing off"
                 );
                 tokio::time::sleep(delay).await;
+                // Re-enter the rate limiter so the retry is properly throttled,
+                // not just the first attempt.
+                self.limiters.acquire(host).await;
                 continue;
             }
 
@@ -170,6 +185,7 @@ mod tests {
             store,
             RateLimiters::new(),
             CacheSettings::default(),
+            "PlaylistCurator/test ( test@example.com )".to_string(),
         )
     }
 

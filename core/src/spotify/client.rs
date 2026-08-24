@@ -6,7 +6,7 @@
 
 use super::auth::Session;
 use super::models::*;
-use crate::config::USER_AGENT;
+use crate::config::APP_USER_AGENT;
 use crate::error::{CoreError, Result};
 use std::time::Duration;
 
@@ -35,7 +35,7 @@ impl SpotifyClient {
     /// across every host the app talks to.
     pub fn build_http() -> Result<reqwest::Client> {
         Ok(reqwest::Client::builder()
-            .user_agent(USER_AGENT)
+            .user_agent(APP_USER_AGENT)
             .timeout(Duration::from_secs(30))
             .build()?)
     }

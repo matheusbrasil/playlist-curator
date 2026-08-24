@@ -12,9 +12,10 @@
 use crate::AppState;
 use pc_core::error::CoreError;
 use pc_core::{suggest::PlaylistFilter, Settings};
-use serde::{Deserialize, Serialize};
+use serde::Serialize;
 use std::sync::Arc;
-use tauri::{AppHandle, State};
+use tauri::{AppHandle, Emitter, State};
+use tauri_plugin_opener::OpenerExt;
 
 // ── Error serialisation ───────────────────────────────────────────────────────
 
@@ -36,10 +37,6 @@ impl From<CoreError> for CommandError {
 }
 
 type Cmd<T> = Result<T, CommandError>;
-
-fn err(e: impl Into<CoreError>) -> CommandError {
-    CommandError::from(e.into())
-}
 
 // ── Connection ────────────────────────────────────────────────────────────────
 
@@ -64,35 +61,45 @@ pub struct ConnectionStatus {
 #[tauri::command]
 pub async fn connection_status(state: State<'_, AppState>) -> Cmd<ConnectionStatus> {
     let settings = state.app.settings();
-    let client_id_configured = settings.spotify_client_id.as_deref().is_some_and(|s| !s.is_empty());
+    let client_id_configured =
+        settings.spotify_client_id.as_deref().is_some_and(|s| !s.is_empty());
+    let data_dir = &state.app.paths.data_dir;
+    let token_store =
+        pc_core::spotify::auth::TokenStore::detect(data_dir).name().to_owned();
 
-    let http = reqwest::Client::builder()
-        .use_rustls_tls()
-        .build()
-        .map_err(|e| CommandError { kind: "http".into(), message: e.to_string() })?;
+    let http = build_http()?;
+    let session_result =
+        pc_core::spotify::auth::Session::from_settings(&settings, data_dir, http.clone());
 
-    let session = pc_core::spotify::auth::Session::load(&state.app.paths, &settings);
-
-    let (connected, user, premium_warning, token_store) = match session {
-        Ok(sess) => {
-            let client = pc_core::spotify::client::SpotifyClient::new(http, sess);
-            match client.current_user().await {
+    let (connected, user, premium_warning) = match session_result {
+        Ok(session) if session.is_connected().await => {
+            let client = pc_core::spotify::client::SpotifyClient::new(http, Arc::new(session));
+            match client.me().await {
                 Ok(u) => {
                     let premium = u.product.as_deref() != Some("premium");
-                    let store = if cfg!(target_os = "linux") || cfg!(target_os = "macos") || cfg!(target_os = "windows") {
-                        "keyring"
-                    } else {
-                        "file"
-                    };
-                    (true, Some(SpotifyUser { id: u.id, display_name: u.display_name, product: u.product }), premium, store.to_owned())
+                    (
+                        true,
+                        Some(SpotifyUser {
+                            id: u.id,
+                            display_name: u.display_name,
+                            product: u.product,
+                        }),
+                        premium,
+                    )
                 }
-                Err(_) => (false, None, false, "file".to_owned()),
+                Err(_) => (false, None, false),
             }
         }
-        Err(_) => (false, None, false, "file".to_owned()),
+        _ => (false, None, false),
     };
 
-    Ok(ConnectionStatus { connected, client_id_configured, user, premium_warning, token_store })
+    Ok(ConnectionStatus {
+        connected,
+        client_id_configured,
+        user,
+        premium_warning,
+        token_store,
+    })
 }
 
 #[tauri::command]
@@ -103,33 +110,53 @@ pub async fn spotify_login(
     let settings = state.app.settings();
     let client_id = settings
         .require_client_id()
-        .map_err(|e| CommandError::from(e))?
+        .map_err(CommandError::from)?
         .to_owned();
-
     let http = build_http()?;
 
-    // Open the system browser at the Spotify auth URL and block until
-    // the loopback receives the callback.
-    let session = pc_core::spotify::auth::run_pkce_flow(
-        &client_id,
-        &state.app.paths,
-        &settings,
-        |url| {
-            // Open in default browser via the shell plugin.
-            let _ = tauri_plugin_shell::ShellExt::shell_open(&app_handle, url, None);
-        },
-    )
+    // Build the authorize URL and open the system browser.
+    let pending = pc_core::spotify::auth::begin(&client_id);
+    app_handle
+        .opener()
+        .open_url(&pending.authorize_url, None::<&str>)
+        .map_err(|e| CommandError { kind: "shell".into(), message: e.to_string() })?;
+
+    // tiny_http is synchronous, so the wait runs on a blocking thread.
+    let expected_state = pending.state.clone();
+    let verifier = pending.pkce.verifier.clone();
+    let code = tokio::task::spawn_blocking(move || {
+        pc_core::spotify::auth::wait_for_callback(
+            &expected_state,
+            std::time::Duration::from_secs(300),
+        )
+    })
     .await
+    .map_err(|e| CommandError { kind: "internal".into(), message: e.to_string() })?
     .map_err(CommandError::from)?;
 
-    let client = pc_core::spotify::client::SpotifyClient::new(http, session);
-    let user = client.current_user().await.map_err(CommandError::from)?;
+    let tokens =
+        pc_core::spotify::auth::exchange_code(&http, &client_id, &code, &verifier)
+            .await
+            .map_err(CommandError::from)?;
+
+    let data_dir = &state.app.paths.data_dir;
+    let session = pc_core::spotify::auth::Session::new(
+        pc_core::spotify::auth::TokenStore::detect(data_dir),
+        client_id,
+        http.clone(),
+    )
+    .map_err(CommandError::from)?;
+    session.set_tokens(tokens).await.map_err(CommandError::from)?;
+
+    let client = pc_core::spotify::client::SpotifyClient::new(http, Arc::new(session));
+    let user = client.me().await.map_err(CommandError::from)?;
     Ok(SpotifyUser { id: user.id, display_name: user.display_name, product: user.product })
 }
 
 #[tauri::command]
 pub async fn spotify_logout(state: State<'_, AppState>) -> Cmd<()> {
-    pc_core::spotify::auth::clear_tokens(&state.app.paths)
+    pc_core::spotify::auth::TokenStore::detect(&state.app.paths.data_dir)
+        .clear()
         .map_err(CommandError::from)
 }
 
@@ -158,15 +185,8 @@ pub async fn clear_cache(state: State<'_, AppState>) -> Cmd<CacheClearResult> {
 }
 
 #[tauri::command]
-pub async fn export_database(
-    state: State<'_, AppState>,
-    dest_path: String,
-) -> Cmd<()> {
-    state
-        .app
-        .store
-        .export_to(&dest_path)
-        .map_err(CommandError::from)
+pub async fn export_database(state: State<'_, AppState>, dest_path: String) -> Cmd<()> {
+    state.app.store.export_to(&dest_path).map_err(CommandError::from)
 }
 
 // ── Playlists ─────────────────────────────────────────────────────────────────
@@ -180,12 +200,20 @@ pub async fn list_playlists(state: State<'_, AppState>) -> Cmd<Vec<pc_core::mode
 pub async fn sync_playlists(state: State<'_, AppState>) -> Cmd<Vec<pc_core::model::Playlist>> {
     let settings = state.app.settings();
     let http = build_http()?;
-    let session = load_session(&state, &settings)?;
-    let client = pc_core::spotify::client::SpotifyClient::new(http, session);
+    let session = load_session(&state, &settings, http.clone())?;
+    let client = pc_core::spotify::client::SpotifyClient::new(http, Arc::new(session));
 
-    let playlists = client.current_user_playlists().await.map_err(CommandError::from)?;
+    let playlists = client.my_playlists().await.map_err(CommandError::from)?;
     for p in &playlists {
-        state.app.store.upsert_playlist(p).map_err(CommandError::from)?;
+        let playlist = pc_core::model::Playlist {
+            spotify_id: p.id.clone(),
+            name: p.name.clone(),
+            owner: p.owner.as_ref().map(|o| o.id.clone()),
+            snapshot_id: p.snapshot_id.clone(),
+            track_count: p.tracks.as_ref().and_then(|t| t.total),
+            synced_at: None,
+        };
+        state.app.store.upsert_playlist(&playlist).map_err(CommandError::from)?;
     }
     state.app.store.list_playlists().map_err(CommandError::from)
 }
@@ -197,8 +225,8 @@ pub async fn import_playlist(
 ) -> Cmd<pc_core::spotify::import::ImportStats> {
     let settings = state.app.settings();
     let http = build_http()?;
-    let session = load_session(&state, &settings)?;
-    let client = pc_core::spotify::client::SpotifyClient::new(http, session);
+    let session = load_session(&state, &settings, http.clone())?;
+    let client = pc_core::spotify::client::SpotifyClient::new(http, Arc::new(session));
 
     pc_core::spotify::import::import_playlist(&client, &state.app.store, &playlist_id)
         .await
@@ -212,6 +240,8 @@ pub async fn enrich_playlist(
     state: State<'_, AppState>,
     app_handle: AppHandle,
     playlist_id: String,
+    limit: Option<usize>,
+    only_unresolved: Option<bool>,
 ) -> Cmd<pc_core::enrich::pipeline::EnrichStats> {
     let settings = state.app.settings();
     let store = state.app.store.clone();
@@ -223,9 +253,25 @@ pub async fn enrich_playlist(
         })
     };
 
-    pc_core::enrich::pipeline::enrich_playlist(store, settings, &playlist_id, on_progress)
+    pc_core::enrich::pipeline::enrich_playlist(store, settings, &playlist_id, limit, only_unresolved, on_progress)
         .await
         .map_err(CommandError::from)
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct EnrichCounts {
+    pub total: i64,
+    pub unresolved: i64,
+}
+
+#[tauri::command]
+pub async fn enrich_counts(
+    state: State<'_, AppState>,
+    playlist_id: String,
+) -> Cmd<EnrichCounts> {
+    let (total, unresolved) = state.app.store.enrich_counts(&playlist_id).map_err(CommandError::from)?;
+    Ok(EnrichCounts { total, unresolved })
 }
 
 #[derive(Serialize)]
@@ -247,20 +293,12 @@ pub async fn derive_playlist(
         .map_err(CommandError::from)?;
     let eras = derive::derive_eras_for_playlist(&state.app.store, &playlist_id)
         .map_err(CommandError::from)?;
-
     let settings = state.app.settings();
-    let tracks_with_genre = aggregate::derive_genres_for_playlist(
-        &state.app.store,
-        &playlist_id,
-        &settings,
-    )
-    .map_err(CommandError::from)?;
+    let tracks_with_genre =
+        aggregate::derive_playlist_genres(&state.app.store, &settings, &playlist_id)
+            .map_err(CommandError::from)?;
 
-    Ok(DeriveResult {
-        tracks_with_genre,
-        origins_resolved: origins,
-        eras_resolved: eras,
-    })
+    Ok(DeriveResult { tracks_with_genre, origins_resolved: origins, eras_resolved: eras })
 }
 
 #[derive(Serialize)]
@@ -305,11 +343,15 @@ pub async fn analysis_summary(
 ) -> Cmd<AnalysisSummary> {
     let store = &state.app.store;
 
-    let (total_tracks, with_isrc) = store.isrc_coverage(&playlist_id).map_err(CommandError::from)?;
-    let (_, mb_resolved) = store.mb_resolution_coverage(&playlist_id).map_err(CommandError::from)?;
+    let (total_tracks, with_isrc) =
+        store.isrc_coverage(&playlist_id).map_err(CommandError::from)?;
+    let (_, mb_resolved) =
+        store.mb_resolution_coverage(&playlist_id).map_err(CommandError::from)?;
 
-    let isrc_coverage = if total_tracks > 0 { with_isrc as f64 / total_tracks as f64 } else { 0.0 };
-    let mb_coverage = if total_tracks > 0 { mb_resolved as f64 / total_tracks as f64 } else { 0.0 };
+    let isrc_coverage =
+        if total_tracks > 0 { with_isrc as f64 / total_tracks as f64 } else { 0.0 };
+    let mb_coverage =
+        if total_tracks > 0 { mb_resolved as f64 / total_tracks as f64 } else { 0.0 };
 
     let genre_dist = store.genre_distribution(&playlist_id).map_err(CommandError::from)?;
     let country_dist = store.country_distribution(&playlist_id).map_err(CommandError::from)?;
@@ -341,27 +383,34 @@ pub async fn analysis_tracks(
     state: State<'_, AppState>,
     playlist_id: String,
 ) -> Cmd<Vec<serde_json::Value>> {
-    use pc_core::model::OriginSource;
     use serde_json::json;
 
-    let pts = state.app.store.playlist_tracks(&playlist_id).map_err(CommandError::from)?;
+    let store = &state.app.store;
+    let pts = store.playlist_tracks(&playlist_id).map_err(CommandError::from)?;
+    // Load reviews once outside the loop.
+    let reviews = store.open_reviews().map_err(CommandError::from)?;
     let mut result = Vec::with_capacity(pts.len());
 
     for pt in pts {
         let track = &pt.track;
-        let artists = state.app.store.track_artists(&track.spotify_id).map_err(CommandError::from)?;
-        let genres = state.app.store.track_genres(&track.spotify_id).map_err(CommandError::from)?;
-        let origin = state.app.store.artist_origin(&artists.first().map(|a| a.spotify_id.as_str()).unwrap_or("")).map_err(CommandError::from)?;
-        let era = state.app.store.track_era(&track.spotify_id).map_err(CommandError::from)?;
-        let reviews = state.app.store.open_reviews().map_err(CommandError::from)?;
+        let genres = store.track_genres(&track.spotify_id).map_err(CommandError::from)?;
+        let first_artist_id = pt.artists.first().map(|a| a.spotify_id.as_str()).unwrap_or("");
+        let origin = store.artist_origin(first_artist_id).map_err(CommandError::from)?;
+        let era = store.track_era(&track.spotify_id).map_err(CommandError::from)?;
         let needs_review = reviews.iter().any(|r| r.entity_id == track.spotify_id);
 
         result.push(json!({
             "spotifyId": track.spotify_id,
             "name": track.name,
             "isrc": track.isrc,
-            "artists": artists.iter().map(|a| json!({ "spotifyId": a.spotify_id, "name": a.name })).collect::<Vec<_>>(),
-            "genres": genres.iter().map(|g| json!({ "slug": g.canonical_slug, "score": g.score })).collect::<Vec<_>>(),
+            "artists": pt.artists.iter().map(|a| json!({
+                "spotifyId": a.spotify_id,
+                "name": a.name,
+            })).collect::<Vec<_>>(),
+            "genres": genres.iter().map(|g| json!({
+                "slug": g.canonical_slug,
+                "score": g.score,
+            })).collect::<Vec<_>>(),
             "origin": origin.as_ref().map(|o| json!({
                 "countryCode": o.country_code,
                 "countryLabel": o.country_label,
@@ -392,8 +441,7 @@ pub async fn suggest_playlists(
     state: State<'_, AppState>,
     playlist_id: String,
 ) -> Cmd<Vec<pc_core::suggest::SuggestionCard>> {
-    pc_core::suggest::suggest(&state.app.store, &playlist_id)
-        .map_err(CommandError::from)
+    pc_core::suggest::suggest(&state.app.store, &playlist_id).map_err(CommandError::from)
 }
 
 #[tauri::command]
@@ -403,41 +451,79 @@ pub async fn suggest_from_query(
     query: String,
 ) -> Cmd<pc_core::suggest::SuggestionCard> {
     use pc_core::llm::Llm;
-    use pc_core::suggest::nl;
+    use pc_core::suggest::{facets, nl, score_candidate};
 
     let settings = state.app.settings();
+    let store = &state.app.store;
 
-    // Try deterministic parser first; if it produces a valid filter, use it.
-    // If not and an LLM is configured, ask the LLM.
-    let filter = nl::parse_query(&query, &state.app.store)
-        .or_else(|_| {
+    // Deterministic parser first; fall back to LLM if it can't parse.
+    let filter = match nl::parse(store, &query, Some(&playlist_id)) {
+        Ok(f) => f,
+        Err(parse_err) => {
             let llm = Llm::from_settings(&settings, build_http_client());
             if llm.is_enabled() {
-                // Blocking bridge: parse_query_with_llm is async but we need sync here.
-                // In practice commands run on the Tokio runtime so this is fine.
-                futures::executor::block_on(nl::parse_query_with_llm(
-                    &query,
-                    &state.app.store,
-                    &llm,
-                ))
+                let all_genres = store.all_canonical_genres().map_err(CommandError::from)?;
+                let vocab: Vec<String> = all_genres.iter().map(|g| g.slug.clone()).collect();
+                let schema = pc_core::llm::prompts::nl_filter_schema();
+                let prompt_str =
+                    pc_core::llm::prompts::nl_to_filter_prompt(&query, &vocab, &[]);
+                let raw = llm
+                    .complete_json(
+                        &schema,
+                        pc_core::llm::prompts::SYSTEM_NL_TO_FILTER,
+                        &prompt_str,
+                    )
+                    .await
+                    .map_err(CommandError::from)?;
+                let mut f: PlaylistFilter = serde_json::from_value(raw)
+                    .map_err(|e| CommandError { kind: "parse".into(), message: e.to_string() })?;
+                f.source_playlist_id = Some(playlist_id.clone());
+                f.validate(store).map_err(CommandError::from)?;
+                f
             } else {
-                Err(CoreError::Config("no LLM configured and deterministic parser failed".into()))
+                return Err(CommandError::from(parse_err));
             }
-        })
-        .map_err(CommandError::from)?;
+        }
+    };
 
-    pc_core::suggest::execute(&state.app.store, &playlist_id, &filter)
-        .map_err(CommandError::from)
+    let tracks = pc_core::suggest::execute(store, &filter).map_err(CommandError::from)?;
+    let score = score_candidate(&tracks, filter.specificity(), 0.0);
+    let (proposed_name, description) =
+        facets::name_for(store, &filter, tracks.len()).map_err(CommandError::from)?;
+
+    Ok(pc_core::suggest::SuggestionCard {
+        id: card_id(&filter),
+        proposed_name,
+        description,
+        track_count: tracks.len(),
+        score,
+        tracks,
+        filter,
+    })
 }
 
 #[tauri::command]
 pub async fn suggest_from_filter(
     state: State<'_, AppState>,
-    playlist_id: String,
     filter: PlaylistFilter,
 ) -> Cmd<pc_core::suggest::SuggestionCard> {
-    pc_core::suggest::execute(&state.app.store, &playlist_id, &filter)
-        .map_err(CommandError::from)
+    use pc_core::suggest::{facets, score_candidate};
+
+    let store = &state.app.store;
+    let tracks = pc_core::suggest::execute(store, &filter).map_err(CommandError::from)?;
+    let score = score_candidate(&tracks, filter.specificity(), 0.0);
+    let (proposed_name, description) =
+        facets::name_for(store, &filter, tracks.len()).map_err(CommandError::from)?;
+
+    Ok(pc_core::suggest::SuggestionCard {
+        id: card_id(&filter),
+        proposed_name,
+        description,
+        track_count: tracks.len(),
+        score,
+        tracks,
+        filter,
+    })
 }
 
 #[derive(Serialize)]
@@ -450,11 +536,16 @@ pub struct GenreEntry {
 
 #[tauri::command]
 pub async fn list_genres(state: State<'_, AppState>) -> Cmd<Vec<GenreEntry>> {
-    let genres = state.app.store.all_canonical_genres().map_err(CommandError::from)?;
-    Ok(genres
-        .into_iter()
-        .map(|g| GenreEntry { slug: g.slug, label: g.label, parent_slug: g.parent_slug })
-        .collect())
+    state
+        .app
+        .store
+        .all_canonical_genres()
+        .map_err(CommandError::from)
+        .map(|gs| {
+            gs.into_iter()
+                .map(|g| GenreEntry { slug: g.slug, label: g.label, parent_slug: g.parent_slug })
+                .collect()
+        })
 }
 
 #[tauri::command]
@@ -514,19 +605,20 @@ pub async fn create_playlist(
     state: State<'_, AppState>,
     card: pc_core::suggest::SuggestionCard,
     public: bool,
-    dry_run_override: Option<bool>,
+    dry_run: bool,
 ) -> Cmd<CreateResult> {
     let settings = state.app.settings();
+
     let http = build_http()?;
+    let session = load_session(&state, &settings, http.clone())?;
+    let client = pc_core::spotify::client::SpotifyClient::new(http, Arc::new(session));
 
     let result = pc_core::spotify::publish::create_from_card(
+        &client,
         &state.app.store,
-        &settings,
-        http,
-        &state.app.paths,
         &card,
         public,
-        dry_run_override,
+        dry_run,
     )
     .await
     .map_err(CommandError::from)?;
@@ -547,14 +639,23 @@ pub async fn create_playlist(
 }
 
 #[tauri::command]
-pub async fn list_created_playlists(
-    state: State<'_, AppState>,
-) -> Cmd<Vec<serde_json::Value>> {
-    state
-        .app
-        .store
-        .list_created_playlists()
+pub async fn list_created_playlists(state: State<'_, AppState>) -> Cmd<Vec<serde_json::Value>> {
+    use serde_json::json;
+    pc_core::spotify::publish::list_created(&state.app.store)
         .map_err(CommandError::from)
+        .map(|records| {
+            records
+                .into_iter()
+                .map(|r| {
+                    json!({
+                        "spotifyId": r.spotify_id,
+                        "name": r.name,
+                        "createdAt": r.created_at,
+                        "recipe": r.recipe,
+                    })
+                })
+                .collect()
+        })
 }
 
 // ── Overrides ─────────────────────────────────────────────────────────────────
@@ -570,7 +671,7 @@ pub async fn set_override(
     state
         .app
         .store
-        .set_override(&entity_type, &entity_id, &field, &value)
+        .set_override(&entity_type, &entity_id, &field, Some(&value))
         .map_err(CommandError::from)
 }
 
@@ -626,7 +727,10 @@ pub async fn llm_status(state: State<'_, AppState>) -> Cmd<LlmStatus> {
             Err(e) => (false, format!("Cannot reach Ollama daemon: {e}")),
         }
     } else {
-        (llm.is_enabled(), if llm.is_enabled() { "Configured".into() } else { "No provider configured".into() })
+        (
+            llm.is_enabled(),
+            if llm.is_enabled() { "Configured".into() } else { "No provider configured".into() },
+        )
     };
 
     Ok(LlmStatus { provider: llm.name().to_owned(), available, detail })
@@ -644,9 +748,7 @@ pub async fn normalize_orphan_tags(
     state: State<'_, AppState>,
     limit: usize,
 ) -> Cmd<NormaliseResult> {
-    use pc_core::llm::Llm;
-    use pc_core::llm::prompts;
-    use pc_core::taxonomy::aliases::Taxonomy;
+    use pc_core::llm::{prompts, Llm};
 
     let settings = state.app.settings();
     let llm = Llm::from_settings(&settings, build_http_client());
@@ -664,10 +766,11 @@ pub async fn normalize_orphan_tags(
     let vocab: Vec<String> = all_genres.iter().map(|g| g.slug.clone()).collect();
 
     let schema = prompts::normalise_tags_schema(&batch);
-    let prompt = prompts::normalise_tags_prompt(&batch, &vocab);
-    let system = prompts::SYSTEM_NORMALISE_TAGS;
-
-    let result = llm.complete_json(&schema, system, &prompt).await.map_err(CommandError::from)?;
+    let prompt_str = prompts::normalise_tags_prompt(&batch, &vocab);
+    let result = llm
+        .complete_json(&schema, prompts::SYSTEM_NORMALISE_TAGS, &prompt_str)
+        .await
+        .map_err(CommandError::from)?;
 
     let mut resolved = 0usize;
     let mut unresolved = 0usize;
@@ -679,7 +782,11 @@ pub async fn normalize_orphan_tags(
             .store
             .upsert_genre_alias(tag, canonical.as_deref(), "llm")
             .map_err(CommandError::from)?;
-        if canonical.is_some() { resolved += 1; } else { unresolved += 1; }
+        if canonical.is_some() {
+            resolved += 1;
+        } else {
+            unresolved += 1;
+        }
     }
 
     Ok(NormaliseResult { resolved, unresolved })
@@ -695,16 +802,26 @@ fn build_http() -> Result<reqwest::Client, CommandError> {
 }
 
 fn build_http_client() -> reqwest::Client {
-    reqwest::Client::builder()
-        .use_rustls_tls()
-        .build()
-        .unwrap_or_default()
+    reqwest::Client::builder().use_rustls_tls().build().unwrap_or_default()
 }
 
 fn load_session(
     state: &State<'_, AppState>,
     settings: &Settings,
+    http: reqwest::Client,
 ) -> Result<pc_core::spotify::auth::Session, CommandError> {
-    pc_core::spotify::auth::Session::load(&state.app.paths, settings)
+    pc_core::spotify::auth::Session::from_settings(settings, &state.app.paths.data_dir, http)
         .map_err(CommandError::from)
+}
+
+/// A stable ID for a user-constructed card derived from the filter's key fields.
+fn card_id(filter: &PlaylistFilter) -> String {
+    let mut s = filter.genres.join(",");
+    s.push('|');
+    s.push_str(&filter.countries.join(","));
+    if let Some((from, to)) = filter.year_range {
+        use std::fmt::Write;
+        let _ = write!(s, "|{from}-{to}");
+    }
+    s
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DryRunBanner } from "../components/DryRunBanner";
 import { ErrorNotice } from "../components/ErrorNotice";
 import { SuggestionCard } from "../components/SuggestionCard";
 import { TrackTable } from "../components/TrackTable";
@@ -29,18 +28,26 @@ function toAnalysedTrack(st: Card["tracks"][number]): AnalysedTrack {
     isrc: null,
     genres: st.reason.genre ? [{ slug: st.reason.genre, score: st.reason.genreScore }] : [],
     origin: st.reason.countryCode
-      ? { countryCode: st.reason.countryCode, countryLabel: null, city: null, source: st.reason.eraSource ?? "unknown", confidence: 1 }
+      ? {
+          countryCode: st.reason.countryCode,
+          countryLabel: null,
+          city: null,
+          source: st.reason.eraSource ?? "unknown",
+          confidence: 1,
+        }
       : null,
     era: st.reason.year
-      ? { year: st.reason.year, decade: st.reason.year ? Math.floor(st.reason.year / 10) * 10 : null, source: st.reason.eraSource ?? "unknown" }
+      ? {
+          year: st.reason.year,
+          decade: st.reason.year ? Math.floor(st.reason.year / 10) * 10 : null,
+          source: st.reason.eraSource ?? "unknown",
+        }
       : null,
     needsReview: st.reason.needsReview,
   };
 }
 
-export function Suggestions({ playlistId, settings, navigate }: Props) {
-  const dryRun = settings?.dryRun ?? true;
-
+export function Suggestions({ playlistId, navigate }: Props) {
   const suggestions = useAsync(
     () => (playlistId ? suggestPlaylists(playlistId) : Promise.resolve([])),
     [playlistId],
@@ -55,6 +62,9 @@ export function Suggestions({ playlistId, settings, navigate }: Props) {
   const [openCardId, setOpenCardId] = useState<string | null>(null);
   const [creatingCardId, setCreatingCardId] = useState<string | null>(null);
 
+  const [confirmCard, setConfirmCard] = useState<Card | null>(null);
+  const [confirmDryRun, setConfirmDryRun] = useState(true);
+
   if (!playlistId) {
     return (
       <div className="screen">
@@ -67,11 +77,11 @@ export function Suggestions({ playlistId, settings, navigate }: Props) {
     );
   }
 
-  async function runCreate(card: Card) {
+  async function doCreate(card: Card, dryRun: boolean) {
     setCreatingCardId(card.id);
     setCreateResult(null);
     await createAction.run(
-      () => createPlaylist({ card, public: false, dryRunOverride: null }),
+      () => createPlaylist(card, false, dryRun),
       (result) => {
         setCreateResult(result);
         return result.dryRun
@@ -103,13 +113,6 @@ export function Suggestions({ playlistId, settings, navigate }: Props) {
     <div className="screen">
       <h2>Suggestions</h2>
 
-      {dryRun ? (
-        <DryRunBanner
-          dryRun
-          onOpenSettings={() => navigate("settings")}
-        />
-      ) : null}
-
       {createResult ? (
         <div className={`notice ${createResult.dryRun ? "notice-info" : "notice-ok"}`} role="status">
           <p className="notice-title">
@@ -131,15 +134,15 @@ export function Suggestions({ playlistId, settings, navigate }: Props) {
         <ErrorNotice
           error={createAction.error}
           onRetry={createAction.clear}
-          onGoConnect={() => navigate("connect")}
+          onGoConnect={() => navigate("settings")}
         />
       ) : null}
 
       <section className="panel">
         <h3>Free-text query</h3>
         <p className="muted">
-          Describe the playlist you want — genre, country, decade, or a combination.
-          {" "}Uses the LLM if configured, otherwise parses common patterns.
+          Describe the playlist you want — genre, country, decade, or a combination.{" "}
+          Uses the LLM if configured, otherwise parses common patterns.
         </p>
         <form
           className="row"
@@ -193,10 +196,10 @@ export function Suggestions({ playlistId, settings, navigate }: Props) {
             <div key={card.id}>
               <SuggestionCard
                 card={card}
-                dryRun={dryRun}
+                dryRun={true}
                 selected={openCardId === card.id}
                 onOpen={(c) => setOpenCardId(openCardId === c.id ? null : c.id)}
-                onCreate={(c) => void runCreate(c)}
+                onCreate={(c) => setConfirmCard(c)}
                 creating={creatingCardId === card.id}
               />
               {openCardId === card.id ? (
@@ -212,6 +215,44 @@ export function Suggestions({ playlistId, settings, navigate }: Props) {
           ))}
         </div>
       </section>
+
+      {/* Per-creation confirm panel */}
+      {confirmCard ? (
+        <div
+          className="panel"
+          style={{ position: "sticky", bottom: 0, zIndex: 10, background: "var(--surface2)" }}
+        >
+          <h4>Create playlist</h4>
+          <p>
+            "{confirmCard.proposedName}" — {confirmCard.trackCount} tracks
+          </p>
+          <label className="row" style={{ marginTop: 8 }}>
+            <input
+              type="checkbox"
+              checked={confirmDryRun}
+              onChange={(e) => setConfirmDryRun(e.target.checked)}
+            />
+            <span>Dry run (preview only — nothing will be created)</span>
+          </label>
+          <div className="row" style={{ marginTop: 8 }}>
+            <button
+              type="button"
+              className={confirmDryRun ? "primary" : "danger"}
+              onClick={() => {
+                const card = confirmCard;
+                const dryRun = confirmDryRun;
+                setConfirmCard(null);
+                void doCreate(card, dryRun);
+              }}
+            >
+              {confirmDryRun ? "Preview" : "Create on Spotify"}
+            </button>
+            <button type="button" onClick={() => setConfirmCard(null)}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

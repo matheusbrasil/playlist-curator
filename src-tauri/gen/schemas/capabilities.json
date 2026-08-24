@@ -1,0 +1,1 @@
+{"main":{"identifier":"main","description":"Playlist Curator main window capabilities","local":true,"windows":["main"],"permissions":["core:default","opener:allow-open-url","dialog:allow-open","dialog:allow-save","fs:default"]}}
