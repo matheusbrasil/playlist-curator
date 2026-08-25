@@ -20,27 +20,27 @@ use crate::store::Store;
 const COUNTRY_WORDS: &[(&str, &str)] = &[
     // Brazil — the primary use case, so worth being generous.
     ("brasileira", "BR"), ("brasileiro", "BR"), ("brasileiras", "BR"), ("brasileiros", "BR"),
-    ("brasil", "BR"), ("brazilian", "BR"), ("brazil", "BR"),
+    ("brasil", "BR"), ("brazilian", "BR"), ("brazil", "BR"), ("br", "BR"),
     ("inglesa", "GB"), ("ingles", "GB"), ("inglesas", "GB"), ("ingleses", "GB"),
     ("inglaterra", "GB"), ("english", "GB"), ("british", "GB"), ("britanica", "GB"),
     ("britanico", "GB"), ("uk", "GB"), ("britain", "GB"),
     ("americana", "US"), ("americano", "US"), ("american", "US"),
     ("estadunidense", "US"), ("eua", "US"), ("usa", "US"),
-    ("francesa", "FR"), ("frances", "FR"), ("french", "FR"), ("franca", "FR"), ("france", "FR"),
+    ("francesa", "FR"), ("frances", "FR"), ("french", "FR"), ("franca", "FR"), ("france", "FR"), ("fr", "FR"),
     ("alema", "DE"), ("alemao", "DE"), ("german", "DE"), ("alemanha", "DE"), ("germany", "DE"),
     ("italiana", "IT"), ("italiano", "IT"), ("italian", "IT"), ("italia", "IT"), ("italy", "IT"),
-    ("japonesa", "JP"), ("japones", "JP"), ("japanese", "JP"), ("japao", "JP"), ("japan", "JP"),
-    ("jamaicana", "JM"), ("jamaicano", "JM"), ("jamaican", "JM"), ("jamaica", "JM"),
+    ("japonesa", "JP"), ("japones", "JP"), ("japanese", "JP"), ("japao", "JP"), ("japan", "JP"), ("jp", "JP"),
+    ("jamaicana", "JM"), ("jamaicano", "JM"), ("jamaican", "JM"), ("jamaica", "JM"), ("jm", "JM"),
     ("argentina", "AR"), ("argentino", "AR"), ("argentinian", "AR"), ("argentine", "AR"),
-    ("portuguesa", "PT"), ("portugues", "PT"), ("portuguese", "PT"), ("portugal", "PT"),
+    ("portuguesa", "PT"), ("portugues", "PT"), ("portuguese", "PT"), ("portugal", "PT"), ("pt", "PT"),
     ("espanhola", "ES"), ("espanhol", "ES"), ("spanish", "ES"), ("espanha", "ES"), ("spain", "ES"),
-    ("mexicana", "MX"), ("mexicano", "MX"), ("mexican", "MX"), ("mexico", "MX"),
+    ("mexicana", "MX"), ("mexicano", "MX"), ("mexican", "MX"), ("mexico", "MX"), ("mx", "MX"),
     ("cubana", "CU"), ("cubano", "CU"), ("cuban", "CU"), ("cuba", "CU"),
-    ("nigeriana", "NG"), ("nigeriano", "NG"), ("nigerian", "NG"), ("nigeria", "NG"),
-    ("canadense", "CA"), ("canadian", "CA"), ("canada", "CA"),
+    ("nigeriana", "NG"), ("nigeriano", "NG"), ("nigerian", "NG"), ("nigeria", "NG"), ("ng", "NG"),
+    ("canadense", "CA"), ("canadian", "CA"), ("canada", "CA"), ("ca", "CA"),
     ("australiana", "AU"), ("australiano", "AU"), ("australian", "AU"), ("australia", "AU"),
     ("sueca", "SE"), ("sueco", "SE"), ("swedish", "SE"), ("suecia", "SE"), ("sweden", "SE"),
-    ("colombiana", "CO"), ("colombiano", "CO"), ("colombian", "CO"), ("colombia", "CO"),
+    ("colombiana", "CO"), ("colombiano", "CO"), ("colombian", "CO"), ("colombia", "CO"), ("co", "CO"),
 ];
 
 /// Parse `query` into a filter, scoped to `playlist_id`.
@@ -52,6 +52,11 @@ pub fn parse(store: &Store, query: &str, playlist_id: Option<&str>) -> Result<Pl
     let words: Vec<&str> = normalized.split_whitespace().collect();
 
     let countries = find_countries(&words);
+    if let Some(suspect) = near_miss_country(&words) {
+        return Err(CoreError::InvalidFilter(format!(
+            "'{suspect}' looks like a country name but was not recognised — check the spelling"
+        )));
+    }
     let year_range = find_year_range(&normalized);
     let genres = find_genres(store, &normalized)?;
 
@@ -96,6 +101,37 @@ fn fold(s: &str) -> String {
 fn is_combining_mark(c: char) -> bool {
     // Unicode combining diacritical marks, which NFD splits accents into.
     matches!(c as u32, 0x0300..=0x036F | 0x1AB0..=0x1AFF | 0x20D0..=0x20FF)
+}
+
+fn levenshtein(a: &str, b: &str) -> usize {
+    let (a, b) = (a.as_bytes(), b.as_bytes());
+    let (m, n) = (a.len(), b.len());
+    let mut row: Vec<usize> = (0..=n).collect();
+    for i in 1..=m {
+        let mut prev = row[0];
+        row[0] = i;
+        for j in 1..=n {
+            let temp = row[j];
+            row[j] = if a[i - 1] == b[j - 1] { prev } else { 1 + prev.min(row[j]).min(row[j - 1]) };
+            prev = temp;
+        }
+    }
+    row[n]
+}
+
+/// Returns the first word that is a near-miss of a known country word (edit
+/// distance ≤ 2) but not an exact match. Words shorter than 5 characters are
+/// skipped to avoid false positives against short ISO codes and stop-words.
+fn near_miss_country(words: &[&str]) -> Option<String> {
+    for &word in words {
+        if word.len() < 5 || COUNTRY_WORDS.iter().any(|(w, _)| *w == word) {
+            continue;
+        }
+        if COUNTRY_WORDS.iter().any(|(w, _)| levenshtein(word, w) <= 2) {
+            return Some(word.to_string());
+        }
+    }
+    None
 }
 
 fn find_countries(words: &[&str]) -> Vec<String> {
@@ -225,6 +261,7 @@ mod tests {
             CanonicalGenre { slug: "hip-hop".into(), label: "Hip-Hop".into(), parent_slug: None },
             CanonicalGenre { slug: "tropicalia".into(), label: "Tropicália".into(), parent_slug: None },
             CanonicalGenre { slug: "mpb".into(), label: "MPB".into(), parent_slug: None },
+            CanonicalGenre { slug: "rnb".into(), label: "R&B".into(), parent_slug: Some("soul".into()) },
         ])
         .unwrap();
         s
@@ -350,6 +387,14 @@ mod tests {
     }
 
     #[test]
+    fn parses_iso_country_code() {
+        let s = store();
+        let f = parse(&s, "BR Soul And R&B", Some("p1")).unwrap();
+        assert_eq!(f.countries, vec!["BR".to_string()]);
+        assert!(f.genres.contains(&"soul".to_string()));
+    }
+
+    #[test]
     fn never_produces_a_genre_outside_the_vocabulary() {
         // "vaporwave" is not in this store's vocabulary, so it must not appear —
         // and with a country present the query still parses usefully.
@@ -366,6 +411,18 @@ mod tests {
         let s = store();
         let f = parse(&s, "rock ingles e americano e britanico", None).unwrap();
         assert_eq!(f.countries, vec!["GB".to_string(), "US".to_string()]);
+    }
+
+    #[test]
+    fn misspelled_country_name_returns_error() {
+        let s = store();
+        // "brazillian" (double-l) is close to "brazilian" but not exact —
+        // the parser should surface an error rather than silently drop the country.
+        let err = parse(&s, "brazillian soul and r&b", Some("p1")).unwrap_err();
+        assert!(
+            matches!(err, CoreError::InvalidFilter(ref m) if m.contains("brazillian")),
+            "{err}"
+        );
     }
 
     #[test]

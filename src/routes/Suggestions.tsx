@@ -109,6 +109,10 @@ export function Suggestions({ playlistId, navigate }: Props) {
     ...(queryResult ? [queryResult] : []),
   ];
 
+  const openCard = openCardId != null
+    ? (allCards.find((c) => c.id === openCardId) ?? null)
+    : null;
+
   return (
     <div className="screen">
       <h2>Suggestions</h2>
@@ -193,27 +197,30 @@ export function Suggestions({ playlistId, navigate }: Props) {
 
         <div className="card-grid">
           {allCards.map((card) => (
-            <div key={card.id}>
-              <SuggestionCard
-                card={card}
-                dryRun={true}
-                selected={openCardId === card.id}
-                onOpen={(c) => setOpenCardId(openCardId === c.id ? null : c.id)}
-                onCreate={(c) => setConfirmCard(c)}
-                creating={creatingCardId === card.id}
-              />
-              {openCardId === card.id ? (
-                <section className="panel panel-inset">
-                  <h4>Tracks in this suggestion</h4>
-                  <TrackTable
-                    tracks={card.tracks.map(toAnalysedTrack)}
-                    caption={`${card.trackCount} tracks`}
-                  />
-                </section>
-              ) : null}
-            </div>
+            <SuggestionCard
+              key={card.id}
+              card={card}
+              dryRun={true}
+              selected={openCardId === card.id}
+              onOpen={(c) => setOpenCardId(openCardId === c.id ? null : c.id)}
+              onCreate={(c) => setConfirmCard(c)}
+              creating={creatingCardId === card.id}
+            />
           ))}
         </div>
+
+        {openCard ? (
+          <section className="panel" style={{ marginTop: 16 }}>
+            <div className="row" style={{ justifyContent: "space-between", marginBottom: 8 }}>
+              <h4>Tracks — {openCard.proposedName}</h4>
+              <button type="button" onClick={() => setOpenCardId(null)}>Hide tracks</button>
+            </div>
+            <TrackTable
+              tracks={openCard.tracks.map(toAnalysedTrack)}
+              caption={`${openCard.trackCount} tracks`}
+            />
+          </section>
+        ) : null}
       </section>
 
       {/* Per-creation confirm panel */}
