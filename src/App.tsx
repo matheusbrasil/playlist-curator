@@ -6,6 +6,7 @@ import { useAsync } from "./lib/useAsync";
 import { Advanced } from "./routes/Advanced";
 import { Analysis } from "./routes/Analysis";
 import { Playlists } from "./routes/Playlists";
+import { Reviews } from "./routes/Reviews";
 import { SettingsScreen } from "./routes/Settings";
 import { Suggestions } from "./routes/Suggestions";
 
@@ -80,6 +81,7 @@ export function App() {
         {route === "suggestions" ? (
           <Suggestions playlistId={selectedPlaylistId} settings={loaded} navigate={navigate} />
         ) : null}
+        {route === "reviews" ? <Reviews navigate={navigate} settings={loaded} /> : null}
         {route === "settings" ? (
           <SettingsScreen settings={settings} onSaveSettings={persistSettings} />
         ) : null}

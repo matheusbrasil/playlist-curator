@@ -39,9 +39,19 @@ pub struct EnrichStats {
     pub artists_resolved: usize,
     pub name_matched: usize,
     pub needs_review: usize,
+    /// Total tag signals across all sources.
     pub tag_signals_inserted: usize,
     pub cache_hits: u64,
     pub network_calls: u64,
+    /// MB recording + artist tag signals (subset of tag_signals_inserted).
+    pub mb_tag_signals: usize,
+    /// Last.fm artist + track tag signals (subset of tag_signals_inserted).
+    pub lastfm_signals: usize,
+    /// Discogs artist + release tag signals (subset of tag_signals_inserted).
+    pub discogs_signals: usize,
+    /// Wikidata country-of-origin responses (counts responses, not tag rows;
+    /// does not sum into tag_signals_inserted).
+    pub wikidata_signals: usize,
 }
 
 /// Snapshot emitted after each track is processed.
@@ -184,6 +194,7 @@ pub async fn enrich_playlist(
                         store.insert_tag_signals(&signals)?;
                         stats.recordings_resolved += 1;
                         stats.tag_signals_inserted += n;
+                        stats.mb_tag_signals += n;
                         recording_resolved = true;
                         recording_credits = credits;
                     }
@@ -204,6 +215,7 @@ pub async fn enrich_playlist(
                             // Fetch recording-level tags — the ISRC path does this too
                             if let Ok(rec_signals) = mb.recording_tags(&recording.mbid).await {
                                 stats.tag_signals_inserted += rec_signals.len();
+                                stats.mb_tag_signals += rec_signals.len();
                                 let _ = store.insert_tag_signals(&rec_signals);
                             }
                             recording_credits = credits;
@@ -342,6 +354,7 @@ pub async fn enrich_playlist(
                     match mb.artist_tags(mbid).await {
                         Ok(signals) => {
                             stats.tag_signals_inserted += signals.len();
+                            stats.mb_tag_signals += signals.len();
                             let _ = store.insert_tag_signals(&signals);
                         }
                         Err(e) => tracing::warn!(mbid, error = %e, "MB artist tags failed"),
@@ -361,6 +374,7 @@ pub async fn enrich_playlist(
                                         kind: None,
                                     };
                                     let _ = store.insert_tag_signal(&sig);
+                                    stats.wikidata_signals += 1;
                                 }
                                 Ok(None) => {}
                                 Err(e) => tracing::debug!(error = %e, "Wikidata lookup failed"),
@@ -377,6 +391,7 @@ pub async fn enrich_playlist(
                     match lfm.artist_top_tags(&artist.name, &artist.spotify_id).await {
                         Ok(signals) => {
                             stats.tag_signals_inserted += signals.len();
+                            stats.lastfm_signals += signals.len();
                             let _ = store.insert_tag_signals(&signals);
                         }
                         Err(e) => tracing::debug!(error = %e, "Last.fm artist tags failed"),
@@ -387,6 +402,7 @@ pub async fn enrich_playlist(
                     match dg.artist_tags(&artist.name).await {
                         Ok(signals) => {
                             stats.tag_signals_inserted += signals.len();
+                            stats.discogs_signals += signals.len();
                             let _ = store.insert_tag_signals(&signals);
                         }
                         Err(e) => tracing::debug!(error = %e, "Discogs artist tags failed"),
@@ -401,6 +417,7 @@ pub async fn enrich_playlist(
             match dg.release_tags_by_isrc(isrc, &track.name, primary_artist).await {
                 Ok(signals) if !signals.is_empty() => {
                     stats.tag_signals_inserted += signals.len();
+                    stats.discogs_signals += signals.len();
                     let _ = store.insert_tag_signals(&signals);
                 }
                 Ok(_) => {}
@@ -414,6 +431,7 @@ pub async fn enrich_playlist(
             match lfm.track_top_tags(&track.name, primary_artist, track_id).await {
                 Ok(signals) if !signals.is_empty() => {
                     stats.tag_signals_inserted += signals.len();
+                    stats.lastfm_signals += signals.len();
                     let _ = store.insert_tag_signals(&signals);
                 }
                 Ok(_) => {}
@@ -447,6 +465,282 @@ pub async fn enrich_playlist(
         job_id,
         &serde_json::to_string(&stats).unwrap_or_default(),
     )?;
+
+    Ok(stats)
+}
+
+/// Re-run the enrichment cascade for a single track, clearing `prior_reason`
+/// first so the pipeline evaluates it from scratch.
+///
+/// On success the caller should re-derive affected playlists to update genres
+/// and origins — this function stores raw signals only.
+pub async fn enrich_track(
+    store: Store,
+    settings: Settings,
+    track_id: &str,
+    prior_reason: &str,
+) -> Result<EnrichStats> {
+    let user_agent = settings.user_agent();
+    let http = reqwest::Client::builder()
+        .timeout(std::time::Duration::from_secs(30))
+        .build()
+        .unwrap_or_default();
+
+    let limiters = RateLimiters::new();
+    let fetcher = Fetcher::new(
+        http.clone(),
+        store.clone(),
+        limiters,
+        settings.cache.clone(),
+        user_agent,
+    );
+
+    let mb = MusicBrainzClient::new(fetcher.clone());
+    let lastfm = settings.lastfm_api_key.as_ref().map(|key| {
+        LastfmClient::new(fetcher.clone(), key.clone())
+    });
+    let discogs = settings.discogs_token.as_ref().map(|tok| {
+        DiscogsClient::new(fetcher.clone(), tok.clone())
+    });
+    let wikidata = WikidataClient::new(fetcher.clone());
+
+    let track = store.get_track(track_id)?.ok_or_else(|| {
+        crate::error::CoreError::other(format!("track {track_id} not found"))
+    })?;
+    let track_artists = store.track_artists(track_id)?;
+
+    // Clear the prior flag so the cascade can re-evaluate without prejudice.
+    let _ = store.resolve_review("track", track_id, prior_reason);
+
+    let mut stats = EnrichStats::default();
+    let mut recording_credits: Vec<(String, String)> = Vec::new();
+    let already_resolved = store.get_track_mbid(track_id)?.is_some();
+    let mut recording_resolved = already_resolved;
+
+    if !already_resolved {
+        if let Some(isrc) = &track.isrc {
+            match mb.resolve_isrc(isrc).await {
+                Ok(Some((recording, signals, credits))) => {
+                    store.upsert_mb_recording(&recording)?;
+                    store.link_track_mb(track_id, &recording.mbid, recording.confidence)?;
+                    let n = signals.len();
+                    store.insert_tag_signals(&signals)?;
+                    stats.recordings_resolved += 1;
+                    stats.tag_signals_inserted += n;
+                    stats.mb_tag_signals += n;
+                    recording_resolved = true;
+                    recording_credits = credits;
+                }
+                Ok(None) => {}
+                Err(e) => tracing::warn!(track_id, error = %e, "ISRC lookup failed"),
+            }
+        }
+
+        if !recording_resolved {
+            let primary_artist = track_artists.first().map(|a| a.name.as_str()).unwrap_or("");
+            match mb.search_recording(&track.name, primary_artist).await {
+                Ok(Some((recording, score, credits))) => {
+                    if score >= settings.review_threshold {
+                        store.upsert_mb_recording(&recording)?;
+                        store.link_track_mb(track_id, &recording.mbid, score)?;
+                        stats.name_matched += 1;
+                        if let Ok(rec_signals) = mb.recording_tags(&recording.mbid).await {
+                            stats.tag_signals_inserted += rec_signals.len();
+                            stats.mb_tag_signals += rec_signals.len();
+                            let _ = store.insert_tag_signals(&rec_signals);
+                        }
+                        recording_credits = credits;
+                    } else {
+                        store.flag_needs_review(
+                            "track",
+                            track_id,
+                            "low_confidence_match",
+                            Some(&format!("best score {score:.2}")),
+                        )?;
+                        stats.needs_review += 1;
+                    }
+                }
+                Ok(None) => {
+                    store.flag_needs_review("track", track_id, "no_mb_match", None)?;
+                    stats.needs_review += 1;
+                }
+                Err(e) => {
+                    tracing::warn!(track_id, error = %e, "name search failed during retry");
+                    store.flag_needs_review("track", track_id, "search_error", None)?;
+                    stats.needs_review += 1;
+                }
+            }
+        }
+    }
+
+    if recording_credits.is_empty() {
+        if let Some(isrc) = &track.isrc {
+            if let Ok(Some((_, _, credits))) = mb.resolve_isrc(isrc).await {
+                recording_credits = credits;
+            }
+        }
+    }
+
+    let mut seen_artist_mbids: HashSet<String> = HashSet::new();
+    let mut seen_spotify_artists: HashSet<String> = HashSet::new();
+
+    for artist in &track_artists {
+        let artist_mbid: Option<String> = if let Some(mbid) = store.get_artist_mbid(&artist.spotify_id)? {
+            Some(mbid)
+        } else {
+            match mb.artist_by_spotify_url(&artist.spotify_id).await {
+                Ok(Some(mb_artist)) => {
+                    let mbid = mb_artist.mbid.clone();
+                    store.upsert_mb_artist(&mb_artist)?;
+                    store.link_artist_mb(&artist.spotify_id, &mbid, 0.95, "url_relationship")?;
+                    stats.artists_resolved += 1;
+                    Some(mbid)
+                }
+                Ok(None) | Err(_) => {
+                    let name_lower = artist.name.to_lowercase();
+                    if let Some((credit_mbid, _)) = recording_credits
+                        .iter()
+                        .find(|(_, n)| n.to_lowercase() == name_lower)
+                    {
+                        let mbid = credit_mbid.clone();
+                        match mb.fetch_artist_detail(&mbid).await {
+                            Ok(mb_artist) => {
+                                store.upsert_mb_artist(&mb_artist)?;
+                                store.link_artist_mb(
+                                    &artist.spotify_id,
+                                    &mbid,
+                                    0.85,
+                                    "recording_credit",
+                                )?;
+                                stats.artists_resolved += 1;
+                                Some(mbid)
+                            }
+                            Err(e) => {
+                                tracing::warn!(
+                                    artist_id = %artist.spotify_id, %mbid,
+                                    error = %e, "artist detail fetch failed"
+                                );
+                                None
+                            }
+                        }
+                    } else {
+                        match mb.search_artist_by_name(&artist.name).await {
+                            Ok(Some(mb_artist)) => {
+                                let mbid = mb_artist.mbid.clone();
+                                store.upsert_mb_artist(&mb_artist)?;
+                                store.link_artist_mb(
+                                    &artist.spotify_id,
+                                    &mbid,
+                                    0.75,
+                                    "name_search",
+                                )?;
+                                stats.artists_resolved += 1;
+                                Some(mbid)
+                            }
+                            Ok(None) => None,
+                            Err(e) => {
+                                tracing::debug!(
+                                    artist = %artist.name,
+                                    error = %e, "artist name search failed"
+                                );
+                                None
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        if let Some(ref mbid) = artist_mbid {
+            if seen_artist_mbids.insert(mbid.clone()) {
+                match mb.artist_tags(mbid).await {
+                    Ok(signals) => {
+                        stats.tag_signals_inserted += signals.len();
+                        stats.mb_tag_signals += signals.len();
+                        let _ = store.insert_tag_signals(&signals);
+                    }
+                    Err(e) => tracing::warn!(mbid, error = %e, "MB artist tags failed"),
+                }
+
+                if let Ok(Some(mb_a)) = store.get_mb_artist(mbid) {
+                    if let Some(ref qid) = mb_a.wikidata_qid {
+                        match wikidata.country_of_origin(qid).await {
+                            Ok(Some(code)) => {
+                                let sig = crate::model::TagSignal {
+                                    entity_type: EntityType::MbArtist,
+                                    entity_id: mbid.clone(),
+                                    source: Source::Wikidata,
+                                    raw_tag: format!("country:{code}"),
+                                    weight: 0.8,
+                                    fetched_at: crate::util::now_iso(),
+                                    kind: None,
+                                };
+                                let _ = store.insert_tag_signal(&sig);
+                                stats.wikidata_signals += 1;
+                            }
+                            Ok(None) => {}
+                            Err(e) => tracing::debug!(error = %e, "Wikidata lookup failed"),
+                        }
+                    }
+                }
+            }
+        }
+
+        if seen_spotify_artists.insert(artist.spotify_id.clone()) {
+            if let Some(ref lfm) = lastfm {
+                match lfm.artist_top_tags(&artist.name, &artist.spotify_id).await {
+                    Ok(signals) => {
+                        stats.tag_signals_inserted += signals.len();
+                        stats.lastfm_signals += signals.len();
+                        let _ = store.insert_tag_signals(&signals);
+                    }
+                    Err(e) => tracing::debug!(error = %e, "Last.fm artist tags failed"),
+                }
+            }
+
+            if let Some(ref dg) = discogs {
+                match dg.artist_tags(&artist.name).await {
+                    Ok(signals) => {
+                        stats.tag_signals_inserted += signals.len();
+                        stats.discogs_signals += signals.len();
+                        let _ = store.insert_tag_signals(&signals);
+                    }
+                    Err(e) => tracing::debug!(error = %e, "Discogs artist tags failed"),
+                }
+            }
+        }
+    }
+
+    if let (Some(ref dg), Some(isrc)) = (&discogs, &track.isrc) {
+        let primary_artist = track_artists.first().map(|a| a.name.as_str()).unwrap_or("");
+        match dg.release_tags_by_isrc(isrc, &track.name, primary_artist).await {
+            Ok(signals) if !signals.is_empty() => {
+                stats.tag_signals_inserted += signals.len();
+                stats.discogs_signals += signals.len();
+                let _ = store.insert_tag_signals(&signals);
+            }
+            Ok(_) => {}
+            Err(e) => tracing::debug!(isrc, error = %e, "Discogs release tags failed"),
+        }
+    }
+
+    if let Some(ref lfm) = lastfm {
+        let primary_artist = track_artists.first().map(|a| a.name.as_str()).unwrap_or("");
+        match lfm.track_top_tags(&track.name, primary_artist, track_id).await {
+            Ok(signals) if !signals.is_empty() => {
+                stats.tag_signals_inserted += signals.len();
+                stats.lastfm_signals += signals.len();
+                let _ = store.insert_tag_signals(&signals);
+            }
+            Ok(_) => {}
+            Err(e) => tracing::debug!(error = %e, "Last.fm track tags failed"),
+        }
+    }
+
+    stats.tracks_processed = 1;
+    let (hits, network, _) = fetcher.counters.snapshot();
+    stats.cache_hits = hits;
+    stats.network_calls = network;
 
     Ok(stats)
 }

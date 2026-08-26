@@ -434,6 +434,38 @@ pub async fn list_reviews(state: State<'_, AppState>) -> Cmd<Vec<pc_core::model:
     state.app.store.open_reviews().map_err(CommandError::from)
 }
 
+/// Re-run enrichment for a single track, then re-derive genres/origins/eras
+/// for every playlist that contains it.
+#[tauri::command]
+pub async fn retry_enrich_track(
+    state: State<'_, AppState>,
+    track_id: String,
+    reason: String,
+) -> Cmd<pc_core::enrich::pipeline::EnrichStats> {
+    let settings = state.app.settings();
+    let store = state.app.store.clone();
+
+    let stats = pc_core::enrich::pipeline::enrich_track(
+        store.clone(),
+        settings,
+        &track_id,
+        &reason,
+    )
+    .await
+    .map_err(CommandError::from)?;
+
+    let playlist_ids = store.playlists_for_track(&track_id).map_err(CommandError::from)?;
+    for playlist_id in &playlist_ids {
+        use pc_core::taxonomy::{aggregate, derive};
+        let settings = state.app.settings();
+        let _ = derive::derive_origins_for_playlist(&store, playlist_id);
+        let _ = derive::derive_eras_for_playlist(&store, playlist_id);
+        let _ = aggregate::derive_playlist_genres(&store, &settings, playlist_id);
+    }
+
+    Ok(stats)
+}
+
 // ── Suggestions ───────────────────────────────────────────────────────────────
 
 #[tauri::command]

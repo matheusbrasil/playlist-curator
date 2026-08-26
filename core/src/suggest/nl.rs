@@ -75,7 +75,7 @@ pub fn parse(store: &Store, query: &str, playlist_id: Option<&str>) -> Result<Pl
         year_range,
         min_tracks: None,
         max_tracks: None,
-        min_genre_score: None,
+        min_genre_score: Some(0.25),
         source_playlist_id: playlist_id.map(str::to_string),
         exclude_needs_review: false,
     };
@@ -423,6 +423,13 @@ mod tests {
             matches!(err, CoreError::InvalidFilter(ref m) if m.contains("brazillian")),
             "{err}"
         );
+    }
+
+    #[test]
+    fn nl_parser_applies_genre_score_floor() {
+        let s = store();
+        let f = parse(&s, "soul brasileira", None).unwrap();
+        assert_eq!(f.min_genre_score, Some(0.25));
     }
 
     #[test]

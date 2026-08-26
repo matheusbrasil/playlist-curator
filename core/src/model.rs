@@ -293,4 +293,6 @@ pub struct ReviewItem {
     pub reason: String,
     pub detail: Option<String>,
     pub created_at: String,
+    pub track_name: Option<String>,
+    pub artist_names: Vec<String>,
 }

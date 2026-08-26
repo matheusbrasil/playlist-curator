@@ -59,6 +59,40 @@ impl Store {
         Ok(())
     }
 
+    pub fn get_track(&self, track_id: &str) -> Result<Option<Track>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT spotify_id, name, isrc, duration_ms, spotify_album_id,
+                    spotify_release_date, is_local
+             FROM track WHERE spotify_id = ?1",
+        )?;
+        let result = stmt
+            .query_row(params![track_id], |r| {
+                Ok(Track {
+                    spotify_id: r.get(0)?,
+                    name: r.get(1)?,
+                    isrc: r.get(2)?,
+                    duration_ms: r.get(3)?,
+                    spotify_album_id: r.get(4)?,
+                    spotify_release_date: r.get(5)?,
+                    is_local: r.get::<_, i64>(6)? != 0,
+                })
+            })
+            .optional()?;
+        Ok(result)
+    }
+
+    pub fn playlists_for_track(&self, track_id: &str) -> Result<Vec<String>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT playlist_id FROM playlist_track WHERE track_spotify_id = ?1",
+        )?;
+        let ids = stmt
+            .query_map(params![track_id], |r| r.get(0))?
+            .collect::<rusqlite::Result<Vec<String>>>()?;
+        Ok(ids)
+    }
+
     pub fn upsert_artist(&self, a: &Artist) -> Result<()> {
         let conn = self.conn()?;
         conn.execute(
@@ -839,8 +873,16 @@ impl Store {
     pub fn open_reviews(&self) -> Result<Vec<ReviewItem>> {
         let conn = self.conn()?;
         let mut stmt = conn.prepare(
-            "SELECT entity_type, entity_id, reason, detail, created_at
-             FROM needs_review WHERE resolved_at IS NULL ORDER BY created_at",
+            "SELECT nr.entity_type, nr.entity_id, nr.reason, nr.detail, nr.created_at,
+                    t.name AS track_name,
+                    GROUP_CONCAT(a.name, '||') AS artist_names
+             FROM needs_review nr
+             LEFT JOIN track t ON nr.entity_type = 'track' AND t.spotify_id = nr.entity_id
+             LEFT JOIN track_artist ta ON nr.entity_type = 'track' AND ta.track_spotify_id = nr.entity_id
+             LEFT JOIN artist a ON a.spotify_id = ta.artist_spotify_id
+             WHERE nr.resolved_at IS NULL
+             GROUP BY nr.entity_type, nr.entity_id, nr.reason, nr.detail, nr.created_at
+             ORDER BY nr.created_at",
         )?;
         let rows = stmt.query_map([], |r| {
             Ok(ReviewItem {
@@ -849,6 +891,10 @@ impl Store {
                 reason: r.get(2)?,
                 detail: r.get(3)?,
                 created_at: r.get(4)?,
+                track_name: r.get(5)?,
+                artist_names: r.get::<_, Option<String>>(6)?
+                    .map(|s| s.split("||").map(str::to_string).collect())
+                    .unwrap_or_default(),
             })
         })?;
         Ok(rows.collect::<rusqlite::Result<_>>()?)

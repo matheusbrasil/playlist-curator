@@ -35,7 +35,7 @@ type ProgressState = {
   label: string;
 };
 
-export function Analysis({ playlistId, navigate, onEnrichStart, onEnrichEnd }: Props) {
+export function Analysis({ playlistId, settings, navigate, onEnrichStart, onEnrichEnd }: Props) {
   const summary = useAsync(
     () => (playlistId ? analysisSummary(playlistId) : Promise.resolve(null)),
     [playlistId],
@@ -88,18 +88,16 @@ export function Analysis({ playlistId, navigate, onEnrichStart, onEnrichEnd }: P
         summary.reload();
         tracks.reload();
         enrichCounts(playlistId).then(setEnrichCountsData).catch(() => {});
-        const parts: string[] = [];
-        if (stats.recordingsResolved > 0)
-          parts.push(`${stats.recordingsResolved} MB recording${stats.recordingsResolved !== 1 ? "s" : ""}`);
-        if (stats.artistsResolved > 0)
-          parts.push(`${stats.artistsResolved} artist${stats.artistsResolved !== 1 ? "s" : ""}`);
-        if (stats.tagSignalsInserted > 0)
-          parts.push(`${stats.tagSignalsInserted} tag signal${stats.tagSignalsInserted !== 1 ? "s" : ""}`);
-        const summary_str =
-          parts.length > 0
-            ? parts.join(", ")
-            : "no new data (all already resolved or sources unavailable)";
-        return `Enriched: ${summary_str}. Network calls: ${stats.networkCalls}, cache hits: ${stats.cacheHits}.`;
+        const mbStr = `MB: ${stats.mbTagSignals}`;
+        const lfmStr = settings?.lastfmApiKey != null
+          ? `Last.fm: ${stats.lastfmSignals > 0 ? stats.lastfmSignals : "0 (no matches)"}`
+          : null;
+        const dgStr = settings?.discogsToken != null
+          ? `Discogs: ${stats.discogsSignals > 0 ? stats.discogsSignals : "0 (no matches)"}`
+          : null;
+        const wdStr = `Wikidata: ${stats.wikidataSignals}`;
+        const sourceParts = [mbStr, lfmStr, dgStr, wdStr].filter(Boolean).join(" | ");
+        return `Enriched ${stats.tracksProcessed} tracks. ${sourceParts}. Network calls: ${stats.networkCalls}, cache hits: ${stats.cacheHits}.`;
       },
     );
 
@@ -140,7 +138,24 @@ export function Analysis({ playlistId, navigate, onEnrichStart, onEnrichEnd }: P
   return (
     <div className="screen--split">
       <div className="page-toolbar">
-        {/* Row 1: Enrich button + batch selector */}
+        {/* Source status row */}
+        <div className="row" style={{ alignItems: "center", gap: 8, fontSize: 12 }}>
+          <span className="muted">Active sources:</span>
+          <span title="Always active">MusicBrainz <span style={{ color: "var(--ok)" }}>●</span></span>
+          <span title="Always active">Wikidata <span style={{ color: "var(--ok)" }}>●</span></span>
+          {settings?.lastfmApiKey != null ? (
+            <span title="Last.fm API key configured">Last.fm <span style={{ color: "var(--ok)" }}>●</span></span>
+          ) : (
+            <span className="muted" title="No Last.fm API key">Last.fm ✗ <span style={{ fontStyle: "italic" }}>(add key in Settings)</span></span>
+          )}
+          {settings?.discogsToken != null ? (
+            <span title="Discogs token configured">Discogs <span style={{ color: "var(--ok)" }}>●</span></span>
+          ) : (
+            <span className="muted" title="No Discogs token">Discogs ✗ <span style={{ fontStyle: "italic" }}>(add key in Settings)</span></span>
+          )}
+        </div>
+
+        {/* Row 2: Enrich button + batch selector */}
         <div className="row" style={{ alignItems: "center", gap: 8 }}>
           <label htmlFor="batchSize" style={{ whiteSpace: "nowrap" }}>
             Batch:
@@ -183,7 +198,7 @@ export function Analysis({ playlistId, navigate, onEnrichStart, onEnrichEnd }: P
           {enrich.message ? <span className="ok small">{enrich.message}</span> : null}
         </div>
 
-        {/* Row 2: Progress bar when running */}
+        {/* Row 3: Progress bar when running */}
         {progress ? (
           <ProgressBar
             label={progress.label}
@@ -193,7 +208,7 @@ export function Analysis({ playlistId, navigate, onEnrichStart, onEnrichEnd }: P
           />
         ) : null}
 
-        {/* Row 3: Derive button + status */}
+        {/* Row 4: Derive button + status */}
         <div className="row">
           <button
             type="button"
@@ -278,8 +293,14 @@ export function Analysis({ playlistId, navigate, onEnrichStart, onEnrichEnd }: P
                       <div>
                         <dt>Needs review</dt>
                         <dd>
-                          {sum.needsReviewCount} track{sum.needsReviewCount !== 1 ? "s" : ""} with
-                          low confidence
+                          <button
+                            type="button"
+                            className="link"
+                            onClick={() => navigate("reviews")}
+                          >
+                            {sum.needsReviewCount} track{sum.needsReviewCount !== 1 ? "s" : ""} with
+                            low confidence
+                          </button>
                         </dd>
                       </div>
                     ) : null}

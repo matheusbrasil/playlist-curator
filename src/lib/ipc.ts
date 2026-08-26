@@ -244,6 +244,10 @@ export type EnrichStats = {
   tagSignalsInserted: number;
   cacheHits: number;
   networkCalls: number;
+  mbTagSignals: number;
+  lastfmSignals: number;
+  discogsSignals: number;
+  wikidataSignals: number;
 };
 
 export type DeriveStats = {
@@ -302,6 +306,8 @@ export type ReviewItem = {
   reason: string;
   detail: string | null;
   createdAt: string;
+  trackName: string | null;
+  artistNames: string[];
 };
 
 /** Long-running; progress arrives on `enrich://progress`. Resumable. */
@@ -527,6 +533,11 @@ export function resolveReview(args: {
   reason: string;
 }): Promise<void> {
   return call<void>("resolve_review", { ...args });
+}
+
+/** Re-enrich a single track and re-derive its playlists. Clears the prior flag first. */
+export function retryEnrichTrack(trackId: string, reason: string): Promise<EnrichStats> {
+  return call<EnrichStats>("retry_enrich_track", { trackId, reason });
 }
 
 // ------------------------------------------------------------------ llm

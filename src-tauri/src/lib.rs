@@ -55,6 +55,7 @@ pub fn run() {
             commands::analysis_summary,
             commands::analysis_tracks,
             commands::list_reviews,
+            commands::retry_enrich_track,
             // Suggestions
             commands::suggest_playlists,
             commands::suggest_from_query,

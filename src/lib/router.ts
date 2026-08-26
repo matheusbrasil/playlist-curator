@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-export const ROUTES = ["playlists", "analysis", "suggestions", "settings", "advanced"] as const;
+export const ROUTES = ["playlists", "analysis", "suggestions", "reviews", "settings", "advanced"] as const;
 
 export type RouteName = (typeof ROUTES)[number];
 
@@ -8,6 +8,7 @@ export const ROUTE_TITLES: Record<RouteName, string> = {
   playlists: "Playlists",
   analysis: "Analysis",
   suggestions: "Suggestions",
+  reviews: "Reviews",
   settings: "Settings",
   advanced: "Advanced",
 };

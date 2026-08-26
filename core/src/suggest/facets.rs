@@ -216,6 +216,7 @@ fn enumerate_filters(
     let base = || PlaylistFilter {
         genre_mode: GenreMode::AnyWithChildren,
         source_playlist_id: Some(playlist_id.to_string()),
+        min_genre_score: Some(0.25),
         ..Default::default()
     };
     let mut out = Vec::new();
@@ -627,6 +628,16 @@ mod tests {
         // A non-decade range is spelled out rather than mislabelled.
         let odd = PlaylistFilter { year_range: Some((1968, 1974)), ..Default::default() };
         assert_eq!(name_for(&s, &odd, 5).unwrap().0, "1968–1974");
+    }
+
+    #[test]
+    fn facet_enumeration_applies_genre_score_floor() {
+        let genres = vec![FacetValue { key: "soul".into(), label: "Soul".into(), count: 10 }];
+        let filters = enumerate_filters("p1", &genres, &[], &[]);
+        assert!(
+            filters.iter().all(|f| f.min_genre_score == Some(0.25)),
+            "expected all enumerated filters to have min_genre_score = Some(0.25)"
+        );
     }
 
     #[test]
