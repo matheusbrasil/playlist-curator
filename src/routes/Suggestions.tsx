@@ -64,6 +64,7 @@ export function Suggestions({ playlistId, navigate }: Props) {
 
   const [confirmCard, setConfirmCard] = useState<Card | null>(null);
   const [confirmDryRun, setConfirmDryRun] = useState(true);
+  const [editedName, setEditedName] = useState<string>("");
 
   if (!playlistId) {
     return (
@@ -203,7 +204,7 @@ export function Suggestions({ playlistId, navigate }: Props) {
               dryRun={true}
               selected={openCardId === card.id}
               onOpen={(c) => setOpenCardId(openCardId === c.id ? null : c.id)}
-              onCreate={(c) => setConfirmCard(c)}
+              onCreate={(c) => { setConfirmCard(c); setEditedName(c.proposedName); }}
               creating={creatingCardId === card.id}
             />
           ))}
@@ -230,9 +231,21 @@ export function Suggestions({ playlistId, navigate }: Props) {
           style={{ position: "sticky", bottom: 0, zIndex: 10, background: "var(--surface2)" }}
         >
           <h4>Create playlist</h4>
-          <p>
-            "{confirmCard.proposedName}" — {confirmCard.trackCount} tracks
-          </p>
+          <div style={{ marginTop: 8 }}>
+            <label style={{ display: "block", marginBottom: 4, fontSize: 12 }} className="muted">
+              Playlist name
+            </label>
+            <input
+              type="text"
+              value={editedName}
+              onChange={(e) => setEditedName(e.target.value)}
+              style={{ width: "100%" }}
+              maxLength={100}
+            />
+            <span className="muted" style={{ fontSize: 12 }}>
+              {confirmCard.trackCount} tracks
+            </span>
+          </div>
           <label className="row" style={{ marginTop: 8 }}>
             <input
               type="checkbox"
@@ -245,16 +258,18 @@ export function Suggestions({ playlistId, navigate }: Props) {
             <button
               type="button"
               className={confirmDryRun ? "primary" : "danger"}
+              disabled={creatingCardId === confirmCard.id || editedName.trim() === ""}
               onClick={() => {
-                const card = confirmCard;
+                const card = { ...confirmCard, proposedName: editedName.trim() || confirmCard.proposedName };
                 const dryRun = confirmDryRun;
                 setConfirmCard(null);
+                setEditedName("");
                 void doCreate(card, dryRun);
               }}
             >
               {confirmDryRun ? "Preview" : "Create on Spotify"}
             </button>
-            <button type="button" onClick={() => setConfirmCard(null)}>
+            <button type="button" onClick={() => { setConfirmCard(null); setEditedName(""); }}>
               Cancel
             </button>
           </div>
